@@ -1,4 +1,6 @@
 @import url("styles/base.css");
+@import url("styles/color.css");
+@import url("styles/utils.css");
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
