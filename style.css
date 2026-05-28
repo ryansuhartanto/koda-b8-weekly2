@@ -7,8 +7,22 @@ body {
   color: var(--color-black);
 }
 
+.material-symbols-outlined {
+  font-size: inherit;
+}
+
+table {
+  table-layout: fixed;
+}
+
 header {
-  font-size: 0.875rem;
+  font-size: .875rem;
+
+  & .material-symbols-outlined {
+    font-variation-settings: 
+      'GRAD' 200,
+      'opsz' 20;
+  }
 
   & > section[aria-label="Utility bar"] {
     background-color: var(--color-blue);
@@ -16,6 +30,19 @@ header {
 
     font-size: .75rem;
     padding-block: .375rem; /* 6px */
+
+    & .location, .contact {
+      white-space: nowrap;
+    }
+
+    & .location {
+      width: 100%;
+    }
+
+    & .contact > .space {
+      display: inline-block;
+      width: 1rem;
+    }
   }
 
   & > hr {
