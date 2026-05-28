@@ -179,5 +179,46 @@ header {
   & > hr {
     color: color-mix(var(--color-black), transparent 90%);
   }
+
+  & > nav {
+    margin-block: .5rem;
+
+    & .material-symbols-outlined {
+      font-size: 20px;
+      font-variation-settings: 
+        'GRAD' -25,
+        'opsz' 20;
+    }
+
+    & a {
+      color: var(--color-slate);
+
+      padding-inline: .875rem;
+      vertical-align: middle;
+
+      white-space: nowrap;;
+
+      transition-property: color;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+
+      &.all {
+        color: var(--color-black);
+
+        & > span {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      &.hot {
+        color: var(--color-red);
+      }
+
+      &:focus, &:hover, &:active {
+        color: var(--color-black);
+      }
+    }
+  }
 }
  
