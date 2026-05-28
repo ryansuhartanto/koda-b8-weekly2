@@ -1,7 +1,7 @@
 :root {
     --color-black: oklch(0 0 0); /* #000 */
     --color-white: oklch(1 0 0); /* #FFF */
-    --color-gray: oklch(0.9791 0 0); /* #F8F8F8 */
+    --color-gray: oklch(0.551 0.0234 264.36); /* #6B7280 */
 
     --color-blue: oklch(0.5737 0.1946 257.86); /* #1A73E8 */
     --color-red: oklch(0.5771 0.2152 27.33) /* #DC2626 */

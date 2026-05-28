@@ -4,4 +4,21 @@
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: var(--color-black);
+}
+
+header {
+  font-size: 0.875rem;
+
+  & > section[aria-label="Utility bar"] {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+
+    font-size: .75rem;
+    padding-block: .375rem; /* 6px */
+  }
+
+  & > hr {
+    color: color-mix(var(--color-black), transparent 90%);
+  }
 }
