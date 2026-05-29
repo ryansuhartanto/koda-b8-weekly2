@@ -7,10 +7,6 @@ header {
 
     font-size: .75rem;
     padding-block: .375rem; /* 6px */
-
-    & .location, .contact {
-      white-space: nowrap;
-    }
   }
 
   & > section[aria-label="Main header"] {

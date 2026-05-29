@@ -4,6 +4,10 @@
   margin-inline: auto;
 }
 
+table.nowrap td {
+  white-space: nowrap;;  
+}
+
 td.space {
   width: 100%;
 }
