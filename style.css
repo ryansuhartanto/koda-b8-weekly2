@@ -19,7 +19,7 @@ table {
 }
 
 input::placeholder {
-  color: var(--color-slate);
+  color: var(--color-slate-3);
 }
 
 input, button {

@@ -112,7 +112,7 @@ header {
       vertical-align: middle;
 
       & .material-symbols-outlined {
-        color: var(--color-slate);
+        color: var(--color-slate-3);
       }
 
       & table {
@@ -144,7 +144,7 @@ header {
     }
 
     & a {
-      color: var(--color-slate);
+      color: var(--color-slate-3);
 
       padding-inline: .875rem;
       vertical-align: middle;
