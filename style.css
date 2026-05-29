@@ -2,6 +2,7 @@
 @import url("styles/color.css");
 @import url("styles/utils.css");
 
+@import url("styles/components/footer.css");
 @import url("styles/components/header.css");
 
 body {
