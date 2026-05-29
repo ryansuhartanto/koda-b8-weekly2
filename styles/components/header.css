@@ -17,21 +17,15 @@ header {
     & .location, .contact {
       white-space: nowrap;
     }
-
-    & .contact > .gap {
-      display: inline-block;
-      width: 1rem;
-    }
   }
 
   & > section[aria-label="Main header"] {
-    margin-block: .5rem;
+    padding-block: .5rem;
 
-    & .material-symbols-outlined {
-      font-size: 1.5rem;
-      font-variation-settings: 
-        'GRAD' 0,
-        'opsz' 24;
+    --gap: .5rem;
+
+    & [class^="icon-"] {
+      font-size: 1.25rem;
     }
 
     & .brand, form {
@@ -39,12 +33,7 @@ header {
     }
 
     & .brand {
-      margin-block: .25rem;
-    }
-
-    & .gap {
-      display: inline-block;
-      width: .5rem;
+      padding-block: .25rem;
     }
 
     & form {
@@ -62,6 +51,10 @@ header {
         transition-property: border-color;
         transition-duration: .2s;
         transition-timing-function: ease-out;
+
+        & [class^="icon-"] {
+          font-size: 1rem;
+        }
         
         &:has(:focus-within) {
           border-color: color-mix(var(--color-black), transparent 50%);
@@ -76,7 +69,7 @@ header {
           }
           
           &.submit {
-            padding-inline: .5rem;
+            padding-inline: .75rem;
 
             background-color: var(--color-blue);
             color: var(--color-white);
@@ -107,18 +100,23 @@ header {
       display: inline-block;
       vertical-align: middle;
 
-      & .material-symbols-outlined {
+      --gap: 0.125rem;
+
+      & [class^="icon-"] {
         color: var(--color-slate-3);
       }
 
       & table {
         & td {
           height: 2.5rem;
-          padding-inline: 1rem;
+          padding-inline: .75rem;
         }
         
         & span {
           display: inline-block;
+        }
+
+        & a > * {
           vertical-align: middle;
         }
       }
@@ -130,20 +128,12 @@ header {
   }
 
   & > nav {
-    margin-block: .5rem;
-
-    & .material-symbols-outlined {
-      font-size: 20px;
-      font-variation-settings: 
-        'GRAD' -25,
-        'opsz' 20;
-    }
+    padding-block: .5rem;
 
     & a {
       color: var(--color-slate-3);
 
       padding-inline: .875rem;
-      vertical-align: middle;
 
       white-space: nowrap;;
 
@@ -153,15 +143,14 @@ header {
 
       &.all {
         color: var(--color-black);
-
-        & > span {
-          display: inline-block;
-          vertical-align: middle;
-        }
       }
 
       &.hot {
         color: var(--color-red);
+
+        &:focus, &:hover, &:active {
+          color: color-mix(var(--color-red), var(--color-black) 50%);
+        }  
       }
 
       &:focus, &:hover, &:active {

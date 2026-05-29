@@ -35,7 +35,7 @@ input, button {
   vertical-align: middle;
   
   & .gap {
-    width: .25rem;
+    --gap: .5rem;
   }
 
   & .logo {

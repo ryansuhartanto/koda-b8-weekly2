@@ -7,14 +7,11 @@
 
   <title>Document</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin>
+
+  <link rel="preconnect" href="https://unpkg.com/">
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" crossorigin>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,9 +26,7 @@
           <tbody>
             <tr>
               <td class="location">
-                <span class="material-symbols-outlined">
-                  location_on
-                </span>
+                <i class="icon-map-pin"></i>
                 Kirim ke: Jakarta Selatan
               </td>
               <td class="space"></td>
@@ -70,10 +65,8 @@
                   <input type="text" name="q" autocomplete="off" placeholder="Cari produk, merek, kategori...">
                 </td>
                 <td class="submit">
-                  <button type="submit">
-                    <span class="material-symbols-outlined">
-                      search
-                    </span>
+                  <button type="submit" aria-label="Search">
+                    <i class="icon-search"></i>
                   </button>
                 </td>
               </tr>
@@ -88,32 +81,25 @@
             <tbody>
               <tr>
                 <td>
-                  <a href="">
-                    <span class="material-symbols-outlined">
-                      notifications
-                    </span>
+                  <a aria-label="Notifications" href="">
+                    <i class="icon-bell"></i>
                   </a>
                 </td>
                 <td>
-                  <a href="">
-                    <span class="material-symbols-outlined">
-                      person
-                    </span>
+                  <a aria-label="User" href="">
+                    <i class="icon-user"></i>
+                    <span class="gap"></span>
                     <span class="user">Budi</span>
                   </a>
                 </td>
                 <td>
-                  <a href="">
-                    <span class="material-symbols-outlined">
-                      favorite
-                    </span>
+                  <a aria-label="Favorite" href="">
+                    <i class="icon-heart"></i>
                   </a>
                 </td>
                 <td>
-                  <a href="">
-                    <span class="material-symbols-outlined">
-                      shopping_cart
-                    </span>
+                  <a aria-label="Cart " href="">
+                    <i class="icon-shopping-cart"></i>
                   </a>
                 </td>
               </tr>
@@ -128,13 +114,9 @@
     <nav aria-label="Main navigations">
       <div class="inset">
         <a class="all" href="">
-          <span class="material-symbols-outlined">
-            menu
-          </span>
-          <span>Semua Kategori</span>
-          <span class="material-symbols-outlined">
-            keyboard_arrow_down
-          </span>
+          <i class="icon-menu"></i>
+          Semua Kategori
+          <i class="icon-chevron-down"></i>
         </a>
         <a href="">💻 Electronic</a>
         <a href="">👗 Fashion</a>
@@ -147,7 +129,7 @@
     </nav>
   </header>
 
-  <main>
+  <main style="height: 100dvh; background-color: var(--color-blue);">
 
   </main>
 
