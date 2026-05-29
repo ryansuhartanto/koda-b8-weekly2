@@ -130,7 +130,7 @@ header {
   }
 
   & > hr {
-    color: color-mix(var(--color-black), transparent 90%);
+    border-color: color-mix(var(--color-black), transparent 90%);
   }
 
   & > nav {
