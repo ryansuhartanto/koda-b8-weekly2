@@ -4,6 +4,11 @@
   margin-inline: auto;
 }
 
+table.full {
+  table-layout: fixed;
+  width: 100%;
+}
+
 table.nowrap td {
   white-space: nowrap;;  
 }

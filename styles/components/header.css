@@ -90,7 +90,7 @@ header {
       display: inline-block;
       vertical-align: middle;
 
-      --gap: 0.125rem;
+      --gap: .5rem;
 
       & [class^="icon-"] {
         color: var(--color-slate-3);

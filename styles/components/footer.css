@@ -16,6 +16,105 @@ footer {
     padding-block: 2rem;;
   }
 
+  & div.inset > table {
+    margin: -2rem;
+    border-spacing: 2rem;
+
+    & > tbody > tr > td {
+      vertical-align: top;
+    }
+  }
+
+  & > nav {
+    & .brand {
+      color: var(--color-white);
+
+      & .type {
+        font-size: 1.125rem; /* 18 px */;
+      }
+    }
+
+    & section[aria-label="Description"] {
+      padding-block: 1rem;
+      line-height: 1.625;
+    }
+
+    & section[aria-label="Links"] {
+      --gap: .25rem;
+
+      & > a {
+        display: inline-block;
+
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100%;
+        
+        background-color: var(--color-slate-2);
+        text-align: center;
+        line-height: 2rem;
+
+        & > i {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    & h5 {
+      color: var(--color-white);
+      font-size: 1rem;
+
+      margin-block-end: 1rem;
+    }
+
+    & ul {
+      margin: 0;;
+      padding: 0;
+      list-style-type: none;
+
+      & > li {
+        padding-block: 0.5rem;
+      }
+    }
+
+    & section[aria-label="Newsletter"] {
+      margin-block-start: 1rem;
+      
+      padding: 1rem;
+      border-radius: .5rem;;
+      
+      background-color: var(--color-slate-2);
+
+      --gap: 0.125;
+
+      & h6 {
+        margin-block-end: 1rem;
+
+        font-size: .75rem;;
+      }
+
+      & .input, .submit {
+        padding: .5rem;
+        border-radius: .375rem;
+      }
+
+      & .input {
+        padding-inline: .75rem;
+        
+        background-color: var(--color-slate-2);
+
+        border-width: 1px;
+        border-style: solid;
+        border-color: color-mix(var(--color-white), transparent 90%);
+      }
+
+      & .submit {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+      }
+    }
+  }
+
   & > section[aria-label="Copyright"] {
     padding-block: 1rem;
 
