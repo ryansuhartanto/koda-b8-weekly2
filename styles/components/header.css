@@ -1,12 +1,6 @@
 header {
   font-size: .875rem;
 
-  & .material-symbols-outlined {
-    font-variation-settings: 
-      'GRAD' 200,
-      'opsz' 20;
-  }
-
   & > section[aria-label="Utility bar"] {
     background-color: var(--color-blue);
     color: var(--color-white);

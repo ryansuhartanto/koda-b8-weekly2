@@ -10,10 +10,6 @@ body {
   color: var(--color-black);
 }
 
-.material-symbols-outlined {
-  font-size: inherit;
-}
-
 table {
   table-layout: auto;
   overflow: hidden;
