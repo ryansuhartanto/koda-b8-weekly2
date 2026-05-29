@@ -3,3 +3,7 @@
   padding-inline: 1rem; /* 16px */
   margin-inline: auto;
 }
+
+td.space {
+  width: 100%;
+}
