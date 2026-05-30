@@ -36,6 +36,8 @@ small, input, button {
 }
 
 input, button {
+  padding: 0;
+
   border: none;
   background: none;
 

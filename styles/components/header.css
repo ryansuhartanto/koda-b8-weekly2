@@ -7,12 +7,14 @@ header {
 
     font-size: .75rem;
     padding-block: .375rem; /* 6px */
+
+    --gap: 1rem
   }
 
   & > section[aria-label="Main header"] {
     padding-block: .5rem;
 
-    --gap: .5rem;
+    --gap: 1rem;
 
     & [class^="icon-"] {
       font-size: 1.25rem;
@@ -22,44 +24,47 @@ header {
       vertical-align: middle;
     }
 
-    & .brand {
-      padding-block: .25rem;
+    & .brand .type {
+      font-size: 1rem; /* 16px */
     }
 
     & form {
       display: inline-block;
 
+      border-width: 1px;
+      border-style: solid;
+      border-color: color-mix(var(--color-black), transparent 90%);
+      border-radius: .75rem;
+
+      overflow: hidden;
+      
+      &:has(:focus-within) {
+        border-color: color-mix(var(--color-black), transparent 50%);
+      }
+
+      transition-property: border-color;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+
       & > table {
-        max-width: 36rem;
         background-color: var(--color-gray-2);
-        
-        border-width: 1px;
-        border-style: solid;
-        border-color: color-mix(var(--color-black), transparent 90%);
-        border-radius: .75rem;
-        
-        transition-property: border-color;
-        transition-duration: .2s;
-        transition-timing-function: ease-out;
+
+        --gap: .5rem;
 
         & [class^="icon-"] {
           font-size: 1rem;
-        }
-        
-        &:has(:focus-within) {
-          border-color: color-mix(var(--color-black), transparent 50%);
         }
 
         & td {
           height: 2.5rem;
 
           &.input {
-            padding-inline: 1rem;
-            width: 100%;
+            padding-inline: 1rem;;
+            width: 32rem;
           }
           
           &.submit {
-            padding-inline: .75rem;
+            padding-inline: 1rem;
 
             background-color: var(--color-blue);
             color: var(--color-white);
@@ -90,7 +95,8 @@ header {
       display: inline-block;
       vertical-align: middle;
 
-      --gap: .5rem;
+      margin-inline: .5rem;
+      --gap: 1.5rem;
 
       & [class^="icon-"] {
         color: var(--color-slate-4);
@@ -99,7 +105,6 @@ header {
       & table {
         & td {
           height: 2.5rem;
-          padding-inline: .75rem;
         }
         
         & span {
@@ -110,6 +115,10 @@ header {
           vertical-align: middle;
         }
       }
+
+      & .user {
+        margin-inline-start: .5rem;
+      }
     }
   }
 
@@ -118,12 +127,16 @@ header {
   }
 
   & > nav {
-    padding-block: .5rem;
+    padding-block: .75rem;
+
+    & [class^="icon-"] {
+      font-size: 0.75rem; /* 12px */
+    }
 
     & a {
       color: var(--color-slate-4);
 
-      padding-inline: .875rem;
+      padding-inline: 1rem;
 
       white-space: nowrap;;
 

@@ -16,8 +16,3 @@ table.nowrap td {
 td.space {
   width: 100%;
 }
-
-.gap {
-  display: inline-block;
-  width: var(--gap, 1rem);
-}
