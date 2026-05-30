@@ -93,7 +93,7 @@ header {
       --gap: .5rem;
 
       & [class^="icon-"] {
-        color: var(--color-slate-3);
+        color: var(--color-slate-4);
       }
 
       & table {
@@ -121,7 +121,7 @@ header {
     padding-block: .5rem;
 
     & a {
-      color: var(--color-slate-3);
+      color: var(--color-slate-4);
 
       padding-inline: .875rem;
 

@@ -7,7 +7,7 @@ footer {
   }
 
   & > hr {
-    border-color: var(--color-slate-2);
+    border-color: var(--color-slate-3);
   }
 
   font-size: .875rem; /* 14px */
@@ -49,7 +49,7 @@ footer {
         height: 2rem;
         border-radius: 100%;
         
-        background-color: var(--color-slate-2);
+        background-color: var(--color-slate-3);
         text-align: center;
         line-height: 2rem;
 
@@ -83,7 +83,7 @@ footer {
       padding: 1rem;
       border-radius: .5rem;;
       
-      background-color: var(--color-slate-2);
+      background-color: var(--color-slate-3);
 
       --gap: 0.125;
 
@@ -101,7 +101,7 @@ footer {
       & .input {
         padding-inline: .75rem;
         
-        background-color: var(--color-slate-2);
+        background-color: var(--color-slate-3);
 
         border-width: 1px;
         border-style: solid;
@@ -119,6 +119,6 @@ footer {
     padding-block: 1rem;
 
     font-size: .75rem; /* 12px */
-    color: var(--color-slate-3);
+    color: var(--color-slate-4);
   }
 }

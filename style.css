@@ -16,7 +16,7 @@ table {
 }
 
 input::placeholder {
-  color: var(--color-slate-3);
+  color: var(--color-slate-4);
 }
 
 input, button {
