@@ -54,11 +54,6 @@ footer {
         background-color: var(--color-slate-3);
         text-align: center;
         line-height: 2rem;
-
-        & > i {
-          display: inline-block;
-          vertical-align: middle;
-        }
       }
     }
 
@@ -97,9 +92,9 @@ footer {
       
       background-color: var(--color-slate-2);
       padding: 1rem;
-      border-radius: .5rem;;
+      border-radius: .5rem;
       
-      font-size: .75rem;;
+      font-size: .75rem;
 
       & h6 {
         margin-block-end: 1rem;
@@ -126,6 +121,34 @@ footer {
       & .submit {
         background-color: var(--color-blue);
         color: var(--color-white);
+      }
+    }
+  }
+
+  & > section[aria-label="Promotions"] {
+    & td {
+      & > table {
+        --gap: 1rem;
+      }
+
+      &.icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        overflow: hidden;
+
+        background-color: color-mix(var(--color-blue), transparent 80%);
+        color: var(--color-blue);
+
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+      }
+
+      font-size: .75rem;
+
+      & h6 {
+        font-size: .875rem;
       }
     }
   }
