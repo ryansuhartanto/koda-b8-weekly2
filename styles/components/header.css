@@ -1,4 +1,6 @@
 header {
+  background-color: var(--color-white);
+
   font-size: .875rem;
 
   & > section[aria-label="Utility bar"] {
