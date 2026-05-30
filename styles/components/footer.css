@@ -16,11 +16,11 @@ footer {
     padding-block: 2rem;;
   }
 
-  & div.inset > table {
-    margin: -2rem;
-    border-spacing: 2rem;
+  & table:not(table table) {
+    --gap: 2rem;
+    --count: 4;
 
-    & > tbody > tr > td {
+    & td:not(td td) {
       vertical-align: top;
     }
   }
@@ -40,14 +40,17 @@ footer {
     }
 
     & section[aria-label="Links"] {
-      --gap: .25rem;
+      & table {
+        --gap: .5rem;
+      }
 
-      & > a {
+      & a {
         display: inline-block;
 
         width: 2rem;
         height: 2rem;
         border-radius: 100%;
+        overflow: hidden;
         
         background-color: var(--color-slate-3);
         text-align: center;
@@ -75,32 +78,45 @@ footer {
       & > li {
         padding-block: 0.5rem;
       }
+
+      &.icon > li {
+        padding-inline-start: 1.5rem;
+        
+        position: relative;
+
+        & i[class^="icon-"] {
+          position: absolute;
+          left: 0;
+
+          font-size: 1rem;
+        }
+      }
     }
 
     & section[aria-label="Newsletter"] {
       margin-block-start: 1rem;
       
+      background-color: var(--color-slate-2);
       padding: 1rem;
       border-radius: .5rem;;
       
-      background-color: var(--color-slate-3);
-
-      --gap: 0.125;
+      font-size: .75rem;;
 
       & h6 {
         margin-block-end: 1rem;
+      }
 
-        font-size: .75rem;;
+      & table {
+        --gap: .5rem;
       }
 
       & .input, .submit {
         padding: .5rem;
+        padding-inline: .75rem;
         border-radius: .375rem;
       }
 
       & .input {
-        padding-inline: .75rem;
-        
         background-color: var(--color-slate-3);
 
         border-width: 1px;
@@ -120,5 +136,9 @@ footer {
 
     font-size: .75rem; /* 12px */
     color: var(--color-slate-4);
+
+    & table {
+      --gap: 1rem;
+    }
   }
 }

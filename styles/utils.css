@@ -6,7 +6,10 @@
 
 table.full {
   table-layout: fixed;
-  width: 100%;
+  
+  & td:not(td td) {
+    width: calc(100% / var(--count));
+  }
 }
 
 table.nowrap td {
