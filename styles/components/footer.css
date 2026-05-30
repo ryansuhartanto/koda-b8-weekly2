@@ -18,7 +18,6 @@ footer {
 
   & table:not(table table) {
     --gap: 2rem;
-    --count: 4;
 
     & td:not(td td) {
       vertical-align: top;
