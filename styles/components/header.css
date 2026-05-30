@@ -1,7 +1,8 @@
 header {
   position: sticky;
   inset: 0;
-  bottom: auto;
+  inset-block-end: auto;
+  z-index: 50;
 
   background-color: var(--color-white);
 
