@@ -4,6 +4,7 @@
 
 @import url("styles/components/footer.css");
 @import url("styles/components/header.css");
+@import url("styles/components/main.css");
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
