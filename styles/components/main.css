@@ -96,6 +96,7 @@ section[aria-label="Hero"] {
       inset-block: 0;
       margin-block: auto;
       
+      inset-inline-start: 1rem;
       inset-inline-end: 60%;
 
       --gap: 1rem;
