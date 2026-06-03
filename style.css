@@ -12,13 +12,6 @@ body {
   color: var(--color-black);
 }
 
-table {
-  margin: calc(var(--gap, 0) * -1);
-  border-spacing: var(--gap, 0);
-
-  table-layout: auto;
-}
-
 input::placeholder {
   color: var(--color-slate-4);
 }

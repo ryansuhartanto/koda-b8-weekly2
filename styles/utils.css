@@ -75,16 +75,3 @@
 .vertical-middle > * {
   vertical-align: middle;
 }
-
-table.full {
-  table-layout: fixed;
-  width: calc(100% + var(--gap) * 2);
-}
-
-table.nowrap td {
-  white-space: nowrap;
-}
-
-td.space {
-  width: 100%;
-}
