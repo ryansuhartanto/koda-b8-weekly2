@@ -6,6 +6,10 @@ body > main.homepage {
       font-size: 0.875rem; /* 14rem */
 
       & h2 {
+        & [class^="icon-"] {
+          color: var(--color-blue)
+        }
+
         font-size: 1.25rem; /* 20px */
         font-weight: 500;
       }
