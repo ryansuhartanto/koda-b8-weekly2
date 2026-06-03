@@ -19,14 +19,11 @@ header {
   & > section[aria-label="Main header"] {
     padding-block: 0.5rem;
 
-    --gap: 1rem;
-
     & [class^="icon-"] {
       font-size: 1.25rem;
     }
 
-    & .brand,
-    & .brand .type {
+    & .brand {
       font-size: 1rem; /* 16px */
     }
 
