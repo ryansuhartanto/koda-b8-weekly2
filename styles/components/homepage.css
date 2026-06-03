@@ -45,5 +45,62 @@ body > main.homepage {
         color: var(--color-white);
       }
     }
+
+    &.marketing {
+      & .card {
+        font-size: 0.875rem;
+        line-height: 1.5;
+
+        height: 11rem;
+        background-position: center;
+        background-size: cover;
+        color: var(--color-white);
+
+        & .content {
+          margin: 1.5rem;
+        }
+
+        &.fashion {
+          background-image:
+            linear-gradient(
+              in oklch to right,
+              color-mix(var(--color-black) 60%, transparent),
+              transparent
+            ),
+            url("../../images/marketing/fashion.png");
+        }
+
+        &.electronic {
+          background-image:
+            linear-gradient(
+              in oklch to right,
+              color-mix(var(--color-blue) 60%, transparent),
+              transparent
+            ),
+            url("../../images/marketing/electronic.png");
+        }
+
+        & .category {
+          color: color-mix(var(--color-white) 80%, transparent);
+        }
+
+        & strong {
+          font-size: 1.25rem;
+          font-size: 700;
+        }
+
+        & .cta {
+          width: fit-content;
+
+          padding: 0.25rem;
+          padding-inline: 0.75rem;
+
+          border-radius: 0.5rem;
+          border-style: solid;
+          border-color: var(--color-white);
+          border-width: 1px;
+        }
+      }
+    }
   }
 }
