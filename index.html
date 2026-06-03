@@ -130,7 +130,7 @@
       </div>
     </section>
 
-    <section aria-label="Browse categories">
+    <section class="categories">
       <div class="inset flex block gap-1.5">
         <header class="flex justify-space-between">
           <h2>Belanja Bedasarkan Kategori</h2>
@@ -195,10 +195,20 @@
       </div>
     </section>
 
-    <section>
+    <section class="hot">
       <div class="inset flex block gap-1.5">
         <header class="flex justify-space-between">
-          <h2>Flash Deal</h2>
+          <div class="flex gap-1 align-center">
+            <h2 class="flex gap-.25 align-center">
+              <i class="icon-zap"></i>
+              <span>Flash Deal</span>
+            </h2>
+            <span class="flex gap-.5 align-center">
+              <i class="icon-clock"></i>
+              <span>Berakhir dalam:</span>
+              <span class="tnum">05 : 21 : 38</span>
+            </span>
+          </div>
           <a href="">Lihat Semua <i class="icon-arrow-right"></i></a>
         </header>
         <div class="grid columns-4 gap-1">
@@ -358,7 +368,9 @@
       </div>
     </section>
 
+    <section>
 
+    </section>
   </main>
 
   <footer>
@@ -484,7 +496,7 @@
             </li>
           </ul>
           <form class="card">
-            <div class="content flex block gap-.5 align-center flex block gap-.5">
+            <div class="content flex block gap-.5 align-center">
               <label for="newsletter">Newsletter</label>
               <div class="flex gap-.5">
                 <input id="newsletter" type="email" placeholder="Email kamu" class="grow-1">
