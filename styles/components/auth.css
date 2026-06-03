@@ -1,6 +1,10 @@
 body > div.auth {
   height: 100dvh;
 
+  &.alt-ratio {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
   & .brand {
     font-weight: 600;
 
