@@ -30,14 +30,19 @@ button {
 }
 
 .brand {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-  text-align: center;
-  vertical-align: middle;
+  gap: 0.5rem;
+  user-select: none;
 
-  --gap: 0.5rem;
+  &::before {
+    content: "B";
 
-  & .logo {
+    display: grid;
+    place-content: center;
+
     width: 2rem;
     height: 2rem;
     border-radius: 0.5rem;
