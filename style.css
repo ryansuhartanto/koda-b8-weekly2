@@ -53,3 +53,18 @@ button {
     color: var(--color-white);
   }
 }
+
+.card {
+  background-color: var(--color-white);
+
+  border-color: color-mix(var(--color-white), transparent 90%);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  & .content {
+    margin: 1rem;
+  }
+}
