@@ -193,6 +193,8 @@ body > div.auth {
           background-color: var(--color-blue);
           font-size: 1rem;
           font-weight: 500;
+
+          cursor: pointer;
         }
       }
 
