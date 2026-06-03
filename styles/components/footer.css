@@ -1,4 +1,4 @@
-footer {
+body > footer {
   aside {
     position: fixed;
     inset-block-end: 1rem;

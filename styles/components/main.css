@@ -1,182 +1,174 @@
-section[aria-label="Hero"] {
-  position: relative;
-  height: 25rem; /* 400px */
+body > main {
+  margin-block: 3rem; /* 48px */
 
-  background-image: linear-gradient(
-    in oklch to right,
-    var(--color-blue),
-    var(--color-purple)
-  );
+  & > section[aria-label="Hero"] {
+    margin-block-start: -3rem;
 
-  & > nav {
-    position: absolute;
-    z-index: 10;
-    inset: 0;
+    position: relative;
+    height: 25rem; /* 400px */
 
-    margin: 1rem;
+    background-image: linear-gradient(
+      in oklch to right,
+      var(--color-blue),
+      var(--color-purple)
+    );
 
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    & > nav {
+      position: absolute;
+      z-index: 10;
+      inset: 0;
 
-    pointer-events: none;
+      margin: 1rem;
 
-    & > div {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
 
-      & > button {
-        width: 2.5rem;
-        height: 2.5rem;
+      pointer-events: none;
 
-        display: grid;
-        place-content: center;
+      & > div {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
 
-        font-size: 1.25rem;
+        & > button {
+          width: 2.5rem;
+          height: 2.5rem;
 
-        border-radius: 100rem;
-        background-color: color-mix(var(--color-white), transparent 80%);
-        color: var(--color-white);
+          display: grid;
+          place-content: center;
 
-        pointer-events: auto;
+          font-size: 1.25rem;
 
-        cursor: pointer;
+          border-radius: 100rem;
+          background-color: color-mix(var(--color-white), transparent 80%);
+          color: var(--color-white);
+
+          pointer-events: auto;
+
+          cursor: pointer;
+        }
+
+        &:has([aria-label="Previous"]) {
+          flex-direction: column;
+          grid-column: 1;
+          grid-row: 1 / 4;
+        }
+
+        &:has([aria-label="Next"]) {
+          flex-direction: column;
+          grid-column: 3;
+          grid-row: 1 / 4;
+        }
+
+        &:has([aria-selected]) {
+          grid-column: 2;
+          grid-row: 3;
+
+          & button {
+            width: 0.5rem;
+            height: 0.5rem;
+
+            background-color: color-mix(var(--color-white), transparent 50%);
+
+            transition-property: background-color width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-out;
+
+            &[aria-selected="true"] {
+              width: 1.5rem;
+
+              background-color: var(--color-white);
+            }
+          }
+        }
       }
+    }
 
-      &:has([aria-label="Previous"]) {
-        flex-direction: column;
-        grid-column: 1;
-        grid-row: 1 / 4;
-      }
+    & > img {
+      position: absolute;
+      inset: 0;
+      inset-inline-start: auto;
 
-      &:has([aria-label="Next"]) {
-        flex-direction: column;
-        grid-column: 3;
-        grid-row: 1 / 4;
-      }
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
 
-      &:has([aria-selected]) {
-        grid-column: 2;
-        grid-row: 3;
+      mix-blend-mode: hard-light;
+      opacity: 25%;
+    }
 
-        & button {
-          width: 0.5rem;
-          height: 0.5rem;
+    & > div.inset {
+      position: absolute;
+      inset: 0;
 
-          background-color: color-mix(var(--color-white), transparent 50%);
+      & > div {
+        width: 40%;
 
-          transition-property: background-color width;
-          transition-duration: 0.2s;
-          transition-timing-function: ease-out;
+        & h2 {
+          color: var(--color-white);
 
-          &[aria-selected="true"] {
-            width: 1.5rem;
+          font-weight: 700;
+          font-size: 2.5rem;
+          line-height: 1.25;
+        }
 
-            background-color: var(--color-white);
+        & p {
+          color: color-mix(var(--color-white), transparent 20%);
+
+          font-size: 1.125rem;
+          line-height: 1.625;
+        }
+
+        & a {
+          background-color: var(--color-white);
+          color: var(--color-blue);
+
+          padding: 0.75rem;
+          padding-inline: 1.5rem;
+          border-radius: 0.75rem;
+
+          & > * {
+            vertical-align: middle;
           }
         }
       }
     }
   }
 
-  & > img {
-    position: absolute;
-    inset: 0;
-    inset-inline-start: auto;
+  section {
+    & header {
+      & h3 {
+        font-size: 1.25rem; /* 20px */
+        font-weight: 500;
+      }
 
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
+      & a {
+        font-size: 0.875rem; /* 14rem */
 
-    mix-blend-mode: hard-light;
-    opacity: 25%;
-  }
+        color: var(--color-blue);
 
-  & > div.inset {
-    position: absolute;
-    inset: 0;
-    inset-inline-start: 1rem;
-    inset-inline-end: 60%;
-    margin-block: auto;
-
-    & h2 {
-      color: var(--color-white);
-
-      font-weight: 700;
-      font-size: 2.5rem;
-      line-height: 1.25;
-    }
-
-    & p {
-      color: color-mix(var(--color-white), transparent 20%);
-
-      font-size: 1.125rem;
-      line-height: 1.625;
-    }
-
-    & a {
-      background-color: var(--color-white);
-      color: var(--color-blue);
-
-      padding: 0.75rem;
-      padding-inline: 1.5rem;
-      border-radius: 0.75rem;
-
-      & > * {
-        vertical-align: middle;
+        & > * {
+          vertical-align: middle;
+        }
       }
     }
-  }
-}
 
-main > div.inset > section {
-  margin-block: 3rem; /* 48px */
-
-  & table {
-    --gap: 1rem;
-
-    &.tight {
-      --gap: 0.75rem;
-    }
-  }
-
-  & .header {
-    margin-block-end: 1.5rem;
-
-    --gap: unset;
-
-    & td > * {
-      vertical-align: middle;
+    & img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
     }
 
-    & h3 {
-      font-size: 1.25rem; /* 20px */
-      font-weight: 500;
-    }
+    &[aria-label="Browse categories"] {
+      font-size: 0.75rem;
 
-    & a {
-      font-size: 0.875rem; /* 14rem */
-
-      color: var(--color-blue);
-
-      & > * {
-        vertical-align: middle;
+      & .card {
+        border-radius: 0.75rem;
       }
-    }
-  }
-
-  &[aria-label="Browse categories"] {
-    font-size: 0.75rem;
-
-    text-align: center;
-
-    & table table {
-      --gap: 0.5rem;
 
       & img {
         width: 3.5rem;
-        height: 3.5rem;
         border-radius: 0.75rem;
       }
 
