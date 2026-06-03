@@ -26,81 +26,8 @@ header {
     }
 
     & .brand,
-    form {
-      vertical-align: middle;
-    }
-
     & .brand .type {
       font-size: 1rem; /* 16px */
-    }
-
-    & form {
-      display: inline-block;
-
-      border-width: 1px;
-      border-style: solid;
-      border-color: color-mix(var(--color-black), transparent 90%);
-      border-radius: 0.75rem;
-
-      overflow: hidden;
-
-      &:has(:focus-within) {
-        border-color: color-mix(var(--color-black), transparent 50%);
-      }
-
-      transition-property: border-color;
-      transition-duration: 0.2s;
-      transition-timing-function: ease-out;
-
-      & > table {
-        background-color: var(--color-gray-2);
-
-        --gap: 0.5rem;
-
-        & [class^="icon-"] {
-          font-size: 1rem;
-        }
-
-        & td {
-          height: 2.5rem;
-
-          &.input {
-            padding-inline: 1rem;
-            width: 32rem;
-          }
-
-          &.submit {
-            padding-inline: 1rem;
-
-            background-color: var(--color-blue);
-            color: var(--color-white);
-
-            transition-property: background-color;
-            transition-duration: 0.2s;
-            transition-timing-function: ease-out;
-
-            &:has(:focus-within, :hover) {
-              background-color: color-mix(
-                var(--color-blue),
-                var(--color-black) 20%
-              );
-            }
-
-            &:has(:active) {
-              background-color: color-mix(
-                var(--color-blue),
-                var(--color-black) 50%
-              );
-            }
-
-            & > button {
-              line-height: 0;
-
-              cursor: pointer;
-            }
-          }
-        }
-      }
     }
 
     & .links {
@@ -176,5 +103,57 @@ header {
         color: var(--color-black);
       }
     }
+  }
+}
+
+form.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  height: 2.5rem;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: color-mix(var(--color-black), transparent 90%);
+  border-radius: 0.75rem;
+
+  &:has(:focus-within) {
+    border-color: color-mix(var(--color-black), transparent 50%);
+  }
+
+  background-color: var(--color-gray-2);
+
+  overflow: hidden;
+
+  transition-property: border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+
+  & input {
+    padding-inline: 1rem;
+    min-width: 32rem;
+  }
+
+  & button {
+    padding-inline: 1rem;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    &:focus-within, &:hover {
+      background-color: color-mix(var(--color-blue), var(--color-black) 20%);
+    }
+
+    &:active {
+      background-color: color-mix(var(--color-blue), var(--color-black) 50%);
+    }
+
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
   }
 }
