@@ -4,6 +4,10 @@
   margin-inline: auto;
 }
 
+.w-fit {
+  width: fit-content;
+}
+
 .flex {
   display: flex;
 
@@ -33,7 +37,7 @@
   }
 
   &.align-center {
-    align-content: center;
+    align-items: center;
   }
 }
 
