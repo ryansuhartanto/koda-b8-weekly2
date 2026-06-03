@@ -13,6 +13,7 @@
 
   --color-purple: oklch(0.4981 0.2634 301.68); /* #8200DB */
   --color-blue: oklch(0.5737 0.1946 257.86); /* #1A73E8 */
+  --color-blue-dark: oklch(0.4242 0.1982 265.5); /* #193CB8 */
   --color-red: oklch(0.5771 0.2152 27.33) /* #DC2626 */;
   --color-yellow: oklch(0.830885 0.171389 81.5486); /* #FFBA00 */
 }

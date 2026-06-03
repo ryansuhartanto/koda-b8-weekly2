@@ -1,0 +1,204 @@
+body > div.auth {
+  height: 100dvh;
+
+  & .brand {
+    font-weight: 600;
+
+    &::before {
+      background-color: color-mix(var(--color-white) 20%, transparent);
+      backdrop-filter: blur(0.5rem);
+    }
+  }
+
+  & small {
+    font-size: 0.75rem;
+  }
+
+  & > .banner {
+    padding: 3rem;
+
+    color: color-mix(var(--color-white) 70%, transparent);
+    background-image:
+      linear-gradient(
+        in oklch to bottom right,
+        color-mix(var(--color-blue) 80%, transparent),
+        color-mix(var(--color-blue-dark) 80%, transparent)
+      ),
+      url("../../images/auth/login.jpg");
+    background-position: center;
+    background-size: cover;
+
+    & > div {
+      max-width: 20rem;
+    }
+
+    & header {
+      color: var(--color-white);
+    }
+
+    & h2 {
+      color: var(--color-white);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    & .rating {
+      font-size: 0.75rem;
+
+      & strong {
+        color: var(--color-white);
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        & svg {
+          width: 1.25rem;
+          aspect-ratio: 1;
+        }
+      }
+    }
+
+    & small {
+      color: color-mix(var(--color-white) 40%, transparent);
+    }
+  }
+
+  & > main {
+    & > .content {
+      width: 100%;
+      max-width: 28rem;
+
+      color: var(--color-slate-4);
+
+      & h1 {
+        color: var(--color-slate-1);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      & a {
+        color: var(--color-blue);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      & .sso {
+        & > a {
+          border-color: color-mix(var(--color-black) 10%, transparent);
+          border-style: solid;
+          border-width: 1px;
+          border-radius: 0.75rem;
+          padding: 0.75rem;
+
+          color: inherit;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      & .hr-text {
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        font-size: 0.75rem;
+
+        &::before,
+        &::after {
+          content: "";
+          flex: 1;
+          border-color: color-mix(var(--color-black) 10%, transparent);
+          border-block-end-width: 1px;
+          border-block-end-style: solid;
+        }
+
+        &::before {
+          margin-inline-end: 1rem;
+        }
+
+        &::after {
+          margin-inline-start: 1rem;
+        }
+      }
+
+      & form {
+        font-size: 0.875rem;
+
+        a {
+          font-size: 0.75rem;
+        }
+
+        & label:not(:has(input)) {
+          color: var(--color-slate-1);
+          font-weight: 500;
+        }
+
+        & label:has(input[type="email"]),
+        & label:has(input[type="password"]) {
+          border-color: color-mix(var(--color-black) 10%, transparent);
+          border-style: solid;
+          border-width: 1px;
+          border-radius: 0.75rem;
+
+          background-color: var(--color-gray-2);
+
+          overflow: hidden;
+
+          & [class^="icon-"] {
+            font-size: 1rem;
+            padding: 0.875rem;
+            padding-inline: 1rem;
+
+            position: absolute;
+          }
+
+          & input {
+            padding: 0.875rem;
+            padding-inline-start: 3rem;
+          }
+        }
+
+        & label:has(input[type="checkbox"]) {
+          font-weight: 500;
+
+          & input {
+            appearance: none;
+
+            width: 0.875rem;
+            aspect-ratio: 1;
+
+            border-color: color-mix(var(--color-black) 30%, transparent);
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 0.1875rem;
+            background-color: var(--color-white);
+
+            &:checked {
+              content: "";
+
+              border-color: var(--color-slate-4);
+              background-color: var(--color-slate-4);
+            }
+          }
+        }
+
+        & button[type="submit"] {
+          border-radius: 0.75rem;
+          padding: 0.875rem;
+
+          color: var(--color-white);
+          background-color: var(--color-blue);
+          font-size: 1rem;
+          font-weight: 500;
+        }
+      }
+
+      & small {
+        text-align: center;
+      }
+    }
+  }
+}
