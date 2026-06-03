@@ -138,7 +138,7 @@ body > main {
 
   section {
     & header {
-      & h3 {
+      & h2 {
         font-size: 1.25rem; /* 20px */
         font-weight: 500;
       }
@@ -160,6 +160,12 @@ body > main {
       object-fit: cover;
     }
 
+    color: var(--color-slate-4);
+
+    & h3 {
+      color: var(--color-slate-1);
+    }
+
     &[aria-label="Browse categories"] {
       font-size: 0.75rem;
 
@@ -171,14 +177,36 @@ body > main {
         width: 3.5rem;
         border-radius: 0.75rem;
       }
+    }
+  }
+}
 
-      & h4 {
-        color: var(--color-slate-1);
+.product {
+  & > h3,
+  & > div {
+    font-size: 0.875rem;
+
+    & > output {
+      &.star-1 {
+        & > svg
       }
 
-      & p {
-        color: var(--color-slate-4);
+      & > svg {
+        width: 0.75rem;
+        aspect-ratio: 1;
       }
     }
+
+  }
+
+  & > p > span,
+  & > p > ins {
+    color: var(--color-blue);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  & > p > del {
+    font-size: 0.75rem;
   }
 }

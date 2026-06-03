@@ -12,6 +12,10 @@ body {
   color: var(--color-black);
 }
 
+.tnum {
+  font-feature-settings: "tnum" 1;
+}
+
 input::placeholder {
   color: var(--color-slate-4);
 }
