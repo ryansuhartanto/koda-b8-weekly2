@@ -154,6 +154,68 @@ body > main {
       }
     }
 
+    & article {
+      position: relative;
+
+      .badge {
+        position: absolute;
+        inset-block-start: 0.5rem;
+        inset-inline-start: 0.5rem;
+
+        padding: 0.25rem;
+        padding-inline: 0.5rem;
+        border-radius: 100rem;
+
+        color: var(--color-white);
+        background-color: var(--color-red);
+        font-size: 0.75rem;
+      }
+
+      .product {
+        & > h3,
+        & > div {
+          font-size: 0.875rem;
+
+          & > output {
+            & > svg {
+              width: 0.875rem;
+              aspect-ratio: 1;
+              color: var(--color-gray-3);
+            }
+
+            &.star-1 > svg:nth-child(-n + 1) {
+              color: var(--color-yellow);
+            }
+            &.star-2 > svg:nth-child(-n + 2) {
+              color: var(--color-yellow);
+            }
+            &.star-3 > svg:nth-child(-n + 3) {
+              color: var(--color-yellow);
+            }
+            &.star-4 > svg:nth-child(-n + 4) {
+              color: var(--color-yellow);
+            }
+            &.star-5 > svg:nth-child(-n + 5) {
+              color: var(--color-yellow);
+            }
+          }
+        }
+
+        & > p > span,
+        & > p > ins {
+          color: var(--color-blue);
+          font-size: 1rem;
+          font-weight: 500;
+
+          text-decoration: none;
+        }
+
+        & > p > del {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
     & img {
       width: 100%;
       aspect-ratio: 1 / 1;
@@ -178,35 +240,5 @@ body > main {
         border-radius: 0.75rem;
       }
     }
-  }
-}
-
-.product {
-  & > h3,
-  & > div {
-    font-size: 0.875rem;
-
-    & > output {
-      &.star-1 {
-        & > svg
-      }
-
-      & > svg {
-        width: 0.75rem;
-        aspect-ratio: 1;
-      }
-    }
-
-  }
-
-  & > p > span,
-  & > p > ins {
-    color: var(--color-blue);
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  & > p > del {
-    font-size: 0.75rem;
   }
 }
