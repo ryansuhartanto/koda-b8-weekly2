@@ -4,6 +4,40 @@
   margin-inline: auto;
 }
 
+.flex {
+  display: flex;
+
+  flex-direction: row;
+  &.block {
+    flex-direction: column;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &.block.reverse {
+    flex-direction: column-reverse;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+
+  &.align-center {
+    align-content: center;
+  }
+
+  &.gap-1 {
+    gap: 1rem;
+  }
+}
+
+.vertical-middle > * {
+  vertical-align: middle;
+}
+
 table.full {
   table-layout: fixed;
   width: calc(100% + var(--gap) * 2);
