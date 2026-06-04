@@ -24,7 +24,8 @@ h6 {
 }
 
 p,
-hr {
+hr,
+input {
   margin: 0;
 }
 

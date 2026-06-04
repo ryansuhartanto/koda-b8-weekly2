@@ -57,25 +57,34 @@
     <main class="flex justify-center align-center">
       <div class="content flex block gap-2">
         <div class="flex block gap-.5">
-          <h1>Masuk ke Akun</h1>
-          <p>Belum punya akun? <a href="">Daftar gratis</a></p>
+          <h1>Buat Akun Baru</h1>
+          <p>Sudah punya akun? <a href="">Masuk di sini</a></p>
         </div>
         <div class="sso grid columns-2 gap-1">
           <a href="" class="flex gap-.5 justify-center align-center">
             <i class="si si-google"></i>
-            Google
+            Daftar via Google
           </a>
           <a href="" class="flex gap-.5 justify-center align-center">
             <i class="si si-facebook"></i>
-            Facebook
+            Daftar via Facebook
           </a>
         </div>
 
         <div class="hr-text">
-          atau masuk dengan email
+          atau daftar dengan email
         </div>
 
-        <form class="flex block gap-2">
+        <form class="flex block gap-1">
+          <div class="flex block gap-.25">
+            <div class="flex justify-space-between">
+              <label for="name">Nama Lengkap</label>
+            </div>
+            <label class="flex">
+              <i class="icon-user"></i>
+              <input type="text" name="name" id="name" placeholder="Nama lengkap kamu" autocomplete="name">
+            </label>
+          </div>
           <div class="flex block gap-.25">
             <div class="flex justify-space-between">
               <label for="email">Email</label>
@@ -88,17 +97,32 @@
           <div class="flex block gap-.25">
             <div class="flex justify-space-between">
               <label for="password">Kata Sandi</label>
-              <a href="">Lupa kata sandi?</a>
             </div>
             <label class="flex">
               <i class="icon-lock"></i>
-              <input type="password" name="password" id="password" autocomplete="current-password"
-                placeholder="Masukkan kata sandi">
+              <input type="password" name="password" id="password" autocomplete="new-password"
+                placeholder="Minimal 6 karaktur">
             </label>
           </div>
-          <label class="flex gap-.5 align-center">
+          <div class="flex block gap-.25">
+            <div class="flex justify-space-between">
+              <label for="password-repeat">Konfirmasi Kata Sandi</label>
+            </div>
+            <label class="flex">
+              <i class="icon-lock"></i>
+              <input type="password" name="password-repeat" id="password-repeat" autocomplete="new-password"
+                placeholder="Ulangi kata sandi">
+            </label>
+          </div>
+          <label class="flex gap-.5">
             <input type="checkbox" name="remember">
-            <span>Ingat saya selama 30 hari</span>
+            <span>
+              Saya sudah menyetujui
+              <a href="">Syarat &amp; Ketentuan</a>
+              dan
+              <a href="">Kebijakan Privasi</a>
+              BeliMudah.
+            </span>
           </label>
           <button type="submit" class="flex gap-.5 justify-center align-center">
             <i class="icon-log-in"></i>
@@ -107,14 +131,6 @@
         </form>
 
         <small>🔒 Login aman dengan enkripsi SSL 256-bit</small>
-
-        <small>
-          Dengan masuk, kamu menyetujui
-          <a href="">Syarat &amp; Ketentuan</a>
-          dan
-          <a href="">Kebijakan Privasi</a>
-          kami.
-        </small>
       </div>
     </main>
   </div>
