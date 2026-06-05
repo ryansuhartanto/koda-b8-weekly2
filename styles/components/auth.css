@@ -9,7 +9,11 @@ body > div.auth {
     font-weight: 600;
 
     &::before {
-      background-color: color-mix(var(--color-white) 20%, transparent);
+      background-color: color-mix(
+        in oklch,
+        var(--color-white) 20%,
+        transparent
+      );
       backdrop-filter: blur(0.5rem);
     }
   }
@@ -21,12 +25,12 @@ body > div.auth {
   & > .banner {
     padding: 3rem;
 
-    color: color-mix(var(--color-white) 70%, transparent);
+    color: color-mix(in oklch, var(--color-white) 70%, transparent);
     background-image:
       linear-gradient(
         in oklch to bottom right,
-        color-mix(var(--color-blue) 80%, transparent),
-        color-mix(var(--color-blue-dark) 80%, transparent)
+        color-mix(in oklch, var(--color-blue) 80%, transparent),
+        color-mix(in oklch, var(--color-blue-dark) 80%, transparent)
       ),
       url("../../images/auth/login.jpg");
     background-position: center;
@@ -62,7 +66,7 @@ body > div.auth {
     }
 
     & small {
-      color: color-mix(var(--color-white) 40%, transparent);
+      color: color-mix(in oklch, var(--color-white) 40%, transparent);
     }
   }
 
@@ -89,13 +93,10 @@ body > div.auth {
 
       & .sso {
         & > a {
-          border-color: color-mix(var(--color-black) 10%, transparent);
-          border-style: solid;
-          border-width: 1px;
+          border: 1px solid
+            color-mix(in oklch, var(--color-black) 10%, transparent);
           border-radius: 0.75rem;
           padding: 0.75rem;
-
-          color: inherit;
 
           &:hover {
             text-decoration: none;
@@ -114,9 +115,8 @@ body > div.auth {
         &::after {
           content: "";
           flex: 1;
-          border-color: color-mix(var(--color-black) 10%, transparent);
-          border-block-end-width: 1px;
-          border-block-end-style: solid;
+          border-block-end: 1px solid
+            color-mix(in oklch, var(--color-black) 10%, transparent);
         }
 
         &::before {
@@ -143,9 +143,8 @@ body > div.auth {
         & label:has(input[type="text"]),
         & label:has(input[type="email"]),
         & label:has(input[type="password"]) {
-          border-color: color-mix(var(--color-black) 10%, transparent);
-          border-style: solid;
-          border-width: 1px;
+          border: 1px solid
+            color-mix(in oklch, var(--color-black) 10%, transparent);
           border-radius: 0.75rem;
 
           background-color: var(--color-gray-2);
@@ -175,9 +174,8 @@ body > div.auth {
             width: 0.875rem;
             aspect-ratio: 1;
 
-            border-color: color-mix(var(--color-black) 30%, transparent);
-            border-style: solid;
-            border-width: 1px;
+            border: 1px solid
+              color-mix(in oklch, var(--color-black) 30%, transparent);
             border-radius: 0.1875rem;
             margin: 1px;
             background-color: var(--color-white);
@@ -199,8 +197,6 @@ body > div.auth {
           background-color: var(--color-blue);
           font-size: 1rem;
           font-weight: 500;
-
-          cursor: pointer;
         }
       }
 

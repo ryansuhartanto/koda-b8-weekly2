@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+
+  color: inherit;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: revert;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}

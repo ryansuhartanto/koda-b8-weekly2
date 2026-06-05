@@ -2,7 +2,7 @@ body > main > section[aria-label="Hero"] {
   margin-block-start: -3rem;
 
   position: relative;
-  height: 25rem; /* 400px */
+  height: 25rem;
 
   background-image: linear-gradient(
     in oklch to right,
@@ -38,12 +38,14 @@ body > main > section[aria-label="Hero"] {
         font-size: 1.25rem;
 
         border-radius: 100rem;
-        background-color: color-mix(var(--color-white), transparent 80%);
+        background-color: color-mix(
+          in oklch,
+          var(--color-white),
+          transparent 80%
+        );
         color: var(--color-white);
 
         pointer-events: auto;
-
-        cursor: pointer;
       }
 
       &:has([aria-label="Previous"]) {
@@ -66,7 +68,11 @@ body > main > section[aria-label="Hero"] {
           width: 0.5rem;
           height: 0.5rem;
 
-          background-color: color-mix(var(--color-white), transparent 50%);
+          background-color: color-mix(
+            in oklch,
+            var(--color-white),
+            transparent 50%
+          );
 
           transition-property: background-color width;
           transition-duration: 0.2s;
@@ -111,7 +117,7 @@ body > main > section[aria-label="Hero"] {
       }
 
       & p {
-        color: color-mix(var(--color-white), transparent 20%);
+        color: color-mix(in oklch, var(--color-white), transparent 20%);
 
         font-size: 1.125rem;
         line-height: 1.625;
