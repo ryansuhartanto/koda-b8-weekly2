@@ -111,4 +111,12 @@ body > main.homepage {
       }
     }
   }
+
+  & > footer {
+    text-align: center;
+
+    & .content {
+      margin: 2rem;
+    }
+  }
 }
