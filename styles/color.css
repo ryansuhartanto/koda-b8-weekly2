@@ -1,7 +1,6 @@
 :root {
   --color-black: oklch(0 0 0); /* #000 */
   --color-white: oklch(1 0 0); /* #FFF */
-
   --color-gray-1: oklch(0.9816 0.0017 247.84); /* #F8F9FA */
   --color-gray-2: oklch(0.967 0.0029 264.54); /* #F3F4F6 */
   --color-gray-3: oklch(0.872 0.0106 261.79); /* #D1D5DC */
@@ -10,10 +9,767 @@
   --color-slate-2: oklch(0.2784 0.0335 257.67); /* #1E2939 */
   --color-slate-3: oklch(0.3731 0.0343 260.17); /* #364153 */
   --color-slate-4: oklch(0.551 0.0234 264.36); /* #6B7280 */
-
   --color-purple: oklch(0.4981 0.2634 301.68); /* #8200DB */
   --color-blue: oklch(0.5737 0.1946 257.86); /* #1A73E8 */
   --color-blue-dark: oklch(0.4242 0.1982 265.5); /* #193CB8 */
   --color-red: oklch(0.5771 0.2152 27.33) /* #DC2626 */;
   --color-yellow: oklch(0.830885 0.171389 81.5486); /* #FFBA00 */
 }
+
+.text-black {
+  color: color-mix(in oklch, var(--color-black), transparent var(--text\/, 0%));
+}
+
+.bg-black {
+  background-color: color-mix(in oklch, var(--color-black), transparent var(--bg\/, 0%));
+}
+
+.border-black {
+  border-color: color-mix(in oklch, var(--color-black), transparent var(--border\/, 0%));
+}
+
+.outline-black {
+  outline-color: color-mix(in oklch, var(--color-black), transparent var(--outline\/, 0%));
+}
+
+.decoration-black {
+  text-decoration-color: color-mix(in oklch, var(--color-black), transparent var(--decoration\/, 0%));
+}
+
+.caret-black {
+  caret-color: color-mix(in oklch, var(--color-black), transparent var(--caret\/, 0%));
+}
+
+.accent-black {
+  accent-color: color-mix(in oklch, var(--color-black), transparent var(--accent\/, 0%));
+}
+
+.fill-black {
+  fill: color-mix(in oklch, var(--color-black), transparent var(--fill\/, 0%));
+}
+
+.stroke-black {
+  stroke: color-mix(in oklch, var(--color-black), transparent var(--stroke\/, 0%));
+}
+
+.text-white {
+  color: color-mix(in oklch, var(--color-white), transparent var(--text\/, 0%));
+}
+
+.bg-white {
+  background-color: color-mix(in oklch, var(--color-white), transparent var(--bg\/, 0%));
+}
+
+.border-white {
+  border-color: color-mix(in oklch, var(--color-white), transparent var(--border\/, 0%));
+}
+
+.outline-white {
+  outline-color: color-mix(in oklch, var(--color-white), transparent var(--outline\/, 0%));
+}
+
+.decoration-white {
+  text-decoration-color: color-mix(in oklch, var(--color-white), transparent var(--decoration\/, 0%));
+}
+
+.caret-white {
+  caret-color: color-mix(in oklch, var(--color-white), transparent var(--caret\/, 0%));
+}
+
+.accent-white {
+  accent-color: color-mix(in oklch, var(--color-white), transparent var(--accent\/, 0%));
+}
+
+.fill-white {
+  fill: color-mix(in oklch, var(--color-white), transparent var(--fill\/, 0%));
+}
+
+.stroke-white {
+  stroke: color-mix(in oklch, var(--color-white), transparent var(--stroke\/, 0%));
+}
+
+.text-gray-1 {
+  color: color-mix(in oklch, var(--color-gray-1), transparent var(--text\/, 0%));
+}
+
+.bg-gray-1 {
+  background-color: color-mix(in oklch, var(--color-gray-1), transparent var(--bg\/, 0%));
+}
+
+.border-gray-1 {
+  border-color: color-mix(in oklch, var(--color-gray-1), transparent var(--border\/, 0%));
+}
+
+.outline-gray-1 {
+  outline-color: color-mix(in oklch, var(--color-gray-1), transparent var(--outline\/, 0%));
+}
+
+.decoration-gray-1 {
+  text-decoration-color: color-mix(in oklch, var(--color-gray-1), transparent var(--decoration\/, 0%));
+}
+
+.caret-gray-1 {
+  caret-color: color-mix(in oklch, var(--color-gray-1), transparent var(--caret\/, 0%));
+}
+
+.accent-gray-1 {
+  accent-color: color-mix(in oklch, var(--color-gray-1), transparent var(--accent\/, 0%));
+}
+
+.fill-gray-1 {
+  fill: color-mix(in oklch, var(--color-gray-1), transparent var(--fill\/, 0%));
+}
+
+.stroke-gray-1 {
+  stroke: color-mix(in oklch, var(--color-gray-1), transparent var(--stroke\/, 0%));
+}
+
+.text-gray-2 {
+  color: color-mix(in oklch, var(--color-gray-2), transparent var(--text\/, 0%));
+}
+
+.bg-gray-2 {
+  background-color: color-mix(in oklch, var(--color-gray-2), transparent var(--bg\/, 0%));
+}
+
+.border-gray-2 {
+  border-color: color-mix(in oklch, var(--color-gray-2), transparent var(--border\/, 0%));
+}
+
+.outline-gray-2 {
+  outline-color: color-mix(in oklch, var(--color-gray-2), transparent var(--outline\/, 0%));
+}
+
+.decoration-gray-2 {
+  text-decoration-color: color-mix(in oklch, var(--color-gray-2), transparent var(--decoration\/, 0%));
+}
+
+.caret-gray-2 {
+  caret-color: color-mix(in oklch, var(--color-gray-2), transparent var(--caret\/, 0%));
+}
+
+.accent-gray-2 {
+  accent-color: color-mix(in oklch, var(--color-gray-2), transparent var(--accent\/, 0%));
+}
+
+.fill-gray-2 {
+  fill: color-mix(in oklch, var(--color-gray-2), transparent var(--fill\/, 0%));
+}
+
+.stroke-gray-2 {
+  stroke: color-mix(in oklch, var(--color-gray-2), transparent var(--stroke\/, 0%));
+}
+
+.text-gray-3 {
+  color: color-mix(in oklch, var(--color-gray-3), transparent var(--text\/, 0%));
+}
+
+.bg-gray-3 {
+  background-color: color-mix(in oklch, var(--color-gray-3), transparent var(--bg\/, 0%));
+}
+
+.border-gray-3 {
+  border-color: color-mix(in oklch, var(--color-gray-3), transparent var(--border\/, 0%));
+}
+
+.outline-gray-3 {
+  outline-color: color-mix(in oklch, var(--color-gray-3), transparent var(--outline\/, 0%));
+}
+
+.decoration-gray-3 {
+  text-decoration-color: color-mix(in oklch, var(--color-gray-3), transparent var(--decoration\/, 0%));
+}
+
+.caret-gray-3 {
+  caret-color: color-mix(in oklch, var(--color-gray-3), transparent var(--caret\/, 0%));
+}
+
+.accent-gray-3 {
+  accent-color: color-mix(in oklch, var(--color-gray-3), transparent var(--accent\/, 0%));
+}
+
+.fill-gray-3 {
+  fill: color-mix(in oklch, var(--color-gray-3), transparent var(--fill\/, 0%));
+}
+
+.stroke-gray-3 {
+  stroke: color-mix(in oklch, var(--color-gray-3), transparent var(--stroke\/, 0%));
+}
+
+.text-slate-1 {
+  color: color-mix(in oklch, var(--color-slate-1), transparent var(--text\/, 0%));
+}
+
+.bg-slate-1 {
+  background-color: color-mix(in oklch, var(--color-slate-1), transparent var(--bg\/, 0%));
+}
+
+.border-slate-1 {
+  border-color: color-mix(in oklch, var(--color-slate-1), transparent var(--border\/, 0%));
+}
+
+.outline-slate-1 {
+  outline-color: color-mix(in oklch, var(--color-slate-1), transparent var(--outline\/, 0%));
+}
+
+.decoration-slate-1 {
+  text-decoration-color: color-mix(in oklch, var(--color-slate-1), transparent var(--decoration\/, 0%));
+}
+
+.caret-slate-1 {
+  caret-color: color-mix(in oklch, var(--color-slate-1), transparent var(--caret\/, 0%));
+}
+
+.accent-slate-1 {
+  accent-color: color-mix(in oklch, var(--color-slate-1), transparent var(--accent\/, 0%));
+}
+
+.fill-slate-1 {
+  fill: color-mix(in oklch, var(--color-slate-1), transparent var(--fill\/, 0%));
+}
+
+.stroke-slate-1 {
+  stroke: color-mix(in oklch, var(--color-slate-1), transparent var(--stroke\/, 0%));
+}
+
+.text-slate-2 {
+  color: color-mix(in oklch, var(--color-slate-2), transparent var(--text\/, 0%));
+}
+
+.bg-slate-2 {
+  background-color: color-mix(in oklch, var(--color-slate-2), transparent var(--bg\/, 0%));
+}
+
+.border-slate-2 {
+  border-color: color-mix(in oklch, var(--color-slate-2), transparent var(--border\/, 0%));
+}
+
+.outline-slate-2 {
+  outline-color: color-mix(in oklch, var(--color-slate-2), transparent var(--outline\/, 0%));
+}
+
+.decoration-slate-2 {
+  text-decoration-color: color-mix(in oklch, var(--color-slate-2), transparent var(--decoration\/, 0%));
+}
+
+.caret-slate-2 {
+  caret-color: color-mix(in oklch, var(--color-slate-2), transparent var(--caret\/, 0%));
+}
+
+.accent-slate-2 {
+  accent-color: color-mix(in oklch, var(--color-slate-2), transparent var(--accent\/, 0%));
+}
+
+.fill-slate-2 {
+  fill: color-mix(in oklch, var(--color-slate-2), transparent var(--fill\/, 0%));
+}
+
+.stroke-slate-2 {
+  stroke: color-mix(in oklch, var(--color-slate-2), transparent var(--stroke\/, 0%));
+}
+
+.text-slate-3 {
+  color: color-mix(in oklch, var(--color-slate-3), transparent var(--text\/, 0%));
+}
+
+.bg-slate-3 {
+  background-color: color-mix(in oklch, var(--color-slate-3), transparent var(--bg\/, 0%));
+}
+
+.border-slate-3 {
+  border-color: color-mix(in oklch, var(--color-slate-3), transparent var(--border\/, 0%));
+}
+
+.outline-slate-3 {
+  outline-color: color-mix(in oklch, var(--color-slate-3), transparent var(--outline\/, 0%));
+}
+
+.decoration-slate-3 {
+  text-decoration-color: color-mix(in oklch, var(--color-slate-3), transparent var(--decoration\/, 0%));
+}
+
+.caret-slate-3 {
+  caret-color: color-mix(in oklch, var(--color-slate-3), transparent var(--caret\/, 0%));
+}
+
+.accent-slate-3 {
+  accent-color: color-mix(in oklch, var(--color-slate-3), transparent var(--accent\/, 0%));
+}
+
+.fill-slate-3 {
+  fill: color-mix(in oklch, var(--color-slate-3), transparent var(--fill\/, 0%));
+}
+
+.stroke-slate-3 {
+  stroke: color-mix(in oklch, var(--color-slate-3), transparent var(--stroke\/, 0%));
+}
+
+.text-slate-4 {
+  color: color-mix(in oklch, var(--color-slate-4), transparent var(--text\/, 0%));
+}
+
+.bg-slate-4 {
+  background-color: color-mix(in oklch, var(--color-slate-4), transparent var(--bg\/, 0%));
+}
+
+.border-slate-4 {
+  border-color: color-mix(in oklch, var(--color-slate-4), transparent var(--border\/, 0%));
+}
+
+.outline-slate-4 {
+  outline-color: color-mix(in oklch, var(--color-slate-4), transparent var(--outline\/, 0%));
+}
+
+.decoration-slate-4 {
+  text-decoration-color: color-mix(in oklch, var(--color-slate-4), transparent var(--decoration\/, 0%));
+}
+
+.caret-slate-4 {
+  caret-color: color-mix(in oklch, var(--color-slate-4), transparent var(--caret\/, 0%));
+}
+
+.accent-slate-4 {
+  accent-color: color-mix(in oklch, var(--color-slate-4), transparent var(--accent\/, 0%));
+}
+
+.fill-slate-4 {
+  fill: color-mix(in oklch, var(--color-slate-4), transparent var(--fill\/, 0%));
+}
+
+.stroke-slate-4 {
+  stroke: color-mix(in oklch, var(--color-slate-4), transparent var(--stroke\/, 0%));
+}
+
+.text-slate-5 {
+  color: color-mix(in oklch, var(--color-slate-5), transparent var(--text\/, 0%));
+}
+
+.bg-slate-5 {
+  background-color: color-mix(in oklch, var(--color-slate-5), transparent var(--bg\/, 0%));
+}
+
+.border-slate-5 {
+  border-color: color-mix(in oklch, var(--color-slate-5), transparent var(--border\/, 0%));
+}
+
+.outline-slate-5 {
+  outline-color: color-mix(in oklch, var(--color-slate-5), transparent var(--outline\/, 0%));
+}
+
+.decoration-slate-5 {
+  text-decoration-color: color-mix(in oklch, var(--color-slate-5), transparent var(--decoration\/, 0%));
+}
+
+.caret-slate-5 {
+  caret-color: color-mix(in oklch, var(--color-slate-5), transparent var(--caret\/, 0%));
+}
+
+.accent-slate-5 {
+  accent-color: color-mix(in oklch, var(--color-slate-5), transparent var(--accent\/, 0%));
+}
+
+.fill-slate-5 {
+  fill: color-mix(in oklch, var(--color-slate-5), transparent var(--fill\/, 0%));
+}
+
+.stroke-slate-5 {
+  stroke: color-mix(in oklch, var(--color-slate-5), transparent var(--stroke\/, 0%));
+}
+
+.text-purple {
+  color: color-mix(in oklch, var(--color-purple), transparent var(--text\/, 0%));
+}
+
+.bg-purple {
+  background-color: color-mix(in oklch, var(--color-purple), transparent var(--bg\/, 0%));
+}
+
+.border-purple {
+  border-color: color-mix(in oklch, var(--color-purple), transparent var(--border\/, 0%));
+}
+
+.outline-purple {
+  outline-color: color-mix(in oklch, var(--color-purple), transparent var(--outline\/, 0%));
+}
+
+.decoration-purple {
+  text-decoration-color: color-mix(in oklch, var(--color-purple), transparent var(--decoration\/, 0%));
+}
+
+.caret-purple {
+  caret-color: color-mix(in oklch, var(--color-purple), transparent var(--caret\/, 0%));
+}
+
+.accent-purple {
+  accent-color: color-mix(in oklch, var(--color-purple), transparent var(--accent\/, 0%));
+}
+
+.fill-purple {
+  fill: color-mix(in oklch, var(--color-purple), transparent var(--fill\/, 0%));
+}
+
+.stroke-purple {
+  stroke: color-mix(in oklch, var(--color-purple), transparent var(--stroke\/, 0%));
+}
+
+.text-blue {
+  color: color-mix(in oklch, var(--color-blue), transparent var(--text\/, 0%));
+}
+
+.bg-blue {
+  background-color: color-mix(in oklch, var(--color-blue), transparent var(--bg\/, 0%));
+}
+
+.border-blue {
+  border-color: color-mix(in oklch, var(--color-blue), transparent var(--border\/, 0%));
+}
+
+.outline-blue {
+  outline-color: color-mix(in oklch, var(--color-blue), transparent var(--outline\/, 0%));
+}
+
+.decoration-blue {
+  text-decoration-color: color-mix(in oklch, var(--color-blue), transparent var(--decoration\/, 0%));
+}
+
+.caret-blue {
+  caret-color: color-mix(in oklch, var(--color-blue), transparent var(--caret\/, 0%));
+}
+
+.accent-blue {
+  accent-color: color-mix(in oklch, var(--color-blue), transparent var(--accent\/, 0%));
+}
+
+.fill-blue {
+  fill: color-mix(in oklch, var(--color-blue), transparent var(--fill\/, 0%));
+}
+
+.stroke-blue {
+  stroke: color-mix(in oklch, var(--color-blue), transparent var(--stroke\/, 0%));
+}
+
+.text-blue-dark {
+  color: color-mix(in oklch, var(--color-blue-dark), transparent var(--text\/, 0%));
+}
+
+.bg-blue-dark {
+  background-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--bg\/, 0%));
+}
+
+.border-blue-dark {
+  border-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--border\/, 0%));
+}
+
+.outline-blue-dark {
+  outline-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--outline\/, 0%));
+}
+
+.decoration-blue-dark {
+  text-decoration-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--decoration\/, 0%));
+}
+
+.caret-blue-dark {
+  caret-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--caret\/, 0%));
+}
+
+.accent-blue-dark {
+  accent-color: color-mix(in oklch, var(--color-blue-dark), transparent var(--accent\/, 0%));
+}
+
+.fill-blue-dark {
+  fill: color-mix(in oklch, var(--color-blue-dark), transparent var(--fill\/, 0%));
+}
+
+.stroke-blue-dark {
+  stroke: color-mix(in oklch, var(--color-blue-dark), transparent var(--stroke\/, 0%));
+}
+
+.text-red {
+  color: color-mix(in oklch, var(--color-red), transparent var(--text\/, 0%));
+}
+
+.bg-red {
+  background-color: color-mix(in oklch, var(--color-red), transparent var(--bg\/, 0%));
+}
+
+.border-red {
+  border-color: color-mix(in oklch, var(--color-red), transparent var(--border\/, 0%));
+}
+
+.outline-red {
+  outline-color: color-mix(in oklch, var(--color-red), transparent var(--outline\/, 0%));
+}
+
+.decoration-red {
+  text-decoration-color: color-mix(in oklch, var(--color-red), transparent var(--decoration\/, 0%));
+}
+
+.caret-red {
+  caret-color: color-mix(in oklch, var(--color-red), transparent var(--caret\/, 0%));
+}
+
+.accent-red {
+  accent-color: color-mix(in oklch, var(--color-red), transparent var(--accent\/, 0%));
+}
+
+.fill-red {
+  fill: color-mix(in oklch, var(--color-red), transparent var(--fill\/, 0%));
+}
+
+.stroke-red {
+  stroke: color-mix(in oklch, var(--color-red), transparent var(--stroke\/, 0%));
+}
+
+.text-yellow {
+  color: color-mix(in oklch, var(--color-yellow), transparent var(--text\/, 0%));
+}
+
+.bg-yellow {
+  background-color: color-mix(in oklch, var(--color-yellow), transparent var(--bg\/, 0%));
+}
+
+.border-yellow {
+  border-color: color-mix(in oklch, var(--color-yellow), transparent var(--border\/, 0%));
+}
+
+.outline-yellow {
+  outline-color: color-mix(in oklch, var(--color-yellow), transparent var(--outline\/, 0%));
+}
+
+.decoration-yellow {
+  text-decoration-color: color-mix(in oklch, var(--color-yellow), transparent var(--decoration\/, 0%));
+}
+
+.caret-yellow {
+  caret-color: color-mix(in oklch, var(--color-yellow), transparent var(--caret\/, 0%));
+}
+
+.accent-yellow {
+  accent-color: color-mix(in oklch, var(--color-yellow), transparent var(--accent\/, 0%));
+}
+
+.fill-yellow {
+  fill: color-mix(in oklch, var(--color-yellow), transparent var(--fill\/, 0%));
+}
+
+.stroke-yellow {
+  stroke: color-mix(in oklch, var(--color-yellow), transparent var(--stroke\/, 0%));
+}
+
+.text\/-20 {
+  --text\/: 20%;
+}
+
+.bg\/-20 {
+  --bg\/: 20%;
+}
+
+.border\/-20 {
+  --border\/: 20%;
+}
+
+.outline\/-20 {
+  --outline\/: 20%;
+}
+
+.decoration\/-20 {
+  --decoration\/: 20%;
+}
+
+.caret\/-20 {
+  --caret\/: 20%;
+}
+
+.accent\/-20 {
+  --accent\/: 20%;
+}
+
+.fill\/-20 {
+  --fill\/: 20%;
+}
+
+.stroke\/-20 {
+  --stroke\/: 20%;
+}
+
+.text\/-25 {
+  --text\/: 25%;
+}
+
+.bg\/-25 {
+  --bg\/: 25%;
+}
+
+.border\/-25 {
+  --border\/: 25%;
+}
+
+.outline\/-25 {
+  --outline\/: 25%;
+}
+
+.decoration\/-25 {
+  --decoration\/: 25%;
+}
+
+.caret\/-25 {
+  --caret\/: 25%;
+}
+
+.accent\/-25 {
+  --accent\/: 25%;
+}
+
+.fill\/-25 {
+  --fill\/: 25%;
+}
+
+.stroke\/-25 {
+  --stroke\/: 25%;
+}
+
+.text\/-50 {
+  --text\/: 50%;
+}
+
+.bg\/-50 {
+  --bg\/: 50%;
+}
+
+.border\/-50 {
+  --border\/: 50%;
+}
+
+.outline\/-50 {
+  --outline\/: 50%;
+}
+
+.decoration\/-50 {
+  --decoration\/: 50%;
+}
+
+.caret\/-50 {
+  --caret\/: 50%;
+}
+
+.accent\/-50 {
+  --accent\/: 50%;
+}
+
+.fill\/-50 {
+  --fill\/: 50%;
+}
+
+.stroke\/-50 {
+  --stroke\/: 50%;
+}
+
+.text\/-75 {
+  --text\/: 75%;
+}
+
+.bg\/-75 {
+  --bg\/: 75%;
+}
+
+.border\/-75 {
+  --border\/: 75%;
+}
+
+.outline\/-75 {
+  --outline\/: 75%;
+}
+
+.decoration\/-75 {
+  --decoration\/: 75%;
+}
+
+.caret\/-75 {
+  --caret\/: 75%;
+}
+
+.accent\/-75 {
+  --accent\/: 75%;
+}
+
+.fill\/-75 {
+  --fill\/: 75%;
+}
+
+.stroke\/-75 {
+  --stroke\/: 75%;
+}
+
+.text\/-80 {
+  --text\/: 80%;
+}
+
+.bg\/-80 {
+  --bg\/: 80%;
+}
+
+.border\/-80 {
+  --border\/: 80%;
+}
+
+.outline\/-80 {
+  --outline\/: 80%;
+}
+
+.decoration\/-80 {
+  --decoration\/: 80%;
+}
+
+.caret\/-80 {
+  --caret\/: 80%;
+}
+
+.accent\/-80 {
+  --accent\/: 80%;
+}
+
+.fill\/-80 {
+  --fill\/: 80%;
+}
+
+.stroke\/-80 {
+  --stroke\/: 80%;
+}
+
+.text\/-100 {
+  --text\/: 100%;
+}
+
+.bg\/-100 {
+  --bg\/: 100%;
+}
+
+.border\/-100 {
+  --border\/: 100%;
+}
+
+.outline\/-100 {
+  --outline\/: 100%;
+}
+
+.decoration\/-100 {
+  --decoration\/: 100%;
+}
+
+.caret\/-100 {
+  --caret\/: 100%;
+}
+
+.accent\/-100 {
+  --accent\/: 100%;
+}
+
+.fill\/-100 {
+  --fill\/: 100%;
+}
+
+.stroke\/-100 {
+  --stroke\/: 100%;
+}
+
+/*# sourceMappingURL=color.css.map */
