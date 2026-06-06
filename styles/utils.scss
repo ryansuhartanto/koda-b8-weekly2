@@ -142,35 +142,56 @@ $grid-cols: 12;
 }
 
 // Alignment
-.items-a-start    { align-items: start; }
-.items-a-end      { align-items: end; }
-.items-a-center   { align-items: center; }
+$align-values: (
+  "start":    start,
+  "end":      end,
+  "center":   center,
+  "stretch":  stretch,
+  "baseline": baseline,
+);
 
-.items-j-start    { justify-items: start; }
-.items-j-end      { justify-items: end; }
-.items-j-center   { justify-items: center; }
+$justify-values: (
+  "start":   start,
+  "end":     end,
+  "center":  center,
+  "stretch": stretch,
+  "between": space-between,
+  "around":  space-around,
+  "evenly":  space-evenly,
+);
 
-.items-start      { place-items: start; }
-.items-end        { place-items: end; }
-.items-center     { place-items: center; }
+@each $key, $val in $align-values {
+  .items-#{$key}         { align-items:   $val; }
+  .content-#{$key}       { align-content: $val; }
+  .self-#{$key}          { align-self:    $val; }
+}
 
-.content-a-start  { align-content: start; }
-.content-a-end    { align-content: end; }
-.content-a-center { align-content: center; }
+@each $key, $val in $justify-values {
+  .justify-#{$key}       { justify-content: $val; }
+  .justify-items-#{$key} { justify-items:   $val; }
+  .justify-self-#{$key}  { justify-self:    $val; }
+}
 
-.content-j-start  { justify-content: start; }
-.content-j-end    { justify-content: end; }
-.content-j-center { justify-content: center; }
+@each $key, $val in $align-values {
+  .place-items-#{$key}   { place-items:   $val; }
+  .place-content-#{$key} { place-content: $val; }
+  .place-self-#{$key}    { place-self:    $val; }
+}
 
-.content-start    { place-content: start; }
-.content-end      { place-content: end; }
-.content-center   { place-content: center; }
+$vertical-align-values: (
+  "baseline":    baseline,
+  "top":         top,
+  "middle":      middle,
+  "bottom":      bottom,
+  "text-top":    text-top,
+  "text-bottom": text-bottom,
+  "sub":         sub,
+  "super":       super,
+);
 
-.content-j-between { justify-content: space-between; }
-.content-j-around  { justify-content: space-around; }
-.content-j-evenly  { justify-content: space-evenly; }
-
-.vertical-middle > * { vertical-align: middle; }
+@each $key, $val in $vertical-align-values {
+  .align-#{$key} { vertical-align: $val; }
+}
 
 // Typography
 $font-sizes: (
