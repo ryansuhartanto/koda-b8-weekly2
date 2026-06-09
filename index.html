@@ -11,11 +11,26 @@
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin>
 
   <link rel="preconnect" href="https://unpkg.com/">
-  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" crossorigin>
-
   <link rel="stylesheet" href="https://unpkg.com/simple-icons-font@v16/font/simple-icons.min.css" crossorigin>
+  <script src="https://unpkg.com/lucide@v1.17"></script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4.3"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "lucide": "https://esm.sh/lucide@1.17"
+      }
+    }
+  </script>
+  <script type="module" defer>
+    import { createIcons, icons } from 'lucide';
+    createIcons({ icons });
+  </script>
 
   <link rel="stylesheet" href="style.css">
+  <style type="text/tailwindcss">
+
+  </style>
 </head>
 
 <body>
@@ -24,7 +39,7 @@
       <div class="inset flex justify-between">
         <div class="flex gap-4">
           <span class="vertical-middle">
-            <i class="icon-map-pin"></i>
+            <i data-lucide="map-pin"></i>
             Kirim ke: Jakarta Selatan
           </span>
         </div>
@@ -51,23 +66,23 @@
         <form class="searchbar">
           <input type="text" name="q" autocomplete="off" placeholder="Cari produk, merek, kategori...">
           <button type="submit" aria-label="Search">
-            <i class="icon-search"></i>
+            <i data-lucide="search"></i>
           </button>
         </form>
 
         <div class="links">
           <a aria-label="Notifications" href="">
-            <i class="icon-bell"></i>
+            <i data-lucide="bell"></i>
           </a>
           <a aria-label="User" href="">
-            <i class="icon-user"></i>
+            <i data-lucide="user"></i>
             <span class="user">Budi</span>
           </a>
           <a aria-label="Favorite" href="">
-            <i class="icon-heart"></i>
+            <i data-lucide="heart"></i>
           </a>
           <a aria-label="Cart" href="">
-            <i class="icon-shopping-cart"></i>
+            <i data-lucide="shopping-cart"></i>
           </a>
         </div>
       </div>
@@ -78,9 +93,9 @@
     <nav aria-label="Main navigations">
       <div class="inset">
         <a class="all" href="">
-          <i class="icon-menu"></i>
+          <i data-lucide="menu"></i>
           Semua Kategori
-          <i class="icon-chevron-down"></i>
+          <i data-lucide="chevron-down"></i>
         </a>
         <a href="">💻 Electronic</a>
         <a href="">👗 Fashion</a>
@@ -93,17 +108,17 @@
     </nav>
   </header>
 
-  <main class="homepage flex col gap-12">
+  <main class="homepage flex flex-col gap-12">
     <section aria-label="Hero">
       <nav aria-label="Hero slides navigations">
         <div>
           <button aria-label="Previous" type="button">
-            <i class="icon-chevron-left"></i>
+            <i data-lucide="chevron-left"></i>
           </button>
         </div>
         <div>
           <button aria-label="Next" type="button">
-            <i class="icon-chevron-right"></i>
+            <i data-lucide="chevron-right"></i>
           </button>
         </div>
         <div>
@@ -115,8 +130,8 @@
 
       <img src="images/category/electronic.png" alt="Electronics">
 
-      <div class="inset flex col justify-center">
-        <div class="flex col gap-4">
+      <div class="inset flex flex-col justify-center">
+        <div class="flex flex-col gap-4">
           <h2>Elektronik Pilihan, Harga Spesial</h2>
           <p>
             Laptop, smartphone, headphone, dan masih banyak lagi dengan
@@ -124,22 +139,22 @@
           </p>
           <a href="" class="flex gap-2 items-center w-fit">
             Lihat Promo
-            <i class="icon-arrow-right"></i>
+            <i data-lucide="arrow-right"></i>
           </a>
         </div>
       </div>
     </section>
 
     <section class="categories">
-      <div class="inset flex col gap-6">
+      <div class="inset flex flex-col gap-6">
         <header class="flex justify-between">
           <h2>Belanja Bedasarkan Kategori</h2>
-          <a href="">Lihat Semua <i class="icon-arrow-right"></i></a>
+          <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
         </header>
-        <div class="grid cols-6 gap-3">
+        <div class="grid grid-cols-6 gap-3">
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/electronic.png" alt="Electronic category">
                 <h3>Electronik</h3>
                 <p>7 produk</p>
@@ -148,7 +163,7 @@
           </a>
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/fashion.png" alt="Fashion category">
                 <h3>Fashion</h3>
                 <p>5 produk</p>
@@ -157,7 +172,7 @@
           </a>
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/household.png" alt="Household category">
                 <h3>Rumah &amp; Dapur</h3>
                 <p>4 produk</p>
@@ -166,7 +181,7 @@
           </a>
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/beauty.png" alt="Beauty category">
                 <h3>Kecantikan</h3>
                 <p>2 produk</p>
@@ -175,7 +190,7 @@
           </a>
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/sport.png" alt="Sport category">
                 <h3>Olahraga</h3>
                 <p>3 produk</p>
@@ -184,7 +199,7 @@
           </a>
           <a href="">
             <article class="card">
-              <div class="content flex col gap-2 items-center">
+              <div class="content flex flex-col gap-2 items-center">
                 <img src="images/category/stationary.png" alt="Stationary category">
                 <h3>Buku &amp; Alat Tulis</h3>
                 <p>2 produk</p>
@@ -196,27 +211,27 @@
     </section>
 
     <section class="hot">
-      <div class="inset flex col gap-6">
+      <div class="inset flex flex-col gap-6">
         <header class="flex justify-between">
           <div class="flex gap-4 items-center">
             <h2 class="flex gap-1 items-center">
-              <i class="icon-zap"></i>
+              <i data-lucide="zap"></i>
               <span>Flash Deal</span>
             </h2>
             <span class="flex gap-2 items-center">
-              <i class="icon-clock"></i>
+              <i data-lucide="clock"></i>
               <span>Berakhir dalam:</span>
               <span class="tnum">05 : 21 : 38</span>
             </span>
           </div>
-          <a href="">Lihat Semua <i class="icon-arrow-right"></i></a>
+          <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
         </header>
-        <div class="grid cols-4 gap-4">
+        <div class="grid grid-cols-4 gap-4">
           <a href="">
             <article class="card">
               <img src="images/product/soundwave-headphone_wireless_premium.png" alt="Headphone Wireless Premium">
               <span class="badge discount">-31%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>SoundWave</p>
                 <h3>Headphone Wireless Premium</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -254,7 +269,7 @@
             <article class="card">
               <img src="images/product/phonex-smartphone_5g_ultra.png" alt="Smartphone 5G Ultra">
               <span class="badge discount">-16%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>PhoneX</p>
                 <h3>Smartphone 5G Ultra</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -292,7 +307,7 @@
             <article class="card">
               <img src="images/product/wristtech-smartwatch_series_5.png" alt="Smartwatch Series 5">
               <span class="badge discount">-20%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>WristTech</p>
                 <h3>Smartwatch Series 5</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -330,7 +345,7 @@
             <article class="card">
               <img src="images/product/sportpro-sneakers_sport_runfast.png" alt="Sneakers Sport Runfast">
               <span class="badge discount">-27%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>SportPro</p>
                 <h3>Sneakers Sport Runfast</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -369,10 +384,10 @@
     </section>
 
     <section class="marketing">
-      <div class="inset grid cols-2 gap-4">
+      <div class="inset grid grid-cols-2 gap-4">
         <a href="">
-          <article class="card flex col justify-center fashion">
-            <div class="content flex col gap-2">
+          <article class="card flex flex-col justify-center fashion">
+            <div class="content flex flex-col gap-2">
               <div>
                 <span class="category">Fashion Wanita</span><br>
                 <strong>Diskon s/d 50%</strong>
@@ -382,8 +397,8 @@
           </article>
         </a>
         <a href="">
-          <article class="card flex col justify-center electronic">
-            <div class="content flex col gap-2">
+          <article class="card flex flex-col justify-center electronic">
+            <div class="content flex flex-col gap-2">
               <div>
                 <span class="category">Electronik Pilihan</span><br>
                 <strong>Harga Terbaik</strong>
@@ -396,17 +411,17 @@
     </section>
 
     <section>
-      <div class="inset flex col gap-6">
+      <div class="inset flex flex-col gap-6">
         <header class="flex justify-between">
-          <h2 class="vertical-middle"><i class="icon-trending-up"></i> Produk Terbaru</h2>
-          <a href="">Lihat Semua <i class="icon-arrow-right"></i></a>
+          <h2 class="vertical-middle"><i data-lucide="trending-up"></i> Produk Terbaru</h2>
+          <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
         </header>
-        <div class="grid cols-4 gap-4">
+        <div class="grid grid-cols-4 gap-4">
           <a href="">
             <article class="card">
               <img src="images/product/soundwave-headphone_wireless_premium.png" alt="Headphone Wireless Premium">
               <span class="badge discount">-31%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>SoundWave</p>
                 <h3>Headphone Wireless Premium</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -444,7 +459,7 @@
             <article class="card">
               <img src="images/product/phonex-smartphone_5g_ultra.png" alt="Smartphone 5G Ultra">
               <span class="badge discount">-16%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>PhoneX</p>
                 <h3>Smartphone 5G Ultra</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -482,7 +497,7 @@
             <article class="card">
               <img src="images/product/urbanbag-tas_ransel_laptop_waterproof.png" alt="Tas Ransel Laptop Waterproof">
               <span class="badge new">Baru</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>UrbanBag</p>
                 <h3>Tas Ransel Laptop Waterproof</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -519,7 +534,7 @@
             <article class="card">
               <img src="images/product/blendpro-blender_portable_mini.png" alt="Blender Portable Mini">
               <span class="badge new">Baru</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>BlendPro</p>
                 <h3>Blender Portable Mini</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -556,7 +571,7 @@
             <article class="card">
               <img src="images/product/tabtech-tablet_10_5_wifi_4g.png" alt="Tablet 10.5&quot; WiFi + 4G">
               <span class="badge discount">-20%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>TabTech</p>
                 <h3>Tablet 10.5" WiFi + 4G</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -594,7 +609,7 @@
             <article class="card">
               <img src="images/product/fashionid-dress_floral_midi.png" alt="Dress Floral Midi">
               <span class="badge discount">-25%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>FashionID</p>
                 <h3>Dress Floral Midi</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -632,7 +647,7 @@
             <article class="card">
               <img src="images/product/aromawell-minyak_esensial_lavender_set.png" alt="Minyak Esensial Lavender Set">
               <span class="badge new">Baru</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>AromaWell</p>
                 <h3>Minyak Esensial Lavender Set</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -670,17 +685,17 @@
     </section>
 
     <section>
-      <div class="inset flex col gap-6">
+      <div class="inset flex flex-col gap-6">
         <header class="flex justify-between">
           <h2>Produk Unggulan</h2>
-          <a href="">Lihat Semua <i class="icon-arrow-right"></i></a>
+          <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
         </header>
-        <div class="grid cols-4 gap-4">
+        <div class="grid grid-cols-4 gap-4">
           <a href="">
             <article class="card">
               <img src="images/product/soundwave-headphone_wireless_premium.png" alt="Headphone Wireless Premium">
               <span class="badge discount">-31%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>SoundWave</p>
                 <h3>Headphone Wireless Premium</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -718,7 +733,7 @@
             <article class="card">
               <img src="images/product/phonex-smartphone_5g_ultra.png" alt="Smartphone 5G Ultra">
               <span class="badge discount">-16%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>PhoneX</p>
                 <h3>Smartphone 5G Ultra</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -756,7 +771,7 @@
             <article class="card">
               <img src="images/product/wristtech-smartwatch_series_5.png" alt="Smartwatch Series 5">
               <span class="badge discount">-20%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>WristTech</p>
                 <h3>Smartwatch Series 5</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -794,7 +809,7 @@
             <article class="card">
               <img src="images/product/sportpro-sneakers_sport_runfast.png" alt="Sneakers Sport Runfast">
               <span class="badge discount">-27%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>SportPro</p>
                 <h3>Sneakers Sport Runfast</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -832,7 +847,7 @@
             <article class="card">
               <img src="images/product/brewmaster-coffee_maker_otomatis.png" alt="Coffee Maker Otomatis">
               <span class="badge new">Baru</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>BrewMaster</p>
                 <h3>Coffee Maker Otomatis</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -869,7 +884,7 @@
             <article class="card">
               <img src="images/product/fashionid-dress_floral_midi.png" alt="Dress Floral Midi">
               <span class="badge discount">-25%</span>
-              <div class="content flex col gap-2 product">
+              <div class="content flex flex-col gap-2 product">
                 <p>FashionID</p>
                 <h3>Dress Floral Midi</h3>
                 <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"
@@ -909,21 +924,21 @@
 
     <!-- <footer class="inset">
       <div class="card">
-        <div class="content flex col gap-8">
+        <div class="content flex flex-col gap-8">
           <h2>
             Kenapa Belanja di BeliMudah?
           </h2>
-          <div class="grid cols-4 gap-4 5">
-            <div class="flex col gap- 5">
+          <div class="grid grid-cols-4 gap-4 5">
+            <div class="flex flex-col gap- 5">
               <h3>Gratis Onkir</h3>
             </div>
-            <div class="flex col gap- 5">
+            <div class="flex flex-col gap- 5">
               <h3>Pembayaran Aman</h3>
             </div>
-            <div class="flex col gap- 5">
+            <div class="flex flex-col gap- 5">
               <h3>Retur Mudah</h3>
             </div>
-            <div class="flex col gap- 5">
+            <div class="flex flex-col gap- 5">
               <h3>CS 24/7</h3>
             </div>
           </div>
@@ -939,7 +954,7 @@
           <tr>
             <td>
               <a aria-label="Contact us" href="">
-                <i class="icon-message-circle"></i>
+                <i data-lucide="message-circle"></i>
               </a>
             </td>
           </tr>
@@ -948,34 +963,34 @@
     </aside>
 
     <section aria-label="Promotions">
-      <div class="inset grid cols-4 gap-8">
+      <div class="inset grid grid-cols-4 gap-8">
         <div class="flex gap-4">
-          <i class="icon-truck"></i>
-          <div class="flex col justify-center">
+          <i data-lucide="truck"></i>
+          <div class="flex flex-col justify-center">
             <h6>Gratis Ongkir</h6>
             Pembelian diatas Rp 100.000
           </div>
         </div>
 
         <div class="flex gap-4">
-          <i class="icon-shield"></i>
-          <div class="flex col justify-center">
+          <i data-lucide="shield"></i>
+          <div class="flex flex-col justify-center">
             <h6>Pembayaran Aman</h6>
             SSL terenkripsi 256-bit
           </div>
         </div>
 
         <div class="flex gap-4">
-          <i class="icon-refresh-ccw"></i>
-          <div class="flex col justify-center">
+          <i data-lucide="refresh-ccw"></i>
+          <div class="flex flex-col justify-center">
             <h6>Pengembalian Mudah</h6>
             30 hari pengembalian gratis
           </div>
         </div>
 
         <div class="flex gap-4">
-          <i class="icon-headset"></i>
-          <div class="flex col justify-center">
+          <i data-lucide="headset"></i>
+          <div class="flex flex-col justify-center">
             <h6>Dukungan 24/7</h6>
             Bantuan kapan saja
           </div>
@@ -986,8 +1001,8 @@
     <hr>
 
     <nav aria-label="Main footer">
-      <div class="inset grid cols-4 gap-8">
-        <div class="flex col gap-4">
+      <div class="inset grid grid-cols-4 gap-8">
+        <div class="flex flex-col gap-4">
           <div class="brand">BeliMudah</div>
           <section aria-label="Description">
             Platform belanja online terpercaya dengan ribuan produk
@@ -1008,7 +1023,7 @@
             </a>
           </section>
         </div>
-        <div class="flex col gap-4">
+        <div class="flex flex-col gap-4">
           <h5>Layanan</h5>
           <ul>
             <li><a href="">Tentang Kami</a></li>
@@ -1020,7 +1035,7 @@
             </li>
           </ul>
         </div>
-        <div class="flex col gap-4">
+        <div class="flex flex-col gap-4">
           <h5>Bantuan</h5>
           <ul>
             <li><a href="">Cara Belanja</a></li>
@@ -1032,30 +1047,30 @@
             <li><a href="">Hubungi Kami</a></li>
           </ul>
         </div>
-        <div class="flex col gap-4">
+        <div class="flex flex-col gap-4">
           <h5>Kontak</h5>
           <ul class="icon">
             <li>
               <a href="">
-                <i class="icon-map-pin"></i>
+                <i data-lucide="map-pin"></i>
                 Jl. Sudirman No. 1, Jakarta Selatan, DKI Jakarta 12190
               </a>
             </li>
             <li>
               <a href="tel:0800-1234-5678">
-                <i class="icon-phone"></i>
+                <i data-lucide="phone"></i>
                 0800&#8209;1234&#8209;5678&nbsp;(Gratis)
               </a>
             </li>
             <li>
               <a href="mailto:bantuan@belimudah.id">
-                <i class="icon-mail"></i>
+                <i data-lucide="mail"></i>
                 bantuan@belimudah.id
               </a>
             </li>
           </ul>
           <form class="card">
-            <div class="content flex col gap-2 items-center">
+            <div class="content flex flex-col gap-2 items-center">
               <label for="newsletter">Newsletter</label>
               <div class="flex gap-2">
                 <input id="newsletter" type="email" placeholder="Email kamu" class="grow">
