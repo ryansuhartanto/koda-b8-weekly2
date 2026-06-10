@@ -34,7 +34,7 @@
 
       @layer base {
         svg.lucide {
-          @apply inline w-[1em] h-[1em];
+          @apply inline size-[1em];
         }
 
         small {
@@ -47,7 +47,7 @@
           @apply flex flex-row items-center gap-2 select-none;
 
           &::before {
-            @apply content-['B'] grid place-content-center w-8 h-8 rounded-lg text-sm bg-blue-600 text-white;
+            @apply content-['B'] grid place-content-center size-8 rounded-lg text-sm bg-blue-600 text-white;
           }
         }
 
@@ -115,10 +115,6 @@
 
       @utility inset {
         @apply max-w-7xl px-4 mx-auto;
-      }
-
-      @utility tnum {
-        font-feature-settings: "tnum" 1;
       }
     </style>
   </head>
@@ -241,7 +237,7 @@
             </button>
           </div>
           <div
-            class="flex justify-center gap-2 col-2 row-3 *:w-2 *:h-2 *:rounded-full *:bg-white/50 *:pointer-events-auto *:transition-all *:duration-200 *:ease-out *:aria-selected:w-6 *:aria-selected:bg-white"
+            class="flex justify-center gap-2 col-2 row-3 *:size-2 *:rounded-full *:bg-white/50 *:pointer-events-auto *:transition-all *:duration-200 *:ease-out *:aria-selected:w-6 *:aria-selected:bg-white"
           >
             <button
               type="button"
@@ -314,7 +310,7 @@
               <span class="flex gap-2 items-center text-gray-500">
                 <i data-lucide="clock"></i>
                 <span>Berakhir dalam:</span>
-                <span class="tnum">05 : 21 : 38</span>
+                <span class="tabular-nums">05 : 21 : 38</span>
               </span>
             </div>
             <a class="text-blue-600 *:align-middle" href=""
@@ -675,7 +671,7 @@
                 itemprop: "aggregateRating",
                 itemscope: "",
                 itemtype: "https://schema.org/AggregateRating",
-                class: "tnum flex gap-2 items-center",
+                class: "tabular-nums flex gap-2 items-center",
               }).append(
                 $("<output>", { class: "flex" }).append(...stars),
                 $("<span>").append(
@@ -687,7 +683,7 @@
                 ),
               ),
               $("<p>", {
-                class: "tnum flex gap-2 items-center pt-1",
+                class: "tabular-nums flex gap-2 items-center pt-1",
               }).append(
                 originalPrice
                   ? [
