@@ -26,10 +26,6 @@
         }
       }
     </script>
-    <script type="module" defer>
-      import { createIcons, icons } from "lucide";
-      createIcons({ icons });
-    </script>
 
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <style type="text/tailwindcss">
@@ -66,25 +62,64 @@
           h3 {
             @apply text-gray-900;
           }
-        }
 
-        .card-product {
-          @apply text-xs;
+          .badge {
+            @apply absolute top-2 start-2 px-2 py-1 rounded-full text-white text-xs;
 
-          & > h3,
-          & > div {
-            @apply text-sm;
+            &.discount {
+              @apply bg-red-600;
+            }
+            &.new {
+              @apply bg-blue-600;
+            }
           }
 
-          & > p > span,
-          & > p > ins {
-            @apply text-blue-600 text-base font-medium no-underline;
+          &.fashion {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-black) 80%, transparent),
+                color-mix(in oklch, var(--color-black) 0%, transparent)
+              ),
+              url("images/marketing/fashion.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          &.electronic {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-blue-800) 80%, transparent),
+                color-mix(in oklch, var(--color-blue-800) 0%, transparent)
+              ),
+              url("images/marketing/electronic.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          .product {
+            @apply text-xs;
+
+            & > h3,
+            & > div {
+              @apply text-sm;
+            }
+
+            & > p > span,
+            & > p > ins {
+              @apply text-blue-600 text-base font-semibold no-underline;
+            }
           }
         }
       }
 
       @utility inset {
         @apply max-w-7xl px-4 mx-auto;
+      }
+
+      @utility tnum {
+        font-feature-settings: "tnum" 1;
       }
     </style>
   </head>
@@ -267,835 +302,93 @@
         </div>
       </section>
 
-      <section class="hot">
+      <section aria-label="Flash Deal">
         <div class="inset flex flex-col gap-6">
-          <header class="flex justify-between">
+          <header class="flex justify-between items-center text-sm">
             <div class="flex gap-4 items-center">
-              <h2 class="flex gap-1 items-center">
+              <h2
+                class="flex gap-1 items-center bg-red-600 text-white px-3 py-2 rounded-lg font-medium"
+              >
                 <i data-lucide="zap"></i>
                 <span>Flash Deal</span>
               </h2>
-              <span class="flex gap-2 items-center">
+              <span class="flex gap-2 items-center text-gray-500">
                 <i data-lucide="clock"></i>
                 <span>Berakhir dalam:</span>
                 <span class="tnum">05 : 21 : 38</span>
               </span>
             </div>
-            <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
+            <a class="text-blue-600 *:align-middle" href=""
+              >Lihat Semua <i data-lucide="arrow-right"></i
+            ></a>
           </header>
           <div class="grid grid-cols-4 gap-4">
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/soundwave-headphone_wireless_premium.png"
-                  alt="Headphone Wireless Premium"
-                />
-                <span class="badge discount">-31%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>SoundWave</p>
-                  <h3>Headphone Wireless Premium</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.8</span>
-                      (<span itemprop="reviewCount">512</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 450.000</ins>
-                    <del>Rp 650.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/phonex-smartphone_5g_ultra.png"
-                  alt="Smartphone 5G Ultra"
-                />
-                <span class="badge discount">-16%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>PhoneX</p>
-                  <h3>Smartphone 5G Ultra</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.6</span>
-                      (<span itemprop="reviewCount">890</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 4.200.000</ins>
-                    <del>Rp 5.000.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/wristtech-smartwatch_series_5.png"
-                  alt="Smartwatch Series 5"
-                />
-                <span class="badge discount">-20%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>WristTech</p>
-                  <h3>Smartwatch Series 5</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-4">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.4</span>
-                      (<span itemprop="reviewCount">324</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 2.800.000</ins>
-                    <del>Rp 3.500.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/sportpro-sneakers_sport_runfast.png"
-                  alt="Sneakers Sport Runfast"
-                />
-                <span class="badge discount">-27%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>SportPro</p>
-                  <h3>Sneakers Sport Runfast</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.6</span>
-                      (<span itemprop="reviewCount">445</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 550.000</ins>
-                    <del>Rp 750.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
+            <!-- -->
           </div>
         </div>
       </section>
 
-      <section class="marketing">
+      <section aria-label="Marketing">
         <div class="inset grid grid-cols-2 gap-4">
           <a href="">
-            <article class="card flex flex-col justify-center fashion">
-              <div class="content flex flex-col gap-2">
+            <article
+              class="card fashion flex flex-col justify-center h-44 text-white text-sm leading-normal"
+            >
+              <div class="m-6 flex flex-col gap-2">
                 <div>
-                  <span class="category">Fashion Wanita</span><br />
-                  <strong>Diskon s/d 50%</strong>
+                  <span class="text-white/80">Fashion Wanita</span><br />
+                  <strong class="text-xl font-bold">Diskon s/d 50%</strong>
                 </div>
-                <div class="cta">Belanja Sekarang</div>
+                <div class="w-fit px-3 py-1 rounded-lg border border-white">
+                  Belanja Sekarang
+                </div>
               </div>
             </article>
           </a>
           <a href="">
-            <article class="card flex flex-col justify-center electronic">
-              <div class="content flex flex-col gap-2">
+            <article
+              class="card electronic flex flex-col justify-center h-44 text-white text-sm leading-normal"
+            >
+              <div class="m-6 flex flex-col gap-2">
                 <div>
-                  <span class="category">Electronik Pilihan</span><br />
-                  <strong>Harga Terbaik</strong>
+                  <span class="text-white/80">Electronik Pilihan</span><br />
+                  <strong class="text-xl font-bold">Harga Terbaik</strong>
                 </div>
-                <div class="cta">Lihat Produk</div>
+                <div class="w-fit px-3 py-1 rounded-lg border border-white">
+                  Lihat Produk
+                </div>
               </div>
             </article>
           </a>
         </div>
       </section>
 
-      <section>
+      <section aria-label="Produk Terbaru">
         <div class="inset flex flex-col gap-6">
-          <header class="flex justify-between">
-            <h2 class="*:align-middle">
+          <header class="flex justify-between items-center text-sm">
+            <h2 class="text-xl font-medium *:align-middle">
               <i data-lucide="trending-up"></i> Produk Terbaru
             </h2>
-            <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
+            <a class="text-blue-600 *:align-middle" href=""
+              >Lihat Semua <i data-lucide="arrow-right"></i
+            ></a>
           </header>
           <div class="grid grid-cols-4 gap-4">
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/soundwave-headphone_wireless_premium.png"
-                  alt="Headphone Wireless Premium"
-                />
-                <span class="badge discount">-31%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>SoundWave</p>
-                  <h3>Headphone Wireless Premium</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.8</span>
-                      (<span itemprop="reviewCount">512</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 450.000</ins>
-                    <del>Rp 650.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/phonex-smartphone_5g_ultra.png"
-                  alt="Smartphone 5G Ultra"
-                />
-                <span class="badge discount">-16%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>PhoneX</p>
-                  <h3>Smartphone 5G Ultra</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.6</span>
-                      (<span itemprop="reviewCount">890</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 4.200.000</ins>
-                    <del>Rp 5.000.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/urbanbag-tas_ransel_laptop_waterproof.png"
-                  alt="Tas Ransel Laptop Waterproof"
-                />
-                <span class="badge new">Baru</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>UrbanBag</p>
-                  <h3>Tas Ransel Laptop Waterproof</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.5</span>
-                      (<span itemprop="reviewCount">234</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <span>Rp 350.000</span>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/blendpro-blender_portable_mini.png"
-                  alt="Blender Portable Mini"
-                />
-                <span class="badge new">Baru</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>BlendPro</p>
-                  <h3>Blender Portable Mini</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-4">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.2</span>
-                      (<span itemprop="reviewCount">567</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <span>Rp 189.000</span>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/tabtech-tablet_10_5_wifi_4g.png"
-                  alt='Tablet 10.5" WiFi + 4G'
-                />
-                <span class="badge discount">-20%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>TabTech</p>
-                  <h3>Tablet 10.5" WiFi + 4G</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.5</span>
-                      (<span itemprop="reviewCount">345</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 3.200.000</ins>
-                    <del>Rp 4.000.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/fashionid-dress_floral_midi.png"
-                  alt="Dress Floral Midi"
-                />
-                <span class="badge discount">-25%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>FashionID</p>
-                  <h3>Dress Floral Midi</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.5</span>
-                      (<span itemprop="reviewCount">312</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 295.000</ins>
-                    <del>Rp 395.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/aromawell-minyak_esensial_lavender_set.png"
-                  alt="Minyak Esensial Lavender Set"
-                />
-                <span class="badge new">Baru</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>AromaWell</p>
-                  <h3>Minyak Esensial Lavender Set</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.8</span>
-                      (<span itemprop="reviewCount">458</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <span>Rp 145.000</span>
-                  </p>
-                </div>
-              </article>
-            </a>
+            <!-- -->
           </div>
         </div>
       </section>
 
-      <section>
+      <section aria-label="Produk Unggulan">
         <div class="inset flex flex-col gap-6">
-          <header class="flex justify-between">
-            <h2>Produk Unggulan</h2>
-            <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
+          <header class="flex justify-between items-center text-sm">
+            <h2 class="text-xl font-medium">Produk Unggulan</h2>
+            <a class="text-blue-600 *:align-middle" href=""
+              >Lihat Semua <i data-lucide="arrow-right"></i
+            ></a>
           </header>
           <div class="grid grid-cols-4 gap-4">
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/soundwave-headphone_wireless_premium.png"
-                  alt="Headphone Wireless Premium"
-                />
-                <span class="badge discount">-31%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>SoundWave</p>
-                  <h3>Headphone Wireless Premium</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-4">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.8</span>
-                      (<span itemprop="reviewCount">512</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 450.000</ins>
-                    <del>Rp 650.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/phonex-smartphone_5g_ultra.png"
-                  alt="Smartphone 5G Ultra"
-                />
-                <span class="badge discount">-16%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>PhoneX</p>
-                  <h3>Smartphone 5G Ultra</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.6</span>
-                      (<span itemprop="reviewCount">890</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 4.200.000</ins>
-                    <del>Rp 5.000.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/wristtech-smartwatch_series_5.png"
-                  alt="Smartwatch Series 5"
-                />
-                <span class="badge discount">-20%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>WristTech</p>
-                  <h3>Smartwatch Series 5</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-4">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.4</span>
-                      (<span itemprop="reviewCount">324</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 2.800.000</ins>
-                    <del>Rp 3.500.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/sportpro-sneakers_sport_runfast.png"
-                  alt="Sneakers Sport Runfast"
-                />
-                <span class="badge discount">-27%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>SportPro</p>
-                  <h3>Sneakers Sport Runfast</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.6</span>
-                      (<span itemprop="reviewCount">445</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 550.000</ins>
-                    <del>Rp 750.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/brewmaster-coffee_maker_otomatis.png"
-                  alt="Coffee Maker Otomatis"
-                />
-                <span class="badge new">Baru</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>BrewMaster</p>
-                  <h3>Coffee Maker Otomatis</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-4">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.4</span>
-                      (<span itemprop="reviewCount">189</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <span>Rp 875.000</span>
-                  </p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <img
-                  src="images/product/fashionid-dress_floral_midi.png"
-                  alt="Dress Floral Midi"
-                />
-                <span class="badge discount">-25%</span>
-                <div class="content flex flex-col gap-2 product">
-                  <p>FashionID</p>
-                  <h3>Dress Floral Midi</h3>
-                  <div
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                    class="tnum flex gap-2 items-center"
-                  >
-                    <output class="flex star-5">
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                      <svg viewBox="0 0 24 24">
-                        <use href="images/star.svg#lucide"></use>
-                      </svg>
-                    </output>
-                    <span>
-                      <span itemprop="ratingValue">4.5</span>
-                      (<span itemprop="reviewCount">312</span>)
-                    </span>
-                  </div>
-                  <p class="tnum flex gap-2 items-center">
-                    <ins>Rp 295.000</ins>
-                    <del>Rp 395.000</del>
-                  </p>
-                </div>
-              </article>
-            </a>
+            <!-- -->
           </div>
         </div>
       </section>
@@ -1299,6 +592,8 @@
 
     <script type="module">
       import $ from "jquery";
+      import { createIcons, icons } from "lucide";
+
       import data from "./data.json" with { type: "json" };
 
       await $.ready;
@@ -1337,6 +632,85 @@
           ),
         ),
       );
+
+      const rupiah = (n) => `Rp ${n.toLocaleString("id-ID")}`;
+      function ProductCard({
+        name,
+        brand,
+        img,
+        price,
+        originalPrice,
+        rating,
+        ratingCount,
+        tags,
+      }) {
+        const discount = originalPrice
+          ? Math.round((1 - price / originalPrice) * 100)
+          : null;
+
+        const badge = discount
+          ? $("<span>", { class: "badge discount" }).text(`-${discount}%`)
+          : tags.includes("baru")
+            ? $("<span>", { class: "badge new" }).text("Baru")
+            : null;
+
+        const stars = Array.from({ length: 5 }, (_, i) =>
+          $("<i>", {
+            "data-lucide": "star",
+            fill: "currentColor",
+            "stroke-width": "0",
+            class: i < Math.round(rating) ? "text-amber-400" : "text-gray-300",
+          }),
+        );
+
+        return $("<a>", { href: "" }).append(
+          $("<article>", { class: "card" }).append(
+            $("<img>", { src: img, alt: name }),
+            badge,
+            $("<div>", {
+              class: "m-4 flex flex-col gap-2 product",
+            }).append(
+              $("<p>").text(brand),
+              $("<h3>").text(name),
+              $("<div>", { class: "tnum flex gap-2 items-center" }).append(
+                $("<output>", {
+                  class: "flex",
+                }).append(...stars),
+                $("<span>").text(`${rating} (${ratingCount})`),
+              ),
+              $("<p>", {
+                class: "tnum flex gap-2 items-center",
+              }).append(
+                originalPrice
+                  ? [
+                      $("<ins>").text(rupiah(price)),
+                      $("<del>").text(rupiah(originalPrice)),
+                    ]
+                  : $("<span>").text(rupiah(price)),
+              ),
+            ),
+          ),
+        );
+      }
+
+      $(`[aria-label='Flash Deal'] .grid`).append(
+        ...data.products
+          .filter((p) => p.tags.includes("promo"))
+          .slice(0, 4)
+          .map(ProductCard),
+      );
+      $(`[aria-label='Produk Terbaru'] .grid`).append(
+        ...data.products
+          .filter((p) => p.tags.includes("baru"))
+          .map(ProductCard),
+      );
+      $(`[aria-label='Produk Unggulan'] .grid`).append(
+        ...data.products
+          .filter((p) => p.tags.includes("unggulan"))
+          .map(ProductCard),
+      );
+
+      createIcons({ icons });
     </script>
   </body>
 </html>
