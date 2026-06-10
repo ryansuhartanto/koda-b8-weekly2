@@ -44,7 +44,7 @@
 
       @layer components {
         .brand {
-          @apply flex flex-row items-center gap-2 select-none;
+          @apply flex items-center gap-2 select-none;
 
           &::before {
             @apply content-['B'] grid place-content-center size-8 rounded-lg text-sm bg-blue-600 text-white;
@@ -211,7 +211,7 @@
       </nav>
     </header>
 
-    <main class="homepage flex flex-col gap-12 my-12">
+    <main class="flex flex-col gap-12 my-12">
       <section
         aria-label="Hero"
         class="-mt-12 relative h-[25rem] bg-linear-to-r from-blue-600 to-purple-700"
@@ -549,7 +549,7 @@
                 <label class="text-white font-medium" for="newsletter"
                   >Newsletter</label
                 >
-                <div class="flex gap-2 w-full">
+                <div class="flex gap-2">
                   <input
                     class="w-full flex-1 px-3 py-2.5 rounded-md bg-gray-700 border border-white/10"
                     id="newsletter"
@@ -558,7 +558,7 @@
                     placeholder="Email kamu"
                   />
                   <button
-                    class="shrink px-3 py-2.5 rounded-md bg-blue-600 text-white cursor-pointer"
+                    class="px-3 py-2.5 rounded-md bg-blue-600 text-white cursor-pointer"
                     type="submit"
                   >
                     Langganan
