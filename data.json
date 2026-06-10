@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Electronic",
+      "icon": "💻",
+      "items": 7
+    },
+    {
+      "name": "Fashion",
+      "icon": "👗",
+      "items": 5
+    },
+    {
+      "name": "Rumah & Dapur",
+      "icon": "🏠",
+      "items": 4
+    },
+    {
+      "name": "Kecantikan",
+      "icon": "💄",
+      "items": 2
+    },
+    {
+      "name": "Olahraga",
+      "icon": "⚽",
+      "items": 3
+    },
+    {
+      "name": "Buku & Alat Tulis",
+      "icon": "📚",
+      "items": 2
+    }
+  ]
+}
