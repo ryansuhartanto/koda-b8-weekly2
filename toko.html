@@ -213,16 +213,19 @@
 
     <main class="py-6 bg-gray-50">
       <div class="wrapper flex flex-col gap-6">
-        <nav aria-label="Breadcrumb" class="flex gap-1 text-sm text-gray-400">
+        <nav
+          aria-label="Breadcrumb"
+          class="flex items-center gap-1 text-sm text-gray-400"
+        >
           <a class="hover:text-black transition-colors" href="#">Beranda</a>
-          <i data-lucide="chevron-right" class="size-4 mt-0.5"></i>
+          <i data-lucide="chevron-right" class="size-4"></i>
           <a class="hover:text-black transition-colors" href="#">Toko</a>
         </nav>
-        <h1 class="text-2xl font-semibold">Semua Produk</h1>
-        <div class="flex gap-8 items-start mt-2">
+        <h1 class="text-2xl font-medium">Semua Produk</h1>
+        <div class="flex gap-8 items-start">
           <aside class="w-56 shrink-0 flex flex-col gap-8 text-sm">
             <section>
-              <h3 class="font-semibold mb-4">Harga</h3>
+              <h3 class="text-xl font-medium mb-4">Harga</h3>
               <div class="flex justify-between text-gray-500 text-xs mb-3">
                 <span>Rp 0</span>
                 <span>Rp 20.000.000</span>
@@ -232,7 +235,7 @@
               </div>
             </section>
             <section aria-label="Category filter">
-              <h3 class="font-semibold mb-4">Kategori</h3>
+              <h3 class="text-xl font-medium mb-4">Kategori</h3>
               <ul
                 id="category-filter"
                 class="flex flex-col gap-3 text-gray-600"
@@ -241,13 +244,13 @@
               </ul>
             </section>
             <section aria-label="Rating filter">
-              <h3 class="font-semibold mb-4">Rating Minimum</h3>
+              <h3 class="text-xl font-medium mb-4">Rating Minimum</h3>
               <ul id="rating-filter" class="flex flex-col gap-3 text-gray-600">
                 <!-- -->
               </ul>
             </section>
             <section>
-              <h3 class="font-semibold mb-4">Ketersediaan</h3>
+              <h3 class="text-xl font-medium mb-4">Ketersediaan</h3>
               <ul class="flex flex-col gap-3 text-gray-600">
                 <li>
                   <label
@@ -266,7 +269,7 @@
                 <label for="sort" class="text-gray-500">Urutkan:</label>
                 <select
                   id="sort"
-                  class="border border-black/10 rounded-lg px-3 py-2 bg-white outline-none focus:border-black/50 transition-colors cursor-pointer"
+                  class="border border-black/10 rounded-lg p-2 px-4 bg-white outline-none focus:border-black/50 transition-colors cursor-pointer"
                 >
                   <option>Paling Populer</option>
                   <option>Harga Terendah</option>
@@ -277,10 +280,10 @@
             <div id="product-grid" class="grid grid-cols-4 gap-4">
               <!-- -->
             </div>
-            <div class="mt-4 flex justify-center">
+            <div class="my-4 flex justify-center">
               <button
                 type="button"
-                class="px-6 py-2.5 border border-blue-600 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors cursor-pointer bg-white"
+                class="p-3 px-8 border border-blue-600 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors cursor-pointer bg-white"
               >
                 Muat Lebih Banyak (6 produk lagi)
               </button>
