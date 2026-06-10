@@ -668,7 +668,7 @@
             $("<img>", { src: img, alt: name }),
             badge,
             $("<div>", {
-              class: "m-4 flex flex-col gap-2 product",
+              class: "m-4 flex flex-col gap-1 product",
             }).append(
               $("<p>").text(brand),
               $("<h3>").text(name),
@@ -679,7 +679,7 @@
                 $("<span>").text(`${rating} (${ratingCount})`),
               ),
               $("<p>", {
-                class: "tnum flex gap-2 items-center",
+                class: "tnum flex gap-2 items-center pt-1",
               }).append(
                 originalPrice
                   ? [
