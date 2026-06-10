@@ -672,11 +672,20 @@
             }).append(
               $("<p>").text(brand),
               $("<h3>").text(name),
-              $("<div>", { class: "tnum flex gap-2 items-center" }).append(
-                $("<output>", {
-                  class: "flex",
-                }).append(...stars),
-                $("<span>").text(`${rating} (${ratingCount})`),
+              $("<div>", {
+                itemprop: "aggregateRating",
+                itemscope: "",
+                itemtype: "https://schema.org/AggregateRating",
+                class: "tnum flex gap-2 items-center",
+              }).append(
+                $("<output>", { class: "flex" }).append(...stars),
+                $("<span>").append(
+                  $("<span>", { itemprop: "ratingValue" }).text(rating),
+                  " ",
+                  "(",
+                  $("<span>", { itemprop: "reviewCount" }).text(ratingCount),
+                  ")",
+                ),
               ),
               $("<p>", {
                 class: "tnum flex gap-2 items-center pt-1",
