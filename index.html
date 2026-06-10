@@ -51,6 +51,32 @@
             @apply content-['B'] grid place-content-center w-8 h-8 rounded-lg text-sm bg-blue-600 text-white;
           }
         }
+
+        .card {
+          @apply bg-white border border-black/10 rounded-2xl overflow-hidden relative text-gray-500;
+
+          img {
+            @apply aspect-square w-full;
+          }
+
+          h3 {
+            @apply text-gray-900;
+          }
+        }
+
+        .card-product {
+          @apply text-xs;
+
+          & > h3,
+          & > div {
+            @apply text-sm;
+          }
+
+          & > p > span,
+          & > p > ins {
+            @apply text-blue-600 text-base font-medium no-underline;
+          }
+        }
       }
 
       @utility inset {
@@ -223,79 +249,16 @@
         </div>
       </section>
 
-      <section class="categories">
+      <section aria-label="Browse categories" class="text-xs">
         <div class="inset flex flex-col gap-6">
-          <header class="flex justify-between">
-            <h2>Belanja Bedasarkan Kategori</h2>
-            <a href="">Lihat Semua <i data-lucide="arrow-right"></i></a>
+          <header class="flex justify-between items-center text-sm">
+            <h2 class="text-xl font-medium">Belanja Bedasarkan Kategori</h2>
+            <a class="text-blue-600 *:align-middle" href="">
+              Lihat Semua <i data-lucide="arrow-right"></i>
+            </a>
           </header>
           <div class="grid grid-cols-6 gap-3">
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img
-                    src="images/category/electronic.png"
-                    alt="Electronic category"
-                  />
-                  <h3>Electronik</h3>
-                  <p>7 produk</p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img
-                    src="images/category/fashion.png"
-                    alt="Fashion category"
-                  />
-                  <h3>Fashion</h3>
-                  <p>5 produk</p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img
-                    src="images/category/household.png"
-                    alt="Household category"
-                  />
-                  <h3>Rumah &amp; Dapur</h3>
-                  <p>4 produk</p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img src="images/category/beauty.png" alt="Beauty category" />
-                  <h3>Kecantikan</h3>
-                  <p>2 produk</p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img src="images/category/sport.png" alt="Sport category" />
-                  <h3>Olahraga</h3>
-                  <p>3 produk</p>
-                </div>
-              </article>
-            </a>
-            <a href="">
-              <article class="card">
-                <div class="content flex flex-col gap-2 items-center">
-                  <img
-                    src="images/category/stationary.png"
-                    alt="Stationary category"
-                  />
-                  <h3>Buku &amp; Alat Tulis</h3>
-                  <p>2 produk</p>
-                </div>
-              </article>
-            </a>
+            <!--  -->
           </div>
         </div>
       </section>
@@ -1320,7 +1283,6 @@
 
       await $.ready;
 
-      // <a class="text-gray-500 hover:text-black" href="">💻 Electronic</a>
       $("[aria-label='Main navigations']>div").append(
         ...data.categories.map(({ name, icon }) =>
           $("<a>", {
@@ -1334,6 +1296,26 @@
           href: "",
           text: `🔥 Promo`,
         }),
+      );
+
+      $("[aria-label='Browse categories']>div>div").append(
+        ...data.categories.map(({ name, img, items }) =>
+          $("<a>", { href: "" }).append(
+            $("<article>", { class: "card rounded-xl" }).append(
+              $("<div>", {
+                class: "m-4 flex flex-col gap-2 items-center",
+              }).append(
+                $("<img>", {
+                  class: "w-14 rounded-xl",
+                  src: img,
+                  alt: `${name} category`,
+                }),
+                $("<h3>").text(name),
+                $("<p>").text(`${items} produk`),
+              ),
+            ),
+          ),
+        ),
       );
     </script>
   </body>

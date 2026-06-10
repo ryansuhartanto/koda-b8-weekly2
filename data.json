@@ -3,31 +3,37 @@
     {
       "name": "Electronic",
       "icon": "💻",
+      "img": "images/category/electronic.png",
       "items": 7
     },
     {
       "name": "Fashion",
       "icon": "👗",
+      "img": "images/category/fashion.png",
       "items": 5
     },
     {
       "name": "Rumah & Dapur",
       "icon": "🏠",
+      "img": "images/category/household.png",
       "items": 4
     },
     {
       "name": "Kecantikan",
       "icon": "💄",
+      "img": "images/category/beauty.png",
       "items": 2
     },
     {
       "name": "Olahraga",
       "icon": "⚽",
+      "img": "images/category/sport.png",
       "items": 3
     },
     {
       "name": "Buku & Alat Tulis",
       "icon": "📚",
+      "img": "images/category/stationary.png",
       "items": 2
     }
   ]
