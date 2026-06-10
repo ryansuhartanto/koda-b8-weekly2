@@ -211,85 +211,82 @@
       </nav>
     </header>
 
-    <main class="wrapper my-8 flex flex-col gap-6">
-      <nav aria-label="Breadcrumb" class="flex gap-1 text-sm text-gray-400">
-        <a class="hover:text-black transition-colors" href="#">Beranda</a>
-        <i data-lucide="chevron-right" class="size-4 mt-0.5"></i>
-        <a class="hover:text-black transition-colors" href="#">Toko</a>
-      </nav>
-
-      <h1 class="text-2xl font-semibold">Semua Produk</h1>
-
-      <div class="flex gap-8 items-start mt-2">
-        <aside class="w-56 shrink-0 flex flex-col gap-8 text-sm">
-          <section>
-            <h3 class="font-semibold mb-4">Harga</h3>
-            <div class="flex justify-between text-gray-500 text-xs mb-3">
-              <span>Rp 0</span>
-              <span>Rp 20.000.000</span>
-            </div>
-            <div class="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
-              <div class="h-full bg-blue-600 w-full"></div>
-            </div>
-          </section>
-
-          <section aria-label="Category filter">
-            <h3 class="font-semibold mb-4">Kategori</h3>
-            <ul id="category-filter" class="flex flex-col gap-3 text-gray-600">
-              <!--  -->
-            </ul>
-          </section>
-
-          <section aria-label="Rating filter">
-            <h3 class="font-semibold mb-4">Rating Minimum</h3>
-            <ul id="rating-filter" class="flex flex-col gap-3 text-gray-600">
-              <!-- -->
-            </ul>
-          </section>
-
-          <section>
-            <h3 class="font-semibold mb-4">Ketersediaan</h3>
-            <ul class="flex flex-col gap-3 text-gray-600">
-              <li>
-                <label
-                  class="flex gap-2 items-center cursor-pointer hover:text-black"
-                  ><input type="checkbox" class="accent-blue-600 size-4" /> Stok
-                  tersedia</label
-                >
-              </li>
-            </ul>
-          </section>
-        </aside>
-
-        <section class="flex-1 flex flex-col gap-6">
-          <header class="flex justify-between items-center text-sm">
-            <span class="text-gray-500">18 produk ditemukan</span>
-            <div class="flex items-center gap-3">
-              <label for="sort" class="text-gray-500">Urutkan:</label>
-              <select
-                id="sort"
-                class="border border-black/10 rounded-lg px-3 py-2 bg-white outline-none focus:border-black/50 transition-colors cursor-pointer"
+    <main class="py-6 bg-gray-50">
+      <div class="wrapper flex flex-col gap-6">
+        <nav aria-label="Breadcrumb" class="flex gap-1 text-sm text-gray-400">
+          <a class="hover:text-black transition-colors" href="#">Beranda</a>
+          <i data-lucide="chevron-right" class="size-4 mt-0.5"></i>
+          <a class="hover:text-black transition-colors" href="#">Toko</a>
+        </nav>
+        <h1 class="text-2xl font-semibold">Semua Produk</h1>
+        <div class="flex gap-8 items-start mt-2">
+          <aside class="w-56 shrink-0 flex flex-col gap-8 text-sm">
+            <section>
+              <h3 class="font-semibold mb-4">Harga</h3>
+              <div class="flex justify-between text-gray-500 text-xs mb-3">
+                <span>Rp 0</span>
+                <span>Rp 20.000.000</span>
+              </div>
+              <div class="h-1 w-full bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 w-full"></div>
+              </div>
+            </section>
+            <section aria-label="Category filter">
+              <h3 class="font-semibold mb-4">Kategori</h3>
+              <ul
+                id="category-filter"
+                class="flex flex-col gap-3 text-gray-600"
               >
-                <option>Paling Populer</option>
-                <option>Harga Terendah</option>
-                <option>Harga Tertinggi</option>
-              </select>
+                <!--  -->
+              </ul>
+            </section>
+            <section aria-label="Rating filter">
+              <h3 class="font-semibold mb-4">Rating Minimum</h3>
+              <ul id="rating-filter" class="flex flex-col gap-3 text-gray-600">
+                <!-- -->
+              </ul>
+            </section>
+            <section>
+              <h3 class="font-semibold mb-4">Ketersediaan</h3>
+              <ul class="flex flex-col gap-3 text-gray-600">
+                <li>
+                  <label
+                    class="flex gap-2 items-center cursor-pointer hover:text-black"
+                    ><input type="checkbox" class="accent-blue-600 size-4" />
+                    Stok tersedia</label
+                  >
+                </li>
+              </ul>
+            </section>
+          </aside>
+          <section class="flex-1 flex flex-col gap-6">
+            <header class="flex justify-between items-center text-sm">
+              <span class="text-gray-500">18 produk ditemukan</span>
+              <div class="flex items-center gap-3">
+                <label for="sort" class="text-gray-500">Urutkan:</label>
+                <select
+                  id="sort"
+                  class="border border-black/10 rounded-lg px-3 py-2 bg-white outline-none focus:border-black/50 transition-colors cursor-pointer"
+                >
+                  <option>Paling Populer</option>
+                  <option>Harga Terendah</option>
+                  <option>Harga Tertinggi</option>
+                </select>
+              </div>
+            </header>
+            <div id="product-grid" class="grid grid-cols-4 gap-4">
+              <!-- -->
             </div>
-          </header>
-
-          <div id="product-grid" class="grid grid-cols-4 gap-4">
-            <!-- -->
-          </div>
-
-          <div class="mt-4 flex justify-center">
-            <button
-              type="button"
-              class="px-6 py-2.5 border border-blue-600 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors cursor-pointer bg-white"
-            >
-              Muat Lebih Banyak (6 produk lagi)
-            </button>
-          </div>
-        </section>
+            <div class="mt-4 flex justify-center">
+              <button
+                type="button"
+                class="px-6 py-2.5 border border-blue-600 text-blue-600 rounded-xl text-sm font-medium hover:bg-blue-50 transition-colors cursor-pointer bg-white"
+              >
+                Muat Lebih Banyak (6 produk lagi)
+              </button>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
 
