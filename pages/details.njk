@@ -242,26 +242,12 @@
     import $ from "jquery";
     import { createIcons, icons } from "lucide";
 
-    import { ProductCard } from "./scripts/components.js";
+    import { initHeader, ProductCard } from "./scripts/components.js";
 
     import data from "./data.json" with { type: "json" };
 
     await $.ready;
-
-    $("[aria-label='Main navigations']>div").append(
-      ...data.categories.map(({ name, icon }) =>
-        $("<a>", {
-          class: "text-gray-500 hover:text-black",
-          href: "",
-          text: `${icon} ${name}`,
-        }),
-      ),
-      $("<a>", {
-        class: "text-red-600 hover:text-red-900",
-        href: "",
-        text: `🔥 Promo`,
-      }),
-    );
+    initHeader(data);
 
     const pdpStars = Array.from({ length: 5 }, (_, i) =>
       $("<i>", {

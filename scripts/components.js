@@ -2,6 +2,34 @@ import $ from "jquery";
 
 const rupiah = (n) => `Rp ${n.toLocaleString("id-ID")}`;
 
+export function initHeader(data) {
+  $("[aria-label='Main navigations']>div").append(
+    ...data.categories.map(({ name, icon }) =>
+      $("<a>", {
+        class: "text-gray-500 hover:text-black",
+        href: "",
+        text: `${icon} ${name}`,
+      }),
+    ),
+    $("<a>", {
+      class: "text-red-600 hover:text-red-900",
+      href: "",
+      text: `🔥 Promo`,
+    }),
+  );
+
+  $("[aria-label='Category filter']>ul").append(
+    ...data.categories.map(({ name }) =>
+      $("<li>").append(
+        $("<label>").append(
+          $("<input>", { type: "checkbox", value: name }),
+          ` ${name}`,
+        ),
+      ),
+    ),
+  );
+}
+
 export function ProductCard({
   name,
   brand,
