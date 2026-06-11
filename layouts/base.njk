@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BeliMudah</title>
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin />
+
+    <link rel="preconnect" href="https://unpkg.com/" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simple-icons-font@v16/font/simple-icons.min.css"
+      crossorigin
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4.3"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "jquery": "https://esm.sh/jquery@4",
+          "lucide": "https://esm.sh/lucide@1.17"
+        }
+      }
+    </script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "InterVariable", "Inter", Helvetica, Arial, sans-serif;
+      }
+
+      @layer base {
+        svg.lucide {
+          @apply inline size-[1em];
+        }
+
+        small {
+          font-size: unset;
+        }
+      }
+
+      @layer components {
+        .brand {
+          @apply flex items-center gap-2 select-none;
+
+          &::before {
+            @apply content-['B'] grid place-content-center size-8 rounded-lg text-sm bg-blue-600 text-white;
+          }
+        }
+
+        .card {
+          @apply bg-white border border-black/10 rounded-2xl overflow-hidden relative text-gray-500 transition-shadow duration-500 hover:shadow-xl;
+
+          img {
+            @apply aspect-square w-full;
+          }
+
+          h3 {
+            @apply text-gray-900;
+          }
+
+          .badge {
+            @apply absolute top-2 start-2 px-2 py-1 rounded-full text-white text-xs;
+
+            &.discount {
+              @apply bg-red-600;
+            }
+            &.new {
+              @apply bg-blue-600;
+            }
+          }
+
+          &.fashion {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-black) 80%, transparent),
+                color-mix(in oklch, var(--color-black) 0%, transparent)
+              ),
+              url("images/marketing/fashion.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          &.electronic {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-blue-800) 80%, transparent),
+                color-mix(in oklch, var(--color-blue-800) 0%, transparent)
+              ),
+              url("images/marketing/electronic.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          .product {
+            @apply text-xs;
+
+            & > h3,
+            & > div {
+              @apply text-sm;
+            }
+
+            & > p > span,
+            & > p > ins {
+              @apply text-blue-600 text-base font-semibold no-underline;
+            }
+          }
+        }
+      }
+
+      @utility wrapper {
+        @apply max-w-7xl px-4 mx-auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>

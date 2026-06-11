@@ -1,0 +1,269 @@
+{% extends "../layouts/main.njk" %}
+
+{% block main %}
+  <main class="flex flex-col gap-12 pt-6 pb-16 bg-gray-50">
+    <section
+      aria-label="Hero"
+      class="-mt-6 relative h-[25rem] bg-linear-to-r from-blue-600 to-purple-700"
+    >
+      <nav
+        aria-label="Hero slides navigations"
+        class="absolute z-10 inset-0 m-4 grid text-xl text-white grid-cols-[auto_1fr_auto] grid-rows-[auto_1fr_auto] pointer-events-none [&_button]:pointer-events-auto [&_button]:cursor-pointer"
+      >
+        <div
+          class="flex flex-col justify-center gap-2 col-1 row-[1/4] *:size-10 *:grid *:place-content-center *:rounded-full *:bg-white/20"
+        >
+          <button aria-label="Previous" type="button">
+            <i data-lucide="chevron-left"></i>
+          </button>
+        </div>
+        <div
+          class="flex flex-col justify-center gap-2 col-3 row-[1/4] *:size-10 *:grid *:place-content-center *:rounded-full *:bg-white/20"
+        >
+          <button aria-label="Next" type="button">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+        <div
+          class="flex justify-center gap-2 col-2 row-3 *:size-2 *:rounded-full *:bg-white/50 *:pointer-events-auto *:transition-all *:duration-200 *:ease-out *:aria-selected:w-6 *:aria-selected:bg-white"
+        >
+          <button
+            type="button"
+            aria-label="Go to slide 1"
+            aria-selected="false"
+          ></button>
+          <button
+            type="button"
+            aria-label="Go to slide 2"
+            aria-selected="true"
+          ></button>
+          <button
+            type="button"
+            aria-label="Go to slide 3"
+            aria-selected="false"
+          ></button>
+        </div>
+      </nav>
+
+      <img
+        class="absolute inset-y-0 end-0 w-1/2 h-full object-cover mix-blend-hard-light opacity-25"
+        src="images/category/electronic.png"
+        alt="Electronics"
+      />
+
+      <div class="wrapper absolute inset-0 flex flex-col justify-center">
+        <div class="w-2/5 flex flex-col gap-4">
+          <h2 class="text-white font-bold text-[2.5rem] leading-tight">
+            Elektronik Pilihan, Harga Spesial
+          </h2>
+          <p class="text-white/80 text-lg leading-relaxed">
+            Laptop, smartphone, headphone, dan masih banyak lagi dengan diskon
+            hingga 40%
+          </p>
+          <a
+            class="flex gap-2 items-center w-fit bg-white text-blue-600 py-3 px-6 rounded-xl"
+            href=""
+          >
+            Lihat Promo
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Browse categories" class="text-xs">
+      <div class="wrapper flex flex-col gap-6">
+        <header class="flex justify-between items-center text-sm">
+          <h2 class="text-xl font-medium">Belanja Bedasarkan Kategori</h2>
+          <a class="text-blue-600 *:align-middle" href="">
+            Lihat Semua <i data-lucide="arrow-right"></i>
+          </a>
+        </header>
+        <div class="grid grid-cols-6 gap-3">
+          <!--  -->
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Flash Deal">
+      <div class="wrapper flex flex-col gap-6">
+        <header class="flex justify-between items-center text-sm">
+          <div class="flex gap-4 items-center">
+            <h2
+              class="flex gap-1 items-center bg-red-600 text-white px-3 py-2 rounded-lg font-medium"
+            >
+              <i data-lucide="zap"></i>
+              <span>Flash Deal</span>
+            </h2>
+            <span class="flex gap-2 items-center text-gray-500">
+              <i data-lucide="clock"></i>
+              <span>Berakhir dalam:</span>
+              <span class="tabular-nums">05 : 21 : 38</span>
+            </span>
+          </div>
+          <a class="text-blue-600 *:align-middle" href=""
+            >Lihat Semua <i data-lucide="arrow-right"></i
+          ></a>
+        </header>
+        <div class="grid grid-cols-4 gap-4">
+          <!-- -->
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Marketing">
+      <div class="wrapper grid grid-cols-2 gap-4">
+        <a href="">
+          <article
+            class="card fashion flex flex-col justify-center h-44 text-white text-sm leading-normal"
+          >
+            <div class="m-6 flex flex-col gap-2">
+              <div>
+                <span class="text-white/80">Fashion Wanita</span><br />
+                <strong class="text-xl font-bold">Diskon s/d 50%</strong>
+              </div>
+              <div class="w-fit px-3 py-1 rounded-lg border border-white">
+                Belanja Sekarang
+              </div>
+            </div>
+          </article>
+        </a>
+        <a href="">
+          <article
+            class="card electronic flex flex-col justify-center h-44 text-white text-sm leading-normal"
+          >
+            <div class="m-6 flex flex-col gap-2">
+              <div>
+                <span class="text-white/80">Electronik Pilihan</span><br />
+                <strong class="text-xl font-bold">Harga Terbaik</strong>
+              </div>
+              <div class="w-fit px-3 py-1 rounded-lg border border-white">
+                Lihat Produk
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+
+    <section aria-label="Produk Terbaru">
+      <div class="wrapper flex flex-col gap-6">
+        <header class="flex justify-between items-center text-sm">
+          <h2 class="text-xl font-medium *:align-middle">
+            <i data-lucide="trending-up" class="text-blue-600"></i> Produk
+            Terbaru
+          </h2>
+          <a class="text-blue-600 *:align-middle" href=""
+            >Lihat Semua <i data-lucide="arrow-right"></i
+          ></a>
+        </header>
+        <div class="grid grid-cols-4 gap-4">
+          <!-- -->
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Produk Unggulan">
+      <div class="wrapper flex flex-col gap-6">
+        <header class="flex justify-between items-center text-sm">
+          <h2 class="text-xl font-medium">Produk Unggulan</h2>
+          <a class="text-blue-600 *:align-middle" href=""
+            >Lihat Semua <i data-lucide="arrow-right"></i
+          ></a>
+        </header>
+        <div class="grid grid-cols-4 gap-4">
+          <!-- -->
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer class="inset">
+      <div class="card">
+        <div class="content flex flex-col gap-8">
+          <h2>
+            Kenapa Belanja di BeliMudah?
+          </h2>
+          <div class="grid grid-cols-4 gap-4 5">
+            <div class="flex flex-col gap- 5">
+              <h3>Gratis Onkir</h3>
+            </div>
+            <div class="flex flex-col gap- 5">
+              <h3>Pembayaran Aman</h3>
+            </div>
+            <div class="flex flex-col gap- 5">
+              <h3>Retur Mudah</h3>
+            </div>
+            <div class="flex flex-col gap- 5">
+              <h3>CS 24/7</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+  </main>
+{% endblock %}
+
+{% block script %}
+  <script type="module">
+    import $ from "jquery";
+    import { createIcons, icons } from "lucide";
+
+    import { ProductCard } from "./scripts/product-card.js";
+
+    import data from "./data.json" with { type: "json" };
+
+    await $.ready;
+
+    $("[aria-label='Main navigations']>div").append(
+      ...data.categories.map(({ name, icon }) =>
+        $("<a>", {
+          class: "text-gray-500 hover:text-black",
+          href: "",
+          text: `${icon} ${name}`,
+        }),
+      ),
+      $("<a>", {
+        class: "text-red-600 hover:text-red-900",
+        href: "",
+        text: `🔥 Promo`,
+      }),
+    );
+
+    $("[aria-label='Browse categories']>div>div").append(
+      ...data.categories.map(({ name, img, items }) =>
+        $("<a>", { href: "" }).append(
+          $("<article>", { class: "card rounded-xl" }).append(
+            $("<div>", {
+              class: "m-4 flex flex-col gap-2 items-center",
+            }).append(
+              $("<img>", {
+                class: "w-14 rounded-xl",
+                src: img,
+                alt: `${name} category`,
+              }),
+              $("<h3>").text(name),
+              $("<p>").text(`${items} produk`),
+            ),
+          ),
+        ),
+      ),
+    );
+
+    $(`[aria-label='Flash Deal'] .grid`).append(
+      ...data.products
+        .filter((p) => p.tags.includes("promo"))
+        .slice(0, 4)
+        .map(ProductCard),
+    );
+    $(`[aria-label='Produk Terbaru'] .grid`).append(
+      ...data.products.filter((p) => p.tags.includes("baru")).map(ProductCard),
+    );
+    $(`[aria-label='Produk Unggulan'] .grid`).append(
+      ...data.products
+        .filter((p) => p.tags.includes("unggulan"))
+        .map(ProductCard),
+    );
+
+    createIcons({ icons });
+  </script>
+{% endblock %}
