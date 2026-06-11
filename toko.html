@@ -215,17 +215,21 @@
       <div class="wrapper flex flex-col gap-6">
         <nav
           aria-label="Breadcrumb"
-          class="flex items-center gap-1 text-sm text-gray-400"
+          class="flex items-center gap-1 text-sm text-gray-400 [&_a]:transition-colors [&_a]:hover:text-black [&_span]:text-black"
         >
-          <a class="hover:text-black transition-colors" href="#">Beranda</a>
+          <a href="#">Beranda</a>
           <i data-lucide="chevron-right" class="size-4"></i>
-          <a class="hover:text-black transition-colors" href="#">Toko</a>
+          <span href="#">Toko</span>
         </nav>
+
         <h1 class="text-2xl font-medium">Semua Produk</h1>
+
         <div class="flex gap-8 items-start">
-          <aside class="w-56 shrink-0 flex flex-col gap-8 text-sm">
+          <aside
+            class="w-56 shrink-0 flex flex-col gap-8 text-sm [&_h3]:text-xl [&_h3]:font-medium [&_h3]:mb-4 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-3 [&_ul]:text-gray-600 [&_label]:flex [&_label]:gap-2 [&_label]:items-center [&_label]:cursor-pointer hover:[&_label]:text-black [&_input]:accent-blue-600 [&_input]:size-4"
+          >
             <section>
-              <h3 class="text-xl font-medium mb-4">Harga</h3>
+              <h3>Harga</h3>
               <div class="flex justify-between text-gray-500 text-xs mb-3">
                 <span>Rp 0</span>
                 <span>Rp 20.000.000</span>
@@ -235,38 +239,36 @@
               </div>
             </section>
             <section aria-label="Category filter">
-              <h3 class="text-xl font-medium mb-4">Kategori</h3>
-              <ul class="flex flex-col gap-3 text-gray-600">
-                <!--  -->
-              </ul>
+              <h3>Kategori</h3>
+              <ul></ul>
             </section>
             <section aria-label="Rating filter">
-              <h3 class="text-xl font-medium mb-4">Rating Minimum</h3>
-              <ul class="flex flex-col gap-3 text-gray-600">
-                <!-- -->
-              </ul>
+              <h3>Rating Minimum</h3>
+              <ul></ul>
             </section>
             <section>
-              <h3 class="text-xl font-medium mb-4">Ketersediaan</h3>
-              <ul class="flex flex-col gap-3 text-gray-600">
+              <h3>Ketersediaan</h3>
+              <ul>
                 <li>
-                  <label
-                    class="flex gap-2 items-center cursor-pointer hover:text-black"
-                    ><input type="checkbox" class="accent-blue-600 size-4" />
-                    Stok tersedia</label
-                  >
+                  <label>
+                    <input type="checkbox" />
+                    Stok tersedia
+                  </label>
                 </li>
               </ul>
             </section>
           </aside>
+
           <section aria-label="Product list" class="flex-1 flex flex-col gap-6">
-            <header class="flex justify-between items-center text-sm">
-              <span class="text-gray-500">18 produk ditemukan</span>
+            <header
+              class="flex justify-between items-center text-sm *:text-gray-500"
+            >
+              <span>18 produk ditemukan</span>
               <div class="flex items-center gap-3">
-                <label for="sort" class="text-gray-500">Urutkan:</label>
+                <label for="sort">Urutkan:</label>
                 <select
                   id="sort"
-                  class="border border-black/10 rounded-lg p-2 px-4 bg-white outline-none focus:border-black/50 transition-colors cursor-pointer"
+                  class="border border-black/10 rounded-lg p-2 px-4 bg-white text-black outline-none focus:border-black/50 transition-colors cursor-pointer"
                 >
                   <option>Paling Populer</option>
                   <option>Harga Terendah</option>
@@ -274,9 +276,7 @@
                 </select>
               </div>
             </header>
-            <div class="grid grid-cols-4 gap-4">
-              <!-- -->
-            </div>
+            <div class="grid grid-cols-4 gap-4"></div>
             <div class="my-4 flex justify-center">
               <button
                 type="button"
@@ -555,14 +555,8 @@
       $("[aria-label='Category filter']>ul").append(
         ...data.categories.map(({ name }) =>
           $("<li>").append(
-            $("<label>", {
-              class: "flex gap-2 items-center cursor-pointer hover:text-black",
-            }).append(
-              $("<input>", {
-                type: "checkbox",
-                class: "accent-blue-600 size-4",
-                value: name,
-              }),
+            $("<label>").append(
+              $("<input>", { type: "checkbox", value: name }),
               ` ${name}`,
             ),
           ),
@@ -579,15 +573,8 @@
           );
 
           return $("<li>").append(
-            $("<label>", {
-              class: "flex items-center gap-2 cursor-pointer hover:text-black",
-            }).append(
-              $("<input>", {
-                type: "radio",
-                name: "rating",
-                class: "accent-blue-600 size-4",
-                value: rating,
-              }),
+            $("<label>").append(
+              $("<input>", { type: "radio", name: "rating", value: rating }),
               $("<span>", {
                 class: "flex gap-0.5",
                 "aria-label": `${rating} bintang ke atas`,
