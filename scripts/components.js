@@ -56,7 +56,7 @@ export function ProductCard({
           ),
         ),
         $("<p>", {
-          class: "tabular-nums flex gap-2 items-center pt-1",
+          class: "tabular-nums flex gap-2 items-center pt-1 price",
         }).append(
           originalPrice
             ? [

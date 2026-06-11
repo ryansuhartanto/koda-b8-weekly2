@@ -104,11 +104,17 @@
             & > div {
               @apply text-sm;
             }
+          }
+        }
 
-            & > p > span,
-            & > p > ins {
-              @apply text-blue-600 text-base font-semibold no-underline;
-            }
+        .price {
+          & > span,
+          & > ins {
+            @apply text-blue-600 font-semibold no-underline;
+          }
+
+          & > del {
+            @apply text-gray-500;
           }
         }
       }
