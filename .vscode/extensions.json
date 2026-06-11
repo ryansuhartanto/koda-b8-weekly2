@@ -1,3 +1,6 @@
 {
-  "recommendations": ["html-validate.vscode-html-validate", "oxc.oxc-vscode"]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "html-validate.vscode-html-validate"
+  ]
 }
