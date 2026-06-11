@@ -219,6 +219,156 @@
   </header>
 
   
+  <main class="pt-6 pb-16 bg-gray-50">
+    <div class="wrapper flex flex-col gap-8">
+      <h1 class="text-2xl font-medium text-gray-900">
+        Keranjang Belanja (<span class="tabular-nums">1</span> item)
+      </h1>
+
+      <div class="grid grid-cols-3 gap-8 items-start">
+        <section aria-label="Cart items" class="col-span-2 flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
+            <article
+              class="bg-white border border-black/10 rounded-2xl p-4 flex gap-6"
+            >
+              <div
+                class="size-24 shrink-0 rounded-xl overflow-hidden bg-gray-100"
+              >
+                <img
+                  src="images/product/soundwave-headphone_wireless_premium.png"
+                  alt="Headphone Wireless Premium"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-between gap-2">
+                <div class="flex justify-between items-start">
+                  <div class="flex flex-col gap-1">
+                    <h3 class="font-medium text-gray-900 text-sm">
+                      Headphone Wireless Premium
+                    </h3>
+                    <div class="text-xs text-gray-500">Hitam</div>
+                  </div>
+                  <button
+                    type="button"
+                    class="text-gray-400 hover:text-red-500 cursor-pointer transition-colors"
+                    aria-label="Hapus item"
+                  >
+                    <i data-lucide="trash-2" class="size-5"></i>
+                  </button>
+                </div>
+                <div class="flex justify-between items-end">
+                  <div class="flex flex-col gap-2 items-start">
+                    <div
+                      class="flex items-center border border-gray-200 rounded-lg overflow-hidden h-8 w-24 bg-white"
+                    >
+                      <button
+                        type="button"
+                        class="w-8 h-full flex items-center justify-center text-gray-500 hover:bg-gray-50 cursor-pointer"
+                        onclick="this.nextElementSibling.stepDown()"
+                      >
+                        &minus;
+                      </button>
+                      <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="flex-1 w-full text-center text-sm font-medium outline-none bg-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                      />
+                      <button
+                        type="button"
+                        class="w-8 h-full flex items-center justify-center text-gray-500 hover:bg-gray-50 cursor-pointer"
+                        onclick="this.previousElementSibling.stepUp()"
+                      >
+                        &plus;
+                      </button>
+                    </div>
+                    <button
+                      type="button"
+                      class="flex items-center gap-1 text-xs text-gray-500 hover:text-gray-900 cursor-pointer transition-colors"
+                    >
+                      <i data-lucide="heart" class="size-4"></i>
+                      Simpan ke Wishlist
+                    </button>
+                  </div>
+                  <span class="text-blue-600 font-medium">Rp 450.000</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div
+            class="flex flex-col gap-4 bg-white border border-black/10 rounded-2xl p-6"
+          >
+            <h2 class="flex items-center gap-2 font-medium text-gray-900">
+              <i data-lucide="tag" class="text-blue-600"></i> Kode Promo
+            </h2>
+            <div class="flex flex-col gap-3">
+              <form class="flex gap-2">
+                <input
+                  type="text"
+                  placeholder="Masukkan kode promo"
+                  class="flex-1 border border-black/10 rounded-xl px-4 py-2.5 text-sm outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white"
+                />
+                <button
+                  type="submit"
+                  class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-medium hover:bg-blue-700 transition-colors cursor-pointer shrink-0"
+                >
+                  Terapkan
+                </button>
+              </form>
+              <div class="text-xs text-gray-500">
+                Coba: HEMAT10, BELIMUDAH, atau NEWUSER
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside
+          class="flex flex-col gap-4 bg-white border border-black/10 rounded-2xl p-6 sticky top-24"
+        >
+          <h2 class="text-lg font-medium text-gray-900">Ringkasan Pesanan</h2>
+          <div class="flex flex-col gap-2 text-sm text-gray-600">
+            <div class="flex justify-between">
+              <span>Subtotal (1 item)</span>
+              <span>Rp 450.000</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Ongkos Kirim</span>
+              <span class="text-green-600 font-medium">GRATIS</span>
+            </div>
+            <hr class="border-gray-200" />
+            <div class="flex justify-between items-center">
+              <span class="font-medium text-gray-900">Total</span>
+              <span class="font-bold text-blue-600">Rp 450.000</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="w-full bg-orange-500 text-white py-3 rounded-xl hover:bg-orange-600 font-medium flex justify-center items-center gap-2 cursor-pointer shadow-sm shadow-orange-500/20 transition-colors"
+          >
+            <i data-lucide="shield-check" class="size-5"></i>
+            Checkout Aman
+          </button>
+          <div
+            class="flex flex-col items-center gap-2 text-center text-xs text-gray-500"
+          >
+            <div class="flex items-center gap-1 text-yellow-600 font-medium">
+              🔒 Pembayaran 100% Aman
+            </div>
+            <div>
+              Metode: Transfer Bank &bull; Virtual Account &bull; Kartu Kredit
+              &bull; e-Wallet
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="flex flex-col gap-6">
+        <h2 class="text-xl font-medium">Mungkin Kamu Suka Ini</h2>
+        <div id="related-grid" class="grid grid-cols-4 gap-4"></div>
+      </section>
+    </div>
+  </main>
 
 
   <footer
@@ -390,6 +540,46 @@
   </footer>
 
   
+  <script type="module">
+    import $ from "jquery";
+    import { createIcons, icons } from "lucide";
+
+    import { ProductCard } from "./scripts/components.js";
+
+    import data from "./data.json" with { type: "json" };
+
+    await $.ready;
+
+    $("[aria-label='Main navigations']>div").append(
+      ...data.categories.map(({ name, icon }) =>
+        $("<a>", {
+          class: "text-gray-500 hover:text-black",
+          href: "",
+          text: `${icon} ${name}`,
+        }),
+      ),
+      $("<a>", {
+        class: "text-red-600 hover:text-red-900",
+        href: "",
+        text: `🔥 Promo`,
+      }),
+    );
+
+    const suggestionNames = [
+      "Headphone Wireless Premium",
+      "Smartphone 5G Ultra",
+      "Smartwatch Series 5",
+      "Sneakers Sport Runfast",
+    ];
+
+    const suggestionProducts = suggestionNames
+      .map((name) => data.products.find((p) => p.name === name))
+      .filter(Boolean);
+
+    $("#related-grid").append(...suggestionProducts.map(ProductCard));
+
+    createIcons({ icons });
+  </script>
 
 
   </body>
