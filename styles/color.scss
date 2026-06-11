@@ -21,57 +21,119 @@
 $color-names: (
   "black",
   "white",
-
   "gray-1",
   "gray-2",
   "gray-3",
-
   "slate-1",
   "slate-2",
   "slate-3",
   "slate-4",
   "slate-5",
-
   "purple",
   "blue",
   "blue-dark",
   "red",
-  "yellow",
+  "yellow"
 );
 
-$opacity-steps: (
-  20,
-  25,
-  50,
-  75,
-  80,
-  100,
-);
+$opacity-steps: (20, 25, 50, 75, 80, 100);
 
 @each $name in $color-names {
-  .text-#{$name}       { color:                 color-mix(in oklch, var(--color-#{$name}), transparent var(--text\/,       0%)); }
-  .bg-#{$name}         { background-color:      color-mix(in oklch, var(--color-#{$name}), transparent var(--bg\/,         0%)); }
-  .border-#{$name}     { border-color:          color-mix(in oklch, var(--color-#{$name}), transparent var(--border\/,     0%)); }
-  .outline-#{$name}    { outline-color:         color-mix(in oklch, var(--color-#{$name}), transparent var(--outline\/,    0%)); }
-  .decoration-#{$name} { text-decoration-color: color-mix(in oklch, var(--color-#{$name}), transparent var(--decoration\/, 0%)); }
-  .caret-#{$name}      { caret-color:           color-mix(in oklch, var(--color-#{$name}), transparent var(--caret\/,      0%)); }
-  .accent-#{$name}     { accent-color:          color-mix(in oklch, var(--color-#{$name}), transparent var(--accent\/,     0%)); }
-  .fill-#{$name}       { fill:                  color-mix(in oklch, var(--color-#{$name}), transparent var(--fill\/,       0%)); }
-  .stroke-#{$name}     { stroke:                color-mix(in oklch, var(--color-#{$name}), transparent var(--stroke\/,     0%)); }
+  .text-#{$name} {
+    color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--text\/, 0%)
+    );
+  }
+  .bg-#{$name} {
+    background-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--bg\/, 0%)
+    );
+  }
+  .border-#{$name} {
+    border-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--border\/, 0%)
+    );
+  }
+  .outline-#{$name} {
+    outline-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--outline\/, 0%)
+    );
+  }
+  .decoration-#{$name} {
+    text-decoration-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--decoration\/, 0%)
+    );
+  }
+  .caret-#{$name} {
+    caret-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--caret\/, 0%)
+    );
+  }
+  .accent-#{$name} {
+    accent-color: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--accent\/, 0%)
+    );
+  }
+  .fill-#{$name} {
+    fill: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--fill\/, 0%)
+    );
+  }
+  .stroke-#{$name} {
+    stroke: color-mix(
+      in oklch,
+      var(--color-#{$name}),
+      transparent var(--stroke\/, 0%)
+    );
+  }
   // .ring-#{$name}       { --ring-color:          color-mix(in oklch, var(--color-#{$name}), transparent var(--ring\/,       0%)); }
   // .shadow-#{$name}     { --shadow-color:        color-mix(in oklch, var(--color-#{$name}), transparent var(--shadow\/,     0%)); }
 }
 
 @each $step in $opacity-steps {
-  .text\/-#{$step}       { --text\/:       #{$step}%; }
-  .bg\/-#{$step}         { --bg\/:         #{$step}%; }
-  .border\/-#{$step}     { --border\/:     #{$step}%; }
-  .outline\/-#{$step}    { --outline\/:    #{$step}%; }
-  .decoration\/-#{$step} { --decoration\/: #{$step}%; }
-  .caret\/-#{$step}      { --caret\/:      #{$step}%; }
-  .accent\/-#{$step}     { --accent\/:     #{$step}%; }
-  .fill\/-#{$step}       { --fill\/:       #{$step}%; }
-  .stroke\/-#{$step}     { --stroke\/:     #{$step}%; }
+  .text\/-#{$step} {
+    --text\/: #{$step}%;
+  }
+  .bg\/-#{$step} {
+    --bg\/: #{$step}%;
+  }
+  .border\/-#{$step} {
+    --border\/: #{$step}%;
+  }
+  .outline\/-#{$step} {
+    --outline\/: #{$step}%;
+  }
+  .decoration\/-#{$step} {
+    --decoration\/: #{$step}%;
+  }
+  .caret\/-#{$step} {
+    --caret\/: #{$step}%;
+  }
+  .accent\/-#{$step} {
+    --accent\/: #{$step}%;
+  }
+  .fill\/-#{$step} {
+    --fill\/: #{$step}%;
+  }
+  .stroke\/-#{$step} {
+    --stroke\/: #{$step}%;
+  }
   // .ring\/-#{$step}       { --ring\/:       #{$step}%; }
   // .shadow\/-#{$step}     { --shadow\/:     #{$step}%; }
 }

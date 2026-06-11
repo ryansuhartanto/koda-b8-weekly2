@@ -1691,10 +1691,12 @@
 .flex.row.reverse {
   flex-direction: row-reverse;
 }
-.flex.grow > *, .flex > .grow {
+.flex.grow > *,
+.flex > .grow {
   flex: 1;
 }
-.flex.shrink > *, .flex > .shrink {
+.flex.shrink > *,
+.flex > .shrink {
   flex: 0;
 }
 

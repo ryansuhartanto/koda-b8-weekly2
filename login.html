@@ -1,123 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeliMudah</title>
 
-  <title>BeliMudah</title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin />
 
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com/" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+      crossorigin
+    />
 
-  <link rel="preconnect" href="https://unpkg.com/">
-  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simple-icons-font@v16/font/simple-icons.min.css"
+      crossorigin
+    />
 
-  <link rel="stylesheet" href="https://unpkg.com/simple-icons-font@v16/font/simple-icons.min.css" crossorigin>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <div class="auth grid cols-2">
-    <div class="banner flex col justify-between">
-      <header>
-        <div class="brand">BeliMudah</div>
-      </header>
-      <div class="flex col gap-8">
-        <h2>Belanja lebih mudah, hidup lebih praktis</h2>
-        <p>
-          Ribuan produk pilihan dengan harga terbaik, pengiriman cepat,
-          dan pembayaran yang aman.
-        </p>
-        <div class="rating flex gap-8">
-          <div class="flex col gap-1">
-            <strong class="vertical-middle">10rb+</strong>
-            <span>Produk</span>
-          </div>
-          <div class="flex col gap-1">
-            <strong class="vertical-middle">500rb+</strong>
-            <span>Pelanggan</span>
-          </div>
-          <div class="flex col gap-1">
-            <strong class="vertical-middle">
-              <span>4.8</span>
-              <svg viewBox="0 0 24 24">
-                <use href="images/star.svg#lucide"></use>
-              </svg>
-            </strong>
-            <span>Rating</span>
+  <body>
+    <div class="auth grid cols-2">
+      <div class="banner flex col justify-between">
+        <header>
+          <div class="brand">BeliMudah</div>
+        </header>
+        <div class="flex col gap-8">
+          <h2>Belanja lebih mudah, hidup lebih praktis</h2>
+          <p>
+            Ribuan produk pilihan dengan harga terbaik, pengiriman cepat, dan
+            pembayaran yang aman.
+          </p>
+          <div class="rating flex gap-8">
+            <div class="flex col gap-1">
+              <strong class="vertical-middle">10rb+</strong>
+              <span>Produk</span>
+            </div>
+            <div class="flex col gap-1">
+              <strong class="vertical-middle">500rb+</strong>
+              <span>Pelanggan</span>
+            </div>
+            <div class="flex col gap-1">
+              <strong class="vertical-middle">
+                <span>4.8</span>
+                <svg viewBox="0 0 24 24">
+                  <use href="images/star.svg#lucide"></use>
+                </svg>
+              </strong>
+              <span>Rating</span>
+            </div>
           </div>
         </div>
+        <footer>
+          <small>&copy; 2026 BeliMudah. Seluruh hak cipta dilindungi.</small>
+        </footer>
       </div>
-      <footer>
-        <small>&copy; 2026 BeliMudah. Seluruh hak cipta dilindungi.</small>
-      </footer>
+      <main class="flex justify-center items-center">
+        <div class="content flex col gap-8">
+          <div class="flex col gap-2">
+            <h1>Masuk ke Akun</h1>
+            <p>Belum punya akun? <a href="">Daftar gratis</a></p>
+          </div>
+          <div class="sso grid cols-2 gap-4">
+            <a href="" class="flex gap-2 justify-center items-center">
+              <i class="si si-google"></i>
+              Google
+            </a>
+            <a href="" class="flex gap-2 justify-center items-center">
+              <i class="si si-facebook"></i>
+              Facebook
+            </a>
+          </div>
+
+          <div class="hr-text">atau masuk dengan email</div>
+
+          <form class="flex col gap-8">
+            <div class="flex col gap-1">
+              <div class="flex justify-between">
+                <label for="email">Email</label>
+              </div>
+              <label class="flex">
+                <i class="icon-mail"></i>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email@contoh.com"
+                />
+              </label>
+            </div>
+            <div class="flex col gap-1">
+              <div class="flex justify-between">
+                <label for="password">Kata Sandi</label>
+                <a href="">Lupa kata sandi?</a>
+              </div>
+              <label class="flex">
+                <i class="icon-lock"></i>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  autocomplete="current-password"
+                  placeholder="Masukkan kata sandi"
+                />
+              </label>
+            </div>
+            <label class="flex gap-2">
+              <input type="checkbox" name="remember" />
+              <span>Ingat saya selama 30 hari</span>
+            </label>
+            <button
+              type="submit"
+              class="flex gap-2 justify-center items-center"
+            >
+              <i class="icon-log-in"></i>
+              Masuk
+            </button>
+          </form>
+
+          <small>🔒 Login aman dengan enkripsi SSL 256-bit</small>
+
+          <small>
+            Dengan masuk, kamu menyetujui
+            <a href="">Syarat &amp; Ketentuan</a>
+            dan
+            <a href="">Kebijakan Privasi</a>
+            kami.
+          </small>
+        </div>
+      </main>
     </div>
-    <main class="flex justify-center items-center">
-      <div class="content flex col gap-8">
-        <div class="flex col gap-2">
-          <h1>Masuk ke Akun</h1>
-          <p>Belum punya akun? <a href="">Daftar gratis</a></p>
-        </div>
-        <div class="sso grid cols-2 gap-4">
-          <a href="" class="flex gap-2 justify-center items-center">
-            <i class="si si-google"></i>
-            Google
-          </a>
-          <a href="" class="flex gap-2 justify-center items-center">
-            <i class="si si-facebook"></i>
-            Facebook
-          </a>
-        </div>
-
-        <div class="hr-text">
-          atau masuk dengan email
-        </div>
-
-        <form class="flex col gap-8">
-          <div class="flex col gap-1">
-            <div class="flex justify-between">
-              <label for="email">Email</label>
-            </div>
-            <label class="flex">
-              <i class="icon-mail"></i>
-              <input type="email" name="email" id="email" placeholder="email@contoh.com">
-            </label>
-          </div>
-          <div class="flex col gap-1">
-            <div class="flex justify-between">
-              <label for="password">Kata Sandi</label>
-              <a href="">Lupa kata sandi?</a>
-            </div>
-            <label class="flex">
-              <i class="icon-lock"></i>
-              <input type="password" name="password" id="password" autocomplete="current-password"
-                placeholder="Masukkan kata sandi">
-            </label>
-          </div>
-          <label class="flex gap-2">
-            <input type="checkbox" name="remember">
-            <span>Ingat saya selama 30 hari</span>
-          </label>
-          <button type="submit" class="flex gap-2 justify-center items-center">
-            <i class="icon-log-in"></i>
-            Masuk
-          </button>
-        </form>
-
-        <small>🔒 Login aman dengan enkripsi SSL 256-bit</small>
-
-        <small>
-          Dengan masuk, kamu menyetujui
-          <a href="">Syarat &amp; Ketentuan</a>
-          dan
-          <a href="">Kebijakan Privasi</a>
-          kami.
-        </small>
-      </div>
-    </main>
-  </div>
-</body>
-
+  </body>
 </html>
