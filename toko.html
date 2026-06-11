@@ -236,16 +236,13 @@
             </section>
             <section aria-label="Category filter">
               <h3 class="text-xl font-medium mb-4">Kategori</h3>
-              <ul
-                id="category-filter"
-                class="flex flex-col gap-3 text-gray-600"
-              >
+              <ul class="flex flex-col gap-3 text-gray-600">
                 <!--  -->
               </ul>
             </section>
             <section aria-label="Rating filter">
               <h3 class="text-xl font-medium mb-4">Rating Minimum</h3>
-              <ul id="rating-filter" class="flex flex-col gap-3 text-gray-600">
+              <ul class="flex flex-col gap-3 text-gray-600">
                 <!-- -->
               </ul>
             </section>
@@ -262,7 +259,7 @@
               </ul>
             </section>
           </aside>
-          <section class="flex-1 flex flex-col gap-6">
+          <section aria-label="Product list" class="flex-1 flex flex-col gap-6">
             <header class="flex justify-between items-center text-sm">
               <span class="text-gray-500">18 produk ditemukan</span>
               <div class="flex items-center gap-3">
@@ -277,7 +274,7 @@
                 </select>
               </div>
             </header>
-            <div id="product-grid" class="grid grid-cols-4 gap-4">
+            <div class="grid grid-cols-4 gap-4">
               <!-- -->
             </div>
             <div class="my-4 flex justify-center">
@@ -555,7 +552,7 @@
         );
       }
 
-      $("#category-filter").append(
+      $("[aria-label='Category filter']>ul").append(
         ...data.categories.map(({ name }) =>
           $("<li>").append(
             $("<label>", {
@@ -572,13 +569,12 @@
         ),
       );
 
-      $("#rating-filter").append(
+      $("[aria-label='Rating filter']>ul").append(
         [4, 3, 2].map((rating) => {
           const stars = Array.from({ length: 5 }, (_, i) =>
             $("<i>", {
               "data-lucide": "star",
               fill: i < rating ? "currentColor" : undefined,
-              class: i < rating ? "" : "text-gray-300",
             }),
           );
 
@@ -606,7 +602,9 @@
         .sort((a, b) => b.ratingCount - a.ratingCount)
         .slice(0, 12);
 
-      $("#product-grid").append(...displayedProducts.map(ProductCard));
+      $("[aria-label='Product list']>div.grid").append(
+        ...displayedProducts.map(ProductCard),
+      );
 
       createIcons({ icons });
     </script>
