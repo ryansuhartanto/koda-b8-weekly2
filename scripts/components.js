@@ -97,3 +97,36 @@ export function ProductCard({
     ),
   );
 }
+
+export function SummaryItem({ name, img, quantity = 1 }) {
+  return $("<div>", { class: "flex gap-4 items-center" }).append(
+    $("<div>", {
+      class: "size-12 shrink-0 rounded-lg overflow-hidden bg-gray-100",
+    }).append(
+      $("<img>", { src: img, alt: name, class: "w-full h-full object-cover" }),
+    ),
+    $("<div>", { class: "flex-1 text-sm text-gray-600 truncate" }).text(name),
+    $("<div>", { class: "text-sm text-gray-900 font-medium" }).text(
+      `×${quantity}`,
+    ),
+  );
+}
+
+export function OrderReviewItem({ name, img, price, quantity = 1 }) {
+  return $("<div>", {
+    class: "flex gap-4 items-center",
+  }).append(
+    $("<div>", {
+      class: "size-12 shrink-0 rounded-lg overflow-hidden bg-gray-100",
+    }).append(
+      $("<img>", { src: img, alt: name, class: "w-full h-full object-cover" }),
+    ),
+    $("<div>", { class: "flex-1 flex flex-col justify-center" }).append(
+      $("<span>", { class: "text-sm font-medium text-gray-900" }).text(name),
+      $("<span>", { class: "text-xs text-gray-500" }).text(`x${quantity}`),
+    ),
+    $("<div>", { class: "text-sm font-medium text-blue-600" }).text(
+      `Rp ${(price * quantity).toLocaleString("id-ID")}`,
+    ),
+  );
+}

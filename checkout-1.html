@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BeliMudah</title>
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" crossorigin />
+
+    <link rel="preconnect" href="https://unpkg.com/" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simple-icons-font@v16/font/simple-icons.min.css"
+      crossorigin
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4.3"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "jquery": "https://esm.sh/jquery@4",
+          "lucide": "https://esm.sh/lucide@1.17"
+        }
+      }
+    </script>
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-sans: "InterVariable", "Inter", Helvetica, Arial, sans-serif;
+      }
+
+      @layer base {
+        svg.lucide {
+          @apply inline size-[1em];
+        }
+
+        small {
+          font-size: unset;
+        }
+      }
+
+      @layer components {
+        .brand {
+          @apply flex items-center gap-2 select-none;
+
+          &::before {
+            @apply content-['B'] grid place-content-center size-8 rounded-lg text-sm bg-blue-600 text-white;
+          }
+        }
+
+        .card {
+          @apply bg-white border border-black/10 rounded-2xl overflow-hidden relative text-gray-500 transition-shadow duration-500 hover:shadow-xl;
+
+          img {
+            @apply aspect-square w-full;
+          }
+
+          h3 {
+            @apply text-gray-900;
+          }
+
+          .badge {
+            @apply absolute top-2 start-2 px-2 py-1 rounded-full text-white text-xs;
+
+            &.discount {
+              @apply bg-red-600;
+            }
+            &.new {
+              @apply bg-blue-600;
+            }
+          }
+
+          &.fashion {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-black) 80%, transparent),
+                color-mix(in oklch, var(--color-black) 0%, transparent)
+              ),
+              url("images/marketing/fashion.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          &.electronic {
+            background-image:
+              linear-gradient(
+                in oklch to right,
+                color-mix(in oklch, var(--color-blue-800) 80%, transparent),
+                color-mix(in oklch, var(--color-blue-800) 0%, transparent)
+              ),
+              url("images/marketing/electronic.png");
+            background-position: center;
+            background-size: cover;
+          }
+
+          .product {
+            @apply text-xs;
+
+            & > h3,
+            & > div {
+              @apply text-sm;
+            }
+          }
+        }
+
+        .price {
+          & > span,
+          & > ins {
+            @apply text-blue-600 text-base font-semibold no-underline;
+          }
+
+          & > del {
+            @apply text-gray-500;
+          }
+        }
+      }
+
+      @utility wrapper {
+        @apply max-w-7xl px-4 mx-auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+  <header class="sticky top-0 z-50 bg-white">
+    <section aria-label="Utility bar" class="bg-blue-600 text-white text-xs">
+      <div class="wrapper flex justify-between items-center py-1.5">
+        <div class="flex gap-4">
+          <span class="*:align-middle">
+            <i data-lucide="map-pin"></i>
+            Kirim ke: Jakarta Selatan
+          </span>
+        </div>
+        <div class="flex gap-4">
+          <span class="*:align-middle">
+            📞
+            <a href="tel:0800-1234-5678">0800&#8209;1234&#8209;5678</a>
+            (Gratis)
+          </span>
+          <span class="*:align-middle">
+            🚀 Gratis ongkir di atas Rp 100.000
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Main header" class="py-2 shadow-sm">
+      <div class="wrapper flex gap-4 items-center">
+        <a class="brand" href="index.html">BeliMudah</a>
+
+        <form
+          class="flex items-center gap-2 h-10 border border-black/10 rounded-xl bg-gray-100 overflow-hidden focus-within:border-black/50 transition-colors duration-200 *:px-4 *:h-full *:transition-colors *:duration-200"
+        >
+          <input
+            class="flex-1 min-w-[32rem] text-sm bg-transparent focus:outline-none"
+            type="text"
+            name="q"
+            autocomplete="off"
+            placeholder="Cari produk, merek, kategori..."
+          />
+          <button
+            class="shrink-0 text-white bg-blue-600 hover:bg-blue-700 focus:bg-blue-900 focus:outline-none"
+            type="submit"
+            aria-label="Search"
+          >
+            <i data-lucide="search" class="text-base"></i>
+          </button>
+        </form>
+
+        <div
+          class="flex items-center mx-2 gap-6 text-xl **:transition-colors **:duration-200 *:flex *:items-center *:gap-2"
+        >
+          <a class="group" aria-label="Notifications" href="">
+            <i
+              data-lucide="bell"
+              class="text-gray-500 group-hover:text-black"
+            ></i>
+          </a>
+          <a class="group" aria-label="User" href="">
+            <i
+              data-lucide="user"
+              class="text-gray-500 group-hover:text-black"
+            ></i>
+            <span class="text-sm">Budi</span>
+          </a>
+          <a class="group" aria-label="Favorite" href="">
+            <i
+              data-lucide="heart"
+              class="text-gray-500 group-hover:text-black"
+            ></i>
+          </a>
+          <a class="group" aria-label="Cart" href="">
+            <i
+              data-lucide="shopping-cart"
+              class="text-gray-500 group-hover:text-black"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <nav aria-label="Main navigations" class="py-2.5 text-sm shadow-sm">
+      <div
+        class="wrapper flex *:px-4 *:whitespace-nowrap *:transition-colors *:duration-200"
+      >
+        <a class="flex items-center gap-1 text-black" href="">
+          <i data-lucide="menu"></i>
+          Semua Kategori
+          <i data-lucide="chevron-down"></i>
+        </a>
+        <!--  -->
+      </div>
+    </nav>
+  </header>
+
+  
+  <main class="pt-6 pb-16 bg-gray-50">
+    <div class="wrapper flex flex-col gap-12">
+      
+  <nav
+    aria-label="Checkout progress"
+    class="flex items-center justify-center w-full max-w-xl mx-auto py-4"
+  >
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors bg-blue-600 text-white"
+      >
+        
+          1
+        
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap text-blue-600 font-medium"
+        >Pengiriman</span
+      >
+    </div>
+
+    <div
+      class="flex-1 h-[2px] mx-4 transition-colors bg-gray-200"
+    ></div>
+
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors bg-gray-200 text-gray-500"
+      >
+        
+          2
+        
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap text-gray-500"
+        >Pembayaran</span
+      >
+    </div>
+
+    <div
+      class="flex-1 h-[2px] mx-4 transition-colors bg-gray-200"
+    ></div>
+
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors bg-gray-200 text-gray-500"
+      >
+        3
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap text-gray-500"
+        >Konfirmasi</span
+      >
+    </div>
+  </nav>
+
+
+      <div class="grid grid-cols-3 gap-8 items-start">
+        <section
+          aria-label="Shipping details"
+          class="col-span-2 flex flex-col gap-6 bg-white border border-black/10 rounded-2xl p-6"
+        >
+          <h2 class="flex items-center gap-2 text-lg font-medium text-gray-900">
+            <i data-lucide="truck" class="text-blue-600"></i> Alamat Pengiriman
+          </h2>
+
+          <form class="flex flex-col gap-6">
+            <div class="flex flex-col gap-4">
+              <div class="grid grid-cols-2 gap-4">
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span
+                    class="after:content-['*'] after:ml-1 after:text-red-500"
+                    >Nama Penerima</span
+                  >
+                  <input
+                    type="text"
+                    value="Budi Santoso"
+                    required
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span
+                    class="after:content-['*'] after:ml-1 after:text-red-500"
+                    >Nomor Telepon</span
+                  >
+                  <input
+                    type="tel"
+                    value="0812-3456-7890"
+                    required
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+              </div>
+
+              <label class="flex flex-col gap-2 text-sm text-gray-600">
+                <span class="after:content-['*'] after:ml-1 after:text-red-500"
+                  >Email</span
+                >
+                <input
+                  type="email"
+                  value="budi@email.com"
+                  required
+                  class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                />
+              </label>
+
+              <label class="flex flex-col gap-2 text-sm text-gray-600">
+                <span class="after:content-['*'] after:ml-1 after:text-red-500"
+                  >Alamat Lengkap</span
+                >
+                <input
+                  type="text"
+                  value="Jl. Kebon Jeruk No. 15"
+                  required
+                  class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                />
+              </label>
+
+              <div class="grid grid-cols-2 gap-4">
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span
+                    class="after:content-['*'] after:ml-1 after:text-red-500"
+                    >Kota</span
+                  >
+                  <input
+                    type="text"
+                    value="Jakarta Barat"
+                    required
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span
+                    class="after:content-['*'] after:ml-1 after:text-red-500"
+                    >Provinsi</span
+                  >
+                  <input
+                    type="text"
+                    value="DKI Jakarta"
+                    required
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span
+                    class="after:content-['*'] after:ml-1 after:text-red-500"
+                    >Kode Pos</span
+                  >
+                  <input
+                    type="text"
+                    value="11530"
+                    required
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+                <label class="flex flex-col gap-2 text-sm text-gray-600">
+                  <span>Catatan (opsional)</span>
+                  <input
+                    type="text"
+                    placeholder="Warna pagar, dll."
+                    class="border border-black/10 rounded-xl px-4 py-2.5 outline-none focus:border-blue-600 transition-colors bg-gray-50 focus:bg-white text-gray-900"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <hr class="border-gray-100" />
+
+            <div class="flex flex-col gap-4">
+              <h3 class="text-base font-medium text-gray-900">
+                Metode Pengiriman
+              </h3>
+
+              <div class="flex flex-col gap-3">
+                <label
+                  class="flex items-center justify-between p-4 border border-blue-600 bg-blue-50/30 rounded-xl cursor-pointer transition-colors"
+                >
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      checked
+                      class="size-4 accent-blue-600"
+                    />
+                    <div class="flex flex-col">
+                      <span class="text-sm font-medium text-gray-900"
+                        >JNE Reguler</span
+                      >
+                      <span class="text-xs text-gray-500">3-5 hari kerja</span>
+                    </div>
+                  </div>
+                  <span class="text-sm font-medium text-green-600">GRATIS</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+                >
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      class="size-4 accent-blue-600"
+                    />
+                    <div class="flex flex-col">
+                      <span class="text-sm font-medium text-gray-900"
+                        >JNE Express</span
+                      >
+                      <span class="text-xs text-gray-500">1-2 hari kerja</span>
+                    </div>
+                  </div>
+                  <span class="text-sm font-medium text-green-600">GRATIS</span>
+                </label>
+
+                <label
+                  class="flex items-center justify-between p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+                >
+                  <div class="flex items-center gap-3">
+                    <input
+                      type="radio"
+                      name="shipping"
+                      class="size-4 accent-blue-600"
+                    />
+                    <div class="flex flex-col">
+                      <span class="text-sm font-medium text-gray-900"
+                        >Same Day Delivery</span
+                      >
+                      <span class="text-xs text-gray-500"
+                        >Hari ini (sebelum 16:00)</span
+                      >
+                    </div>
+                  </div>
+                  <span class="text-sm font-medium text-green-600">GRATIS</span>
+                </label>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 font-medium cursor-pointer transition-colors"
+            >
+              Lanjut ke Pembayaran &gt;
+            </button>
+          </form>
+        </section>
+
+        
+  <aside
+    class="flex flex-col gap-4 bg-white border border-black/10 rounded-2xl p-5 sticky top-36"
+  >
+    <h2 class="text-lg font-medium text-gray-900">Ringkasan Pesanan</h2>
+
+    <div id="summary-items" class="flex flex-col gap-4"></div>
+
+    <hr class="border-gray-100" />
+
+    <div class="flex flex-col gap-2 text-sm text-gray-600">
+      <div class="flex justify-between">
+        <span>Subtotal</span>
+        <span id="summary-subtotal">Rp 0</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Ongkir</span>
+        <span class="text-green-600 font-medium">Gratis</span>
+      </div>
+      <hr class="border-gray-200" />
+      <div class="flex justify-between items-center">
+        <span class="font-medium text-gray-900">Total</span>
+        <span id="summary-total" class="font-bold text-blue-600">Rp 0</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center gap-2 text-center text-xs">
+      <div class="flex items-center gap-1 text-gray-600 font-medium">
+        🔒 Pembayaran aman dan terenkripsi
+      </div>
+    </div>
+  </aside>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer
+    class="bg-gray-900 text-gray-400 text-sm [&_a]:transition-colors [&_a]:hover:text-white"
+  >
+    <a
+      class="fixed bottom-4 end-4 grid place-content-center w-14 h-14 text-2xl rounded-full bg-blue-600 text-white shadow-md"
+      aria-label="Contact us"
+      href=""
+    >
+      <i data-lucide="message-circle"></i>
+    </a>
+
+    <section aria-label="Promotions" class="py-8">
+      <div class="wrapper grid grid-cols-4 gap-8">
+        <div class="flex gap-4">
+          <div
+            class="grid place-content-center shrink-0 size-10 rounded-full bg-blue-600/20 text-blue-600"
+          >
+            <i class="text-lg" data-lucide="truck"></i>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h6 class="text-white text-sm font-medium">Gratis Ongkir</h6>
+            <span class="text-xs">Pembelian diatas Rp 100.000</span>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="grid place-content-center shrink-0 size-10 rounded-full bg-blue-600/20 text-blue-600"
+          >
+            <i class="text-lg" data-lucide="shield"></i>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h6 class="text-white text-sm font-medium">Pembayaran Aman</h6>
+            <span class="text-xs">SSL terenkripsi 256-bit</span>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="grid place-content-center shrink-0 size-10 rounded-full bg-blue-600/20 text-blue-600"
+          >
+            <i class="text-lg" data-lucide="refresh-ccw"></i>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h6 class="text-white text-sm font-medium">Pengembalian Mudah</h6>
+            <span class="text-xs">30 hari pengembalian gratis</span>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div
+            class="grid place-content-center shrink-0 size-10 rounded-full bg-blue-600/20 text-blue-600"
+          >
+            <i class="text-lg" data-lucide="headset"></i>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h6 class="text-white text-sm font-medium">Dukungan 24/7</h6>
+            <span class="text-xs">Bantuan kapan saja</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-gray-700" />
+
+    <nav aria-label="Main footer" class="py-8">
+      <div class="wrapper grid grid-cols-4 gap-8">
+        <div class="flex flex-col gap-4">
+          <a class="brand text-white text-lg" href="">BeliMudah</a>
+          <p class="text-gray-400 leading-relaxed">
+            Platform belanja online terpercaya dengan ribuan produk pilihan.
+            Belanja mudah, aman, dan menyenangkan.
+          </p>
+          <div
+            class="flex gap-2 *:grid *:place-content-center *:size-8 *:rounded-full *:overflow-hidden *:bg-gray-700"
+          >
+            <a aria-label="Facebook" href=""><i class="si si-facebook"></i></a>
+            <a aria-label="Instagram" href=""
+              ><i class="si si-instagram"></i
+            ></a>
+            <a aria-label="X" href=""><i class="si si-x"></i></a>
+            <a aria-label="YouTube" href=""><i class="si si-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h5 class="text-white text-base font-medium">Layanan</h5>
+          <ul class="flex flex-col gap-4 list-none">
+            <li><a href="">Tentang Kami</a></li>
+            <li><a href="">Karir</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Program Afiliasi</a></li>
+            <li><a href="">Jual di BeliMudah</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h5 class="text-white text-base font-medium">Bantuan</h5>
+          <ul class="flex flex-col gap-4 list-none">
+            <li><a href="">Cara Belanja</a></li>
+            <li><a href="">Kebijakan Pengembalian</a></li>
+            <li><a href="">Lacak Pesanan</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Hubungi Kami</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h5 class="text-white text-base font-medium">Kontak</h5>
+          <ul
+            class="flex flex-col gap-4 list-none *:ps-6 *:relative [&_svg.lucide]:absolute [&_svg.lucide]:left-0 [&_svg.lucide]:text-base"
+          >
+            <li>
+              <a href="">
+                <i data-lucide="map-pin"></i>
+                Jl. Sudirman No. 1, Jakarta Selatan, DKI Jakarta 12190
+              </a>
+            </li>
+            <li>
+              <a href="tel:0800-1234-5678">
+                <i data-lucide="phone"></i>
+                0800&#8209;1234&#8209;5678&nbsp;(Gratis)
+              </a>
+            </li>
+            <li>
+              <a href="mailto:bantuan@belimudah.id">
+                <i data-lucide="mail"></i>
+                bantuan@belimudah.id
+              </a>
+            </li>
+          </ul>
+          <div class="bg-gray-800 border border-white/10 rounded-lg text-xs">
+            <form class="p-3 flex flex-col gap-2">
+              <label class="text-white font-medium" for="newsletter"
+                >Newsletter</label
+              >
+              <div class="flex gap-2">
+                <input
+                  class="w-full flex-1 px-3 py-2.5 rounded-md bg-gray-700 border border-white/10"
+                  id="newsletter"
+                  name="newsletter"
+                  type="email"
+                  placeholder="Email kamu"
+                />
+                <button
+                  class="px-3 py-2.5 rounded-md bg-blue-600 text-white cursor-pointer"
+                  type="submit"
+                >
+                  Langganan
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <hr class="border-gray-700" />
+
+    <section aria-label="Copyright" class="py-4 text-xs text-gray-500">
+      <div class="wrapper flex justify-between">
+        <small>&copy; 2026 BeliMudah. Seluruh hak cipta dilindungi.</small>
+        <small class="flex gap-4">
+          <a href="">Kebijakan Privasi</a>
+          <a href="">Syarat &amp; Ketentuan</a>
+          <a href="">Admin</a>
+        </small>
+      </div>
+    </section>
+  </footer>
+
+  
+  <script type="module">
+    import $ from "jquery";
+    import { createIcons, icons } from "lucide";
+    import { SummaryItem } from "./scripts/components.js";
+    import data from "./data.json" with { type: "json" };
+
+    await $.ready;
+
+    const cartItem = { ...data.products[0], quantity: 1 };
+    const formattedTotal = `Rp ${(cartItem.price * cartItem.quantity).toLocaleString("id-ID")}`;
+
+    $("#summary-items").append(SummaryItem(cartItem));
+    $("#summary-subtotal, #summary-total").text(formattedTotal);
+
+    createIcons({ icons });
+  </script>
+
+
+  </body>
+</html>

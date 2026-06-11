@@ -1,0 +1,167 @@
+{% extends "../layouts/main.njk" %}
+
+{% block main %}
+  <main class="pt-12 pb-24 bg-gray-50">
+    <div
+      class="wrapper flex flex-col items-center gap-8 max-w-2xl text-center mx-auto"
+    >
+      <div class="flex flex-col items-center gap-4">
+        <div
+          class="size-20 rounded-full bg-green-100 text-green-500 flex items-center justify-center outline outline-8 outline-green-50"
+        >
+          <i data-lucide="check-circle-2" class="size-10"></i>
+        </div>
+        <h1
+          class="text-2xl font-bold text-gray-900 flex items-center justify-center gap-2"
+        >
+          Pesanan Berhasil! 🎉
+        </h1>
+        <p class="text-sm text-gray-600">
+          Terima kasih telah berbelanja di BeliMudah. Pesananmu sedang diproses.
+        </p>
+      </div>
+
+      <div class="w-full flex flex-col gap-6 text-left">
+        <section
+          class="bg-white border border-black/10 rounded-2xl p-6 flex flex-col gap-6"
+        >
+          <div class="flex justify-between items-start">
+            <div class="flex flex-col gap-1">
+              <span class="text-xs text-gray-500">Nomor Pesanan</span>
+              <span class="text-sm font-bold text-blue-600">#BM28371132</span>
+            </div>
+            <div class="flex flex-col gap-1 text-right">
+              <span class="text-xs text-gray-500">Total Pembayaran</span>
+              <span class="text-sm font-bold text-gray-900">Rp 450.000</span>
+            </div>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <div class="flex flex-col gap-4">
+            <div class="flex gap-3 items-start">
+              <i data-lucide="truck" class="text-gray-400 size-5 shrink-0"></i>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-medium text-gray-900"
+                  >JNE Reguler</span
+                >
+                <span class="text-xs text-gray-500"
+                  >Estimasi tiba: 14-16 Juni 2026</span
+                >
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <i
+                data-lucide="map-pin"
+                class="text-blue-500 size-5 shrink-0"
+              ></i>
+              <div class="flex flex-col gap-1">
+                <span class="text-sm font-medium text-gray-900"
+                  >Alamat Pengiriman</span
+                >
+                <span class="text-xs text-gray-500 leading-relaxed"
+                  >Jl. Kebon Jeruk No. 15, Jakarta Barat, DKI Jakarta
+                  11530</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="bg-white border border-black/10 rounded-2xl p-6 flex flex-col gap-6"
+        >
+          <h2 class="font-medium text-gray-900">Status Pesanan</h2>
+
+          <div
+            class="flex flex-col gap-6 pl-2 relative before:absolute before:inset-y-0 before:left-4 before:w-0.5 before:bg-gray-100"
+          >
+            <div class="flex gap-4 relative z-10 items-start">
+              <div
+                class="size-5 shrink-0 rounded-full bg-green-100 text-green-500 flex items-center justify-center outline outline-4 outline-white"
+              >
+                <i data-lucide="check" class="size-3"></i>
+              </div>
+              <div class="flex-1 flex justify-between items-start">
+                <div class="flex flex-col gap-1">
+                  <span class="text-sm font-medium text-gray-900"
+                    >Pesanan Diterima</span
+                  >
+                  <span class="text-xs text-gray-500">Baru saja</span>
+                </div>
+                <i data-lucide="check" class="size-4 text-green-500"></i>
+              </div>
+            </div>
+
+            <div class="flex gap-4 relative z-10 items-start">
+              <div
+                class="size-5 shrink-0 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center outline outline-4 outline-white"
+              >
+                <i data-lucide="package" class="size-3"></i>
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <span class="text-sm text-gray-900">Sedang Dikemas</span>
+                <span class="text-xs text-gray-500">Estimasi 1-2 jam</span>
+              </div>
+            </div>
+
+            <div class="flex gap-4 relative z-10 items-start">
+              <div
+                class="size-5 shrink-0 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center outline outline-4 outline-white"
+              >
+                <i data-lucide="truck" class="size-3"></i>
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <span class="text-sm text-gray-900">Dalam Pengiriman</span>
+                <span class="text-xs text-gray-500">3-5 hari kerja</span>
+              </div>
+            </div>
+
+            <div class="flex gap-4 relative z-10 items-start">
+              <div
+                class="size-5 shrink-0 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center outline outline-4 outline-white"
+              >
+                <i data-lucide="map-pin" class="size-3"></i>
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <span class="text-sm text-gray-900">Terkirim</span>
+                <span class="text-xs text-gray-500">14-16 Juni 2026</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="flex justify-center items-center gap-4">
+          <button
+            type="button"
+            class="bg-blue-600 text-white px-6 py-3 rounded-xl font-medium cursor-pointer hover:bg-blue-700 transition-colors flex items-center gap-2"
+          >
+            Lacak Pesanan
+          </button>
+          <button
+            type="button"
+            class="px-6 py-3 border border-black/10 rounded-xl text-gray-600 font-medium hover:bg-gray-50 cursor-pointer transition-colors"
+          >
+            Lihat Riwayat Pesanan
+          </button>
+          <a
+            href="#"
+            class="text-blue-600 font-medium hover:text-blue-800 transition-colors ml-4 text-sm"
+          >
+            Lanjut Belanja &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block script %}
+  <script type="module">
+    import $ from "jquery";
+    import { createIcons, icons } from "lucide";
+
+    await $.ready;
+    createIcons({ icons });
+  </script>
+{% endblock %}

@@ -1,0 +1,92 @@
+{% macro stepper(activeStep) %}
+  <nav
+    aria-label="Checkout progress"
+    class="flex items-center justify-center w-full max-w-xl mx-auto py-4"
+  >
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors {{ 'bg-green-500 text-white' if activeStep > 1 else 'bg-blue-600 text-white' }}"
+      >
+        {% if activeStep > 1 %}
+          <i data-lucide="check" class="size-6"></i>
+        {% else %}
+          1
+        {% endif %}
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap {{ 'text-blue-600 font-medium' if activeStep == 1 else 'text-gray-500' }}"
+        >Pengiriman</span
+      >
+    </div>
+
+    <div
+      class="flex-1 h-[2px] mx-4 transition-colors {{ 'bg-green-500' if activeStep > 1 else 'bg-gray-200' }}"
+    ></div>
+
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors {{ 'bg-green-500 text-white' if activeStep > 2 else ('bg-blue-600 text-white' if activeStep == 2 else 'bg-gray-200 text-gray-500') }}"
+      >
+        {% if activeStep > 2 %}
+          <i data-lucide="check" class="size-6"></i>
+        {% else %}
+          2
+        {% endif %}
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap {{ 'text-blue-600 font-medium' if activeStep == 2 else 'text-gray-500' }}"
+        >Pembayaran</span
+      >
+    </div>
+
+    <div
+      class="flex-1 h-[2px] mx-4 transition-colors {{ 'bg-green-500' if activeStep > 2 else 'bg-gray-200' }}"
+    ></div>
+
+    <div class="flex flex-col items-center gap-2 relative">
+      <div
+        class="size-12 rounded-full flex items-center justify-center text-lg font-medium z-10 transition-colors {{ 'bg-blue-600 text-white' if activeStep == 3 else 'bg-gray-200 text-gray-500' }}"
+      >
+        3
+      </div>
+      <span
+        class="text-sm absolute top-14 whitespace-nowrap {{ 'text-blue-600 font-medium' if activeStep == 3 else 'text-gray-500' }}"
+        >Konfirmasi</span
+      >
+    </div>
+  </nav>
+{% endmacro %}
+
+{% macro summary() %}
+  <aside
+    class="flex flex-col gap-4 bg-white border border-black/10 rounded-2xl p-5 sticky top-36"
+  >
+    <h2 class="text-lg font-medium text-gray-900">Ringkasan Pesanan</h2>
+
+    <div id="summary-items" class="flex flex-col gap-4"></div>
+
+    <hr class="border-gray-100" />
+
+    <div class="flex flex-col gap-2 text-sm text-gray-600">
+      <div class="flex justify-between">
+        <span>Subtotal</span>
+        <span id="summary-subtotal">Rp 0</span>
+      </div>
+      <div class="flex justify-between">
+        <span>Ongkir</span>
+        <span class="text-green-600 font-medium">Gratis</span>
+      </div>
+      <hr class="border-gray-200" />
+      <div class="flex justify-between items-center">
+        <span class="font-medium text-gray-900">Total</span>
+        <span id="summary-total" class="font-bold text-blue-600">Rp 0</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center gap-2 text-center text-xs">
+      <div class="flex items-center gap-1 text-gray-600 font-medium">
+        🔒 Pembayaran aman dan terenkripsi
+      </div>
+    </div>
+  </aside>
+{% endmacro %}

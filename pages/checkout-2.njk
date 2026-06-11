@@ -1,0 +1,172 @@
+{% extends "../layouts/main.njk" %}
+{% from "../components/checkout.njk" import stepper, summary %}
+
+{% block main %}
+  <main class="pt-6 pb-16 bg-gray-50">
+    <div class="wrapper flex flex-col gap-12">
+      {{ stepper(2) }}
+
+      <div class="grid grid-cols-3 gap-8 items-start">
+        <section
+          aria-label="Payment methods"
+          class="col-span-2 flex flex-col gap-6 bg-white border border-black/10 rounded-2xl p-6"
+        >
+          <h2 class="flex items-center gap-2 text-lg font-medium text-gray-900">
+            <i data-lucide="credit-card" class="text-blue-600"></i> Metode
+            Pembayaran
+          </h2>
+
+          <div class="flex flex-col gap-6">
+            <div class="grid grid-cols-2 gap-4">
+              <label
+                class="flex items-center gap-3 p-4 border border-blue-600 bg-blue-50/30 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  checked
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <div
+                  class="w-8 h-5 bg-gray-200 rounded flex items-center justify-center text-[8px] font-bold shrink-0"
+                >
+                  BCA
+                </div>
+                <span class="text-sm font-medium text-gray-900"
+                  >Virtual Account BCA</span
+                >
+              </label>
+
+              <label
+                class="flex items-center gap-3 p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <div
+                  class="w-8 h-5 bg-gray-200 rounded flex items-center justify-center text-[8px] font-bold shrink-0"
+                >
+                  BNI
+                </div>
+                <span class="text-sm font-medium text-gray-900"
+                  >Virtual Account BNI</span
+                >
+              </label>
+
+              <label
+                class="flex items-center gap-3 p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <i
+                  data-lucide="credit-card"
+                  class="text-gray-400 size-6 shrink-0"
+                ></i>
+                <span class="text-sm font-medium text-gray-900"
+                  >Kartu Kredit / Debit</span
+                >
+              </label>
+
+              <label
+                class="flex items-center gap-3 p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <div
+                  class="w-8 h-5 bg-gray-800 text-white rounded flex items-center justify-center text-[8px] font-bold shrink-0"
+                >
+                  GP
+                </div>
+                <span class="text-sm font-medium text-gray-900">GoPay</span>
+              </label>
+
+              <label
+                class="flex items-center gap-3 p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <div
+                  class="w-8 h-5 bg-purple-600 text-white rounded flex items-center justify-center text-[8px] font-bold shrink-0"
+                >
+                  OVO
+                </div>
+                <span class="text-sm font-medium text-gray-900">OVO</span>
+              </label>
+
+              <label
+                class="flex items-center gap-3 p-4 border border-black/10 hover:border-blue-600 rounded-xl cursor-pointer transition-colors"
+              >
+                <input
+                  type="radio"
+                  name="payment"
+                  class="size-4 accent-blue-600 shrink-0"
+                />
+                <div
+                  class="w-8 h-5 bg-blue-500 text-white rounded flex items-center justify-center text-[8px] font-bold shrink-0"
+                >
+                  DN
+                </div>
+                <span class="text-sm font-medium text-gray-900">DANA</span>
+              </label>
+            </div>
+
+            <div
+              class="flex gap-3 items-center p-4 rounded-xl bg-blue-50 text-blue-700 text-xs"
+            >
+              <i data-lucide="lock" class="size-5 shrink-0"></i>
+              Informasi pembayaranmu dienkripsi dengan SSL 256-bit. Kami tidak
+              menyimpan data kartu kreditmu.
+            </div>
+
+            <div class="flex gap-4">
+              <button
+                type="button"
+                class="px-6 py-3 border border-black/10 rounded-xl text-gray-600 font-medium hover:bg-gray-50 transition-colors cursor-pointer shrink-0"
+              >
+                Kembali
+              </button>
+              <button
+                type="button"
+                class="flex-1 bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 font-medium cursor-pointer transition-colors"
+              >
+                Lanjut ke Konfirmasi &gt;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {{ summary() }}
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block script %}
+  <script type="module">
+    import $ from "jquery";
+    import { createIcons, icons } from "lucide";
+    import { SummaryItem } from "./scripts/components.js";
+    import data from "./data.json" with { type: "json" };
+
+    await $.ready;
+
+    const cartItem = { ...data.products[0], quantity: 1 };
+    const formattedTotal = `Rp ${(cartItem.price * cartItem.quantity).toLocaleString("id-ID")}`;
+
+    $("#summary-items").append(SummaryItem(cartItem));
+    $("#summary-subtotal, #summary-total").text(formattedTotal);
+
+    createIcons({ icons });
+  </script>
+{% endblock %}
