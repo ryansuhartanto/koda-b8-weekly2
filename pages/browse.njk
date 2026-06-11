@@ -1,16 +1,15 @@
 {% extends "../layouts/main.njk" %}
+{% from "../components/breadcrumb.njk" import breadcrumb %}
 
 {% block main %}
   <main class="pt-6 pb-16 bg-gray-50">
     <div class="wrapper flex flex-col gap-6">
-      <nav
-        aria-label="Breadcrumb"
-        class="flex items-center gap-1 text-sm text-gray-400 [&_a]:transition-colors [&_a]:hover:text-black [&_span]:text-black"
-      >
-        <a href="#">Beranda</a>
-        <i data-lucide="chevron-right" class="size-4"></i>
-        <span href="#">Toko</span>
-      </nav>
+      {{
+        breadcrumb([
+          { label: "Beranda", url: "#" },
+          { label: "Toko" }
+        ])
+      }}
 
       <h1 class="text-2xl font-medium">Semua Produk</h1>
 
